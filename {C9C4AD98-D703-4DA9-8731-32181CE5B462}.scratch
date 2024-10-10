@@ -1,0 +1,131 @@
+CREATE DATABASE pc_P;
+
+USE pc_P;
+
+CREATE TABLE cpu (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    brand VARCHAR(50) NOT NULL,
+    cores INT NOT NULL,
+    threads INT NOT NULL,
+    base_clock FLOAT NOT NULL,
+    boost_clock FLOAT,
+    tdp INT,
+    price DECIMAL(10, 2) NOT NULL,
+    color VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE gpu (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    brand VARCHAR(50) NOT NULL,
+    memory_size INT NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    color VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE memory ( -- 메모리
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    brand VARCHAR(50) NOT NULL,
+    capacity INT NOT NULL,  -- 용량
+    price DECIMAL(10, 2) NOT NULL,
+    color VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE motherboard ( -- 메인보드
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    brand VARCHAR(50) NOT NULL,
+    form_factor VARCHAR(50) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    color VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE pc_case ( -- 케이스
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    brand VARCHAR(50) NOT NULL,
+    form_factor VARCHAR(50) NOT NULL,
+    cooling_support BOOLEAN,  -- 쿨링 지원 여부
+    price DECIMAL(10, 2) NOT NULL,
+    color VARCHAR(20) NOT NULL 
+);
+
+CREATE TABLE keyboard ( -- 키보드
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    brand VARCHAR(50) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    color VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE mouse ( -- 마우스
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    brand VARCHAR(50) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    color VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE power_supply ( -- 파워
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    brand VARCHAR(50) NOT NULL,
+    wattage INT NOT NULL,  -- 전력 용량
+    price DECIMAL(10, 2) NOT NULL,
+    color VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE storage ( -- 저장장치
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    brand VARCHAR(50) NOT NULL,
+    capacity INT NOT NULL,  -- 용량
+    price DECIMAL(10, 2) NOT NULL,
+    color VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE monitor ( -- 모니터
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    brand VARCHAR(50) NOT NULL,
+    resolution VARCHAR(50) NOT NULL,  -- 해상
+    price DECIMAL(10, 2) NOT NULL,
+    color VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE graphics_card ( -- 그래픽카드
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    brand VARCHAR(50) NOT NULL,
+    memory_size INT NOT NULL,  -- 메모리 크기 (GB)
+    price DECIMAL(10, 2) NOT NULL,
+    color VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE cooler ( -- 쿨러
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    brand VARCHAR(50) NOT NULL,
+    cooling_type VARCHAR(50) NOT NULL,  -- 쿨링 타입 (예: 공랭, 수랭 등)
+    price DECIMAL(10, 2) NOT NULL,
+    color VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE fan ( -- 팬
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    brand VARCHAR(50) NOT NULL,
+    size INT NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    color VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE sound_card ( -- 사운드 카드
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    brand VARCHAR(50) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    color VARCHAR(20) NOT NULL
+);
