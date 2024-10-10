@@ -90,7 +90,7 @@ CREATE TABLE monitor ( -- 모니터
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     brand VARCHAR(50) NOT NULL,
-    resolution VARCHAR(50) NOT NULL,  -- 해상
+    resolution VARCHAR(50) NOT NULL,  -- 해상도
     price DECIMAL(10, 2) NOT NULL,
     color VARCHAR(20) NOT NULL
 );
@@ -99,7 +99,7 @@ CREATE TABLE graphics_card ( -- 그래픽카드
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     brand VARCHAR(50) NOT NULL,
-    memory_size INT NOT NULL,  -- 메모리 크기 (GB)
+    memory_size INT NOT NULL,  -- 메모리 크기
     price DECIMAL(10, 2) NOT NULL,
     color VARCHAR(20) NOT NULL
 );
