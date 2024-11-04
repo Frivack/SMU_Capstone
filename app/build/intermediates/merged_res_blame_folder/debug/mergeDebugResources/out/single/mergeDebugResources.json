@@ -1,0 +1,138 @@
+[
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/drawable_black_outline.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/drawable/black_outline.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/layout_activity_settingpage.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/layout/activity_settingpage.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/layout_activity_loginpage.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/layout/activity_loginpage.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/layout_activity_buildpage.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/layout/activity_buildpage.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.capstone.myapplication.app-main-52:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/xml_data_extraction_rules.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/drawable_white_round_with_black_outline.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/drawable/white_round_with_black_outline.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/xml_backup_rules.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/drawable_img_automatic.png.flat",
+        "source": "com.capstone.myapplication.app-main-52:/drawable/img_automatic.png"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/drawable_img_home.png.flat",
+        "source": "com.capstone.myapplication.app-main-52:/drawable/img_home.png"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/drawable_white_round_outline.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/drawable/white_round_outline.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.capstone.myapplication.app-main-52:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/drawable_img_envelope.png.flat",
+        "source": "com.capstone.myapplication.app-main-52:/drawable/img_envelope.png"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/drawable_gradation.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/drawable/gradation.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/drawable_img_lock.png.flat",
+        "source": "com.capstone.myapplication.app-main-52:/drawable/img_lock.png"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.capstone.myapplication.app-main-52:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.capstone.myapplication.app-main-52:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.capstone.myapplication.app-main-52:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.capstone.myapplication.app-main-52:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/drawable_img_person.png.flat",
+        "source": "com.capstone.myapplication.app-main-52:/drawable/img_person.png"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/drawable_purple_gradation.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/drawable/purple_gradation.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.capstone.myapplication.app-main-52:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/drawable_img_whatido.png.flat",
+        "source": "com.capstone.myapplication.app-main-52:/drawable/img_whatido.png"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.capstone.myapplication.app-main-52:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.capstone.myapplication.app-main-52:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.capstone.myapplication.app-main-52:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/drawable_img_toggle_button.png.flat",
+        "source": "com.capstone.myapplication.app-main-52:/drawable/img_toggle_button.png"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/layout_activity_mainpage.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/layout/activity_mainpage.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/drawable_purple_round_outline.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/drawable/purple_round_outline.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/drawable_alpha_round_outline.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/drawable/alpha_round_outline.xml"
+    }
+]
