@@ -1,4 +1,33 @@
 <resources>
     <string name="app_name">EngUniFriend</string>
-
+    <string name="login">Login</string>
+    <string name="welcome">Welcome!</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="summit">Summit</string>
+    <string name="forgot_id">계정을 잊으셨나요?</string>
+    <string name="estimate">견적</string>
+    <string name="budget">예산: </string>
+    <string name="id">ID</string>
+    <string name="budget_sett">Budget Setting</string>
+    <string name="total_budget">총 예산:</string>
+    <string name="left_budget">남은 예산:</string>
+    <string name="assign_by_comp">부품 별 예산 할당하기</string>
+    <string name="cpu">CPU</string>
+    <string name="percentage">0%\n(₩0)</string>
+    <string name="gpu">GPU</string>
+    <string name="mainboard">메인보드</string>
+    <string name="ram">메모리</string>
+    <string name="power">파워</string>
+    <string name="hard">저장장치</string>
+    <string name="cooler">쿨러</string>
+    <string name="fan">팬</string>
+    <string name="soundcard">사운드카드</string>
+    <string name="pccase">케이스</string>
+    <string name="mouse">마우스</string>
+    <string name="monitor">모니터</string>
+    <string name="headset">헤드셋</string>
+    <string name="keyboard">키보드</string>
+    <string name="earphone">이어폰</string>
+    <string name="speaker">스피커</string>
 </resources>

@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@drawable/gradation"
+        android:background="@drawable/background"
         android:paddingTop="1dp"
         android:elevation="4dp">
         <LinearLayout
@@ -22,7 +22,7 @@
                 android:id="@+id/ryfm82ge0nhd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/alpha_round_outline"
+                android:background="@drawable/layout_rectangle"
                 android:paddingVertical="22dp"
                 android:paddingLeft="156dp"
                 android:paddingRight="146dp"
@@ -68,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:background="@drawable/alpha_round_outline"
+                android:background="@drawable/layout_rectangle"
                 android:paddingVertical="9dp"
                 android:paddingHorizontal="11dp"
                 android:orientation="horizontal">
@@ -112,7 +112,7 @@
                 android:id="@+id/rlihl80sai8d"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/alpha_round_outline"
+                android:background="@drawable/layout_rectangle"
                 android:paddingVertical="42dp"
                 android:paddingHorizontal="19dp"
                 android:orientation="vertical">
@@ -166,7 +166,7 @@
                     android:layout_height="40dp"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:src="@drawable/img_whatido"/>
+                    android:src="@drawable/img_what_i_do"/>
                 <View android:background="#30000000"
                     android:id="@+id/lineLineoneThree"
                     android:layout_height="59dp" android:layout_width="1dp"/>

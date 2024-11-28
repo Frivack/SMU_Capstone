@@ -28,7 +28,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.EngUniFriend" >
         <activity
-            android:name="com.capstone.myapplication.MainActivity"
+            android:name="com.capstone.myapplication.BudgetPage"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.EngUniFriend" >
