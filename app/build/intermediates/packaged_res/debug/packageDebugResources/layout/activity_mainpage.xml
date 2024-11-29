@@ -285,9 +285,9 @@
 
             <LinearLayout android:id="@+id/linearRowhomeOne"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:gravity="center"
-                android:background="@drawable/white_round_with_black_outline"
+                android:background="@drawable/background"
                 android:layout_marginHorizontal="16dp"
                 android:orientation="horizontal">
                 <ImageView android:id="@+id/imageHomeOne"

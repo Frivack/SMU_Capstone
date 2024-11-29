@@ -13,9 +13,8 @@
         android:theme="@style/Theme.EngUniFriend"
         tools:targetApi="31">
         <activity
-            android:name=".BudgetPage"
+            android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.EngUniFriend">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".MainPage"/>
     </application>
 
 </manifest>

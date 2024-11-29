@@ -4,32 +4,48 @@
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\layout_rectangle.xml"
     },
     {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_font.png.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_font.png"
+    },
+    {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_layout_bigbg.xml.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\layout_bigbg.xml"
     },
     {
-        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_password.png.flat",
-        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_password.png"
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_layout_input.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\layout_input.xml"
     },
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_automatic85.png.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_automatic85.png"
     },
     {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_password.png.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_password.png"
+    },
+    {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_logo.png.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_logo.png"
     },
     {
-        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_edit.png.flat",
-        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_edit.png"
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_id_green.png.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_id_green.png"
     },
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_alpha_round_outline.xml.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\alpha_round_outline.xml"
     },
     {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_edit.png.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_edit.png"
+    },
+    {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_white_round_outline.xml.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\white_round_outline.xml"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\layout_activity_edit_user.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\layout\\activity_edit_user.xml"
     },
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\layout_activity_budget.xml.flat",
@@ -48,16 +64,28 @@
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\seekbar_thumb.xml"
     },
     {
-        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_chat_bubble.png.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_chat_bubble.png"
     },
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_event85.png.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_event85.png"
     },
     {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_purple_round_outline.xml.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\purple_round_outline.xml"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_layout_blue.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\layout_blue.xml"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_camera.png.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_camera.png"
     },
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_layout_background.xml.flat",
@@ -72,8 +100,20 @@
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\layout\\activity_buget.xml"
     },
     {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_mail.png.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_mail.png"
+    },
+    {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_envelope.png.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_envelope.png"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_picture.png.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_picture.png"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\layout_activity_notice.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\layout\\activity_notice.xml"
     },
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_purple_gradation.xml.flat",
@@ -82,6 +122,18 @@
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_layout_purple.xml.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\layout_purple.xml"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_layout_light_purple.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\layout_light_purple.xml"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\layout_activity_signin.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\layout\\activity_signin.xml"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_face_id.png.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_face_id.png"
     },
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_layout_line.xml.flat",
@@ -108,8 +160,16 @@
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\xml\\backup_rules.xml"
     },
     {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_start.png.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_start.png"
+    },
+    {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_play.png.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_play.png"
     },
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_home.png.flat",
@@ -148,24 +208,52 @@
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_secure.png.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_secure.png"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_shield.png.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_shield.png"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_layout_light_purple_shaodw.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\layout_light_purple_shaodw.xml"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\layout_activity_leave_user.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\layout\\activity_leave_user.xml"
+    },
+    {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\layout_activity_buildpage.xml.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\layout\\activity_buildpage.xml"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\layout_activity_review.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\layout\\activity_review.xml"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\layout_activity_writepage.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\layout\\activity_writepage.xml"
     },
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.capstone.myapplication.app-debug-50:/layout_activity_budget.xml.flat",
-        "source": "com.capstone.myapplication.app-main-52:/layout/activity_budget.xml"
-    },
-    {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_id_verified.png.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_id_verified.png"
     },
     {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\layout_activity_start.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\layout\\activity_start.xml"
+    },
+    {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_layout_dark_purple.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\layout_dark_purple.xml"
     },
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_support85.png.flat",
@@ -176,8 +264,20 @@
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_toggle_button.png"
     },
     {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_line.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\line.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/layout_activity_start.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/layout/activity_start.xml"
+    },
+    {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_white_round_with_black_outline.xml.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\white_round_with_black_outline.xml"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_layout_red.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\layout_red.xml"
     },
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_background.xml.flat",
@@ -188,20 +288,36 @@
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\layout_activity_support.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\layout\\activity_support.xml"
     },
     {
-        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_lock.png.flat",
-        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_lock.png"
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\layout_activity_settingpage.xml.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\layout\\activity_settingpage.xml"
     },
     {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_lock.png.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_lock.png"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_layout_light_purple_grad.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\layout_light_purple_grad.xml"
+    },
+    {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\layout_activity_review_view.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\layout\\activity_review_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\layout_activity_account.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\layout\\activity_account.xml"
     },
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
@@ -212,11 +328,19 @@
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_popular.png"
     },
     {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_thumbs_up.png.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_thumbs_up.png"
+    },
+    {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_what_i_do.png.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_what_i_do.png"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_layout_light_bg.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\layout_light_bg.xml"
     }
 ]
