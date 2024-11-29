@@ -677,6 +677,8 @@ drawable layout_light_purple_shaodw
 drawable layout_line
 drawable layout_purple
 drawable layout_rectangle
+drawable layout_rectangle_button
+drawable layout_rectangle_pressed
 drawable layout_red
 drawable layout_whiteshadow
 drawable line
@@ -898,6 +900,12 @@ id img36
 id img37
 id img38
 id img39
+id img_account
+id img_newbuild
+id img_notice
+id img_review
+id img_setting
+id img_support
 id info
 id info_edit
 id inspection_slot_table_set
@@ -983,8 +991,6 @@ id progress_circular
 id progress_horizontal
 id r0t9pbja9ov3
 id r0u75olz1thgn
-id r1d7rdjqb2bj
-id r1d7rsd1bj
 id r5bgxagn6cgp
 id r68pczcg218h
 id r87y1qmmazxq
@@ -994,7 +1000,6 @@ id radio
 id ram
 id ram_percentage
 id ram_seekBar
-id rb9mjbueceg8
 id rcb8vdq69j48
 id rctytmjkhvq8
 id rea8v3wm5z8e
@@ -1023,7 +1028,6 @@ id rfh0v5aa39v9
 id rfikhe3uf1u
 id right_icon
 id right_side
-id rijdf8am3vt
 id rj3n2jhecxuq
 id rk4h9uxmdwns
 id rkrybo4jfbcd
@@ -1048,7 +1052,6 @@ id screen
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
-id sdg43azv1k
 id search_badge
 id search_bar
 id search_button
@@ -1116,7 +1119,6 @@ id uniform
 id up
 id useLogo
 id user_id
-id v1arsd1bj
 id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
 id view_tree_saved_state_registry_owner

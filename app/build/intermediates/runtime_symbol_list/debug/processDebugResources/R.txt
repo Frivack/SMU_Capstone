@@ -676,6 +676,8 @@ int drawable layout_light_purple_shaodw 0x7f0700a4
 int drawable layout_line 0x7f070078
 int drawable layout_purple 0x7f070079
 int drawable layout_rectangle 0x7f07007a
+int drawable layout_rectangle_button 0x7f0700a7
+int drawable layout_rectangle_pressed 0x7f0700a8
 int drawable layout_red 0x7f0700a5
 int drawable layout_whiteshadow 0x7f07007b
 int drawable line 0x7f07009c
@@ -897,6 +899,12 @@ int id img36 0x7f08009a
 int id img37 0x7f08009b
 int id img38 0x7f08009c
 int id img39 0x7f08009d
+int id img_account 0x7f0801b1
+int id img_newbuild 0x7f0801b2
+int id img_notice 0x7f0801b3
+int id img_review 0x7f0801b4
+int id img_setting 0x7f0801b5
+int id img_support 0x7f0801b6
 int id info 0x7f08009e
 int id info_edit 0x7f0801a7
 int id inspection_slot_table_set 0x7f08009f
@@ -982,8 +990,6 @@ int id progress_circular 0x7f0800c3
 int id progress_horizontal 0x7f0800c4
 int id r0t9pbja9ov3 0x7f0800c5
 int id r0u75olz1thgn 0x7f0800c6
-int id r1d7rdjqb2bj 0x7f0800c7
-int id r1d7rsd1bj 0x7f0800c8
 int id r5bgxagn6cgp 0x7f0800c9
 int id r68pczcg218h 0x7f0800ca
 int id r87y1qmmazxq 0x7f0800cb
@@ -993,7 +999,6 @@ int id radio 0x7f0800ce
 int id ram 0x7f080168
 int id ram_percentage 0x7f080169
 int id ram_seekBar 0x7f08016a
-int id rb9mjbueceg8 0x7f0800cf
 int id rcb8vdq69j48 0x7f0800d0
 int id rctytmjkhvq8 0x7f0800d1
 int id rea8v3wm5z8e 0x7f0800d2
@@ -1022,7 +1027,6 @@ int id rfh0v5aa39v9 0x7f0800d4
 int id rfikhe3uf1u 0x7f0800d5
 int id right_icon 0x7f0800d6
 int id right_side 0x7f0800d7
-int id rijdf8am3vt 0x7f0800d8
 int id rj3n2jhecxuq 0x7f0800d9
 int id rk4h9uxmdwns 0x7f0800da
 int id rkrybo4jfbcd 0x7f0800db
@@ -1047,7 +1051,6 @@ int id screen 0x7f0800ed
 int id scrollIndicatorDown 0x7f0800ee
 int id scrollIndicatorUp 0x7f0800ef
 int id scrollView 0x7f0800f0
-int id sdg43azv1k 0x7f0800f1
 int id search_badge 0x7f0800f2
 int id search_bar 0x7f0800f3
 int id search_button 0x7f0800f4
@@ -1115,7 +1118,6 @@ int id uniform 0x7f080128
 int id up 0x7f080129
 int id useLogo 0x7f08012a
 int id user_id 0x7f080190
-int id v1arsd1bj 0x7f08012b
 int id view_tree_lifecycle_owner 0x7f08012c
 int id view_tree_on_back_pressed_dispatcher_owner 0x7f08012d
 int id view_tree_saved_state_registry_owner 0x7f08012e

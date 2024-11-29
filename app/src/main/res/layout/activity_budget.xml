@@ -8,7 +8,7 @@
         android:id="@+id/buget_bg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background"
+        android:background="@drawable/layout_background"
         android:elevation="4dp">
         <RelativeLayout
             android:id="@+id/setting"
@@ -17,7 +17,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="1dp"
             android:gravity="center_horizontal"
-            android:background="@drawable/layout_background">
+            android:background="@drawable/layout_title_background">
             <TextView
                 android:id="@+id/budget_sett"
                 android:layout_width="133dp"
@@ -197,7 +197,7 @@
                         />
                 </RelativeLayout>
                 <RelativeLayout
-                    android:id="@+id/layout_4"
+                    android:id="@+id/layout_3"
                     android:layout_width="match_parent"
                     android:layout_height="51dp"
                     android:layout_marginTop="9dp">

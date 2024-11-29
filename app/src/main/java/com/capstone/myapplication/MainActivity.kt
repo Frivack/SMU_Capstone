@@ -10,7 +10,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
-        // 버튼이나 뷰 찾기
+        // 뷰 찾기
         val page = findViewById<ImageView>(R.id.start_main_page)
 
         // 클릭 리스너 설정

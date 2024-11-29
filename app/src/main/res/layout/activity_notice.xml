@@ -3,14 +3,14 @@
     android:id="@+id/bd_background"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/background"
+    android:background="@drawable/layout_background"
     android:elevation="4dp">
     <RelativeLayout
         android:id="@+id/frame_1"
         android:layout_width="match_parent"
         android:layout_height="59dp"
         android:layout_alignParentTop="true"
-        android:background="@drawable/layout_background">
+        android:background="@drawable/layout_title_background">
         <TextView
             android:id="@+id/bd_estimate"
             android:layout_width="wrap_content"

@@ -28,9 +28,8 @@
         android:testOnly="true"
         android:theme="@style/Theme.EngUniFriend" >
         <activity
-            android:name="com.capstone.myapplication.BudgetPage"
+            android:name="com.capstone.myapplication.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.EngUniFriend" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,6 +37,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.capstone.myapplication.MainPage" />
         <activity
             android:name="androidx.compose.ui.tooling.PreviewActivity"
             android:exported="true" />

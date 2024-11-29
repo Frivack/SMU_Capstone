@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@drawable/background"
+        android:background="@drawable/layout_background"
         android:paddingTop="9dp"
         android:elevation="4dp">
         <LinearLayout
@@ -55,7 +55,7 @@
                     android:layout_marginEnd="40dp"
                     android:layout_marginStart="40dp"
                     android:layout_gravity="end"
-                    android:background="@drawable/layout_background">
+                    android:background="@drawable/layout_title_background">
                     <TextView
                         android:id="@+id/mainpage_id"
                         android:textColor="#411A66"
@@ -83,17 +83,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:background="@drawable/layout_rectangle"
+                    android:background="@drawable/layout_rectangle_button"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
                     android:orientation="vertical">
                     <ImageView
-                        android:id="@+id/r1d7rdjqb2bj"
+                        android:id="@+id/img_newbuild"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/img_whatido85"
                         android:scaleType="fitXY"
-                        android:onClick="onClickMainToBuild"
                         />
                     <TextView
                         android:id="@+id/rea8v3wm5z8e"
@@ -114,16 +115,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:background="@drawable/layout_rectangle"
+                    android:background="@drawable/layout_rectangle_button"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:elevation="4dp"
                     android:orientation="vertical">
                     <ImageView
-                        android:id="@+id/r1d7rsd1bj"
+                        android:id="@+id/img_account"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/img_account"
                         android:scaleType="fitXY"
-                        android:onClick="onClickMainToBuild"
                         />
                     <TextView
                         android:id="@+id/r8t7zo8z5auc"
@@ -147,17 +149,17 @@
                     android:id="@+id/rzic1x5yyhc"
                     android:layout_width="121dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/layout_rectangle"
-                    android:elevation="4dp"
+                    android:background="@drawable/layout_rectangle_button"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:orientation="vertical"
                     android:gravity="center">
                     <ImageView
-                        android:id="@+id/v1arsd1bj"
+                        android:id="@+id/img_review"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/img_account"
                         android:scaleType="fitXY"
-                        android:onClick="onClickMainToBuild"
                         />
                     <TextView
                         android:id="@+id/deving2"
@@ -178,10 +180,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:background="@drawable/layout_rectangle"
+                    android:background="@drawable/layout_rectangle_button"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:orientation="vertical">
                     <ImageView
-                        android:id="@+id/rijdf8am3vt"
+                        android:id="@+id/img_setting"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/img_automatic85"
@@ -209,11 +213,13 @@
                     android:id="@+id/rphm3k8j1duo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/layout_rectangle"
+                    android:background="@drawable/layout_rectangle_button"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:orientation="vertical"
                     android:gravity="center">
                     <ImageView
-                        android:id="@+id/sdg43azv1k"
+                        android:id="@+id/img_support"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/img_support85"
@@ -240,19 +246,21 @@
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
                     android:gravity="center_horizontal"
-                    android:background="@drawable/layout_rectangle"
+                    android:background="@drawable/layout_rectangle_button"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:elevation="4dp"
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:orientation="vertical">
+
                     <ImageView
-                        android:id="@+id/rb9mjbueceg8"
+                        android:id="@+id/img_notice"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/img_event85"
                         android:scaleType="fitXY"
-                        android:onClick="onClickMainToSetting"
-                        />
+                        android:src="@drawable/img_event85" />
+
                     <TextView
                         android:id="@+id/rnwd0rymnwfd"
                         android:textColor="#000000"
@@ -279,7 +287,6 @@
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:text="나만의 컴퓨터 만들러 가기"
-                    android:onClick="onClickMainToBuild"
                     />
             </LinearLayout>
 
@@ -287,7 +294,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
-                android:background="@drawable/background"
+                android:background="@drawable/layout_background"
                 android:layout_marginHorizontal="16dp"
                 android:orientation="horizontal">
                 <ImageView android:id="@+id/imageHomeOne"

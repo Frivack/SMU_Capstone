@@ -4,7 +4,7 @@
     android:id="@+id/some_id"
     android:layout_width="match_parent"
     android:layout_height="1996dp"
-    android:background="@drawable/background"
+    android:background="@drawable/layout_background"
     android:orientation="vertical">
     <RelativeLayout
         android:id="@+id/main_frame"

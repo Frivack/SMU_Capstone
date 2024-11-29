@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToOutline="true"
-    android:background="@drawable/background"
+    android:background="@drawable/layout_background"
     android:orientation="vertical">
     <RelativeLayout
         android:id="@+id/writeing"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@drawable/layout_background"
+        android:background="@drawable/layout_title_background"
         android:orientation="vertical">
         <TextView
             android:id="@+id/reviewview"
@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@drawable/background"
+        android:background="@drawable/layout_background"
         android:orientation="vertical">
 
         <TextView

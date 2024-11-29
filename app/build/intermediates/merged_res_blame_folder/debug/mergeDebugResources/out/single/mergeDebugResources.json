@@ -88,6 +88,10 @@
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_camera.png"
     },
     {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_layout_rectangle_button.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\layout_rectangle_button.xml"
+    },
+    {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_layout_background.xml.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\layout_background.xml"
     },
@@ -160,6 +164,10 @@
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\xml\\backup_rules.xml"
     },
     {
+        "merged": "com.capstone.myapplication.app-debug-50:/layout_activity_mainpage.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/layout/activity_mainpage.xml"
+    },
+    {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_start.png.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_start.png"
     },
@@ -182,6 +190,10 @@
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_black_outline.xml.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\black_outline.xml"
+    },
+    {
+        "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_layout_rectangle_pressed.xml.flat",
+        "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\layout_rectangle_pressed.xml"
     },
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\mipmap-mdpi_ic_launcher.webp.flat",
@@ -268,10 +280,6 @@
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\line.xml"
     },
     {
-        "merged": "com.capstone.myapplication.app-debug-50:/layout_activity_start.xml.flat",
-        "source": "com.capstone.myapplication.app-main-52:/layout/activity_start.xml"
-    },
-    {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_white_round_with_black_outline.xml.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\white_round_with_black_outline.xml"
     },
@@ -326,6 +334,10 @@
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_popular.png.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-52:\\drawable\\img_popular.png"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-50:/drawable_layout_rectangle_pressed.xml.flat",
+        "source": "com.capstone.myapplication.app-main-52:/drawable/layout_rectangle_pressed.xml"
     },
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-50:\\drawable_img_thumbs_up.png.flat",
