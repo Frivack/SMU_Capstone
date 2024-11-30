@@ -11,6 +11,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <string name="account">Account</string>
+    <string name="account_setting">계정 설정</string>
     <string name="app_name">EngUniFriend</string>
     <string name="ask">문의하기</string>
     <string name="assign_by_comp">부품 별 예산 할당하기</string>
@@ -19,7 +20,9 @@
     <string name="cooler">쿨러</string>
     <string name="cpu">CPU</string>
     <string name="current_id_text">현재 로그인 ID:</string>
+    <string name="darkmode">다크모드</string>
     <string name="delete">Delete</string>
+    <string name="developer">제작자</string>
     <string name="done">수정완료</string>
     <string name="donot">\n탈퇴 후에는 해당 계정과 관련된 \n모든 데이터가 삭제됩니다.\n신중하게 결정해주세요.\n\n\n아래 버튼을 누르면 회원 탈퇴가 진행되며, \n탈퇴 즉시 서비스를 이용할 수 없게 됩니다.</string>
     <string name="earphone">이어폰</string>
@@ -28,6 +31,7 @@
     <string name="edit_name">이름 수정</string>
     <string name="email">Email</string>
     <string name="email_example">hello@example.com</string>
+    <string name="end">완료</string>
     <string name="estimate">견적</string>
     <string name="fan">팬</string>
     <string name="forgot_id">계정을 잊으셨나요?</string>
@@ -35,14 +39,27 @@
     <string name="hard">저장장치</string>
     <string name="headset">헤드셋</string>
     <string name="id">ID</string>
+    <string name="img_build">build</string>
+    <string name="img_comment">comment</string>
+    <string name="img_email">email</string>
+    <string name="img_face_id">faceID</string>
+    <string name="img_review">review</string>
+    <string name="img_shield">shield</string>
+    <string name="img_start_image">start_image</string>
+    <string name="img_thumbsup">thumbsup</string>
+    <string name="img_user">user</string>
     <string name="info_edit">정보 수정</string>
     <string name="input_name">이름을 입력해 주세요.</string>
     <string name="input_phone">휴대폰 번호를 입력해주세요.</string>
+    <string name="input_total_budget">총 예산 입력</string>
     <string name="keyboard">키보드</string>
     <string name="leave">회원탈퇴</string>
     <string name="left_budget">남은 예산:</string>
     <string name="login">Login</string>
     <string name="logout">로그아웃</string>
+    <string name="lowbar_build">build</string>
+    <string name="lowbar_home">home</string>
+    <string name="lowbar_setting">setting</string>
     <string name="mainboard">메인보드</string>
     <string name="makeiteasy">쉽게 여러분의 컴퓨터를\n같이 만들어봐요!</string>
     <string name="mayi">무엇이 궁금하세요?\n편하게 질문해주세요.</string>
@@ -50,6 +67,7 @@
     <string name="mouse">마우스</string>
     <string name="notice">Notice</string>
     <string name="notice_text">공지사항</string>
+    <string name="old_mode">고령자 모드 (글씨체가 확장)</string>
     <string name="password">Password</string>
     <string name="password_check">비밀번호를 확인하세요.</string>
     <string name="password_edit">비밀번호 수정</string>
@@ -70,10 +88,12 @@
     <string name="review_empty_title"/>
     <string name="reviewview">Review</string>
     <string name="servicecenter">Service Center</string>
+    <string name="setting">Setting</string>
     <string name="sign_in">가입하기</string>
     <string name="soundcard">사운드카드</string>
     <string name="speaker">스피커</string>
     <string name="summit">Summit</string>
+    <string name="toggle_button">toggle_button</string>
     <string name="total_budget">총 예산:</string>
     <string name="user_id">user_id</string>
     <string name="userout">회원 탈퇴</string>
@@ -138,6 +158,10 @@
     <style name="char20">
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">#CA9EF4</item>
+    </style>
+    <style name="char20brown">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#80000000</item>
     </style>
     <style name="char20green">
         <item name="android:textSize">20sp</item>

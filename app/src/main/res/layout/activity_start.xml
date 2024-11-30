@@ -8,6 +8,7 @@
         android:id="@+id/start_main_page"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="@string/img_start_image"
         android:src="@drawable/img_start"/>
 
 </LinearLayout>

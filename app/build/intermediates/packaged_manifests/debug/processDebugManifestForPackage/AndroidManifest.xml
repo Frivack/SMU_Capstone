@@ -8,6 +8,8 @@
         android:minSdkVersion="24"
         android:targetSdkVersion="34" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <permission
         android:name="com.capstone.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
@@ -37,7 +39,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.capstone.myapplication.AccountPage" />
+        <activity android:name="com.capstone.myapplication.BudgetPage" />
+        <activity android:name="com.capstone.myapplication.BuildPage" />
+        <activity android:name="com.capstone.myapplication.LoginPage" />
         <activity android:name="com.capstone.myapplication.MainPage" />
+        <activity android:name="com.capstone.myapplication.NoticePage" />
+        <activity android:name="com.capstone.myapplication.ReviewPage" />
+        <activity android:name="com.capstone.myapplication.SettingPage" />
+        <activity android:name="com.capstone.myapplication.SupportPage" />
+        <activity android:name="com.capstone.myapplication.WritePage" />
         <activity
             android:name="androidx.compose.ui.tooling.PreviewActivity"
             android:exported="true" />

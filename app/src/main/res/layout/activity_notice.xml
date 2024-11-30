@@ -25,7 +25,6 @@
     </RelativeLayout>
 
     <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/frame_5"
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -46,14 +45,12 @@
         android:id="@+id/rctytmjkhvq8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:elevation="4dp">
 
         <LinearLayout
             android:id="@+id/frame_3"
             android:layout_width="match_parent"
             android:layout_height="1840dp"
-            android:layout_alignParentTop="true"
             android:layout_marginTop="160dp"
             android:orientation="vertical">
 

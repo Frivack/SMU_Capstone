@@ -43,6 +43,7 @@
             android:layout_width="64dp"
             android:layout_height="32dp"
             android:layout_centerVertical="true"
+            android:contentDescription="@string/img_email"
             android:src="@drawable/img_mail"/>
         <EditText
             android:layout_width="match_parent"
@@ -65,6 +66,7 @@
             android:layout_width="64dp"
             android:layout_height="32dp"
             android:layout_centerVertical="true"
+            android:contentDescription="@string/img_shield"
             android:src="@drawable/img_shield"/>
         <EditText
             android:layout_width="match_parent"
@@ -87,6 +89,7 @@
             android:layout_width="64dp"
             android:layout_height="32dp"
             android:layout_centerVertical="true"
+            android:contentDescription="@string/img_face_id"
             android:src="@drawable/img_face_id"/>
         <EditText
             android:layout_width="match_parent"
@@ -109,6 +112,7 @@
             android:layout_width="64dp"
             android:layout_height="32dp"
             android:layout_centerVertical="true"
+            android:contentDescription="@string/img_face_id"
             android:src="@drawable/img_face_id"/>
         <EditText
             android:layout_width="match_parent"
@@ -116,6 +120,7 @@
             android:layout_marginStart="60dp"
             android:layout_marginEnd="10dp"
             android:hint="@string/input_phone"
+            android:inputType="phone"
             android:background="@null"
             style="@style/char15edit"/>
     </RelativeLayout>
@@ -127,14 +132,12 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/layout_dark_purple">
         <TextView
-            android:id="@+id/some_id"
+            android:id="@+id/done_button"
             android:layout_width="57dp"
             android:layout_height="18dp"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
             android:text="@string/done"
             android:textAppearance="@style/char15white"
-            android:gravity="top"
             />
     </RelativeLayout>
 </LinearLayout>

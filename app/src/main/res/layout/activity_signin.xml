@@ -173,7 +173,7 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/layout_dark_purple">
         <TextView
-            android:id="@+id/some_id"
+            android:id="@+id/join"
             android:layout_width="57dp"
             android:layout_height="18dp"
             android:layout_centerVertical="true"

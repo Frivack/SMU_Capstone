@@ -8,7 +8,6 @@
     android:elevation="4dp"
     >
     <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/lg_login_panel"
         android:layout_width="320dp"
         android:layout_height="59dp"
@@ -30,7 +29,6 @@
     </RelativeLayout>
 
     <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/some_id"
         android:layout_width="321dp"
         android:layout_height="443dp"
@@ -166,11 +164,11 @@
         <!-- 첫 번째 이미지 뷰 -->
         <ImageView
             android:id="@+id/imageHomeOne"
-
             android:layout_height="50dp"
             android:layout_width="0dp"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:contentDescription="@string/lowbar_home"
             android:src="@drawable/img_home" />
 
         <!-- 첫 번째 선 -->
@@ -182,15 +180,16 @@
 
         <!-- 두 번째 이미지 뷰 -->
 
-        <!-- 두 번째 선 -->
         <ImageView
             android:id="@+id/imageWhatidoOne"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:contentDescription="@string/lowbar_build"
             android:src="@drawable/img_what_i_do" />
 
+        <!-- 두 번째 선 -->
         <View
             android:id="@+id/lineLineoneThree"
             android:layout_height="match_parent"
@@ -204,6 +203,7 @@
             android:layout_width="0dp"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:contentDescription="@string/lowbar_setting"
             android:src="@drawable/img_automatic" />
     </LinearLayout>
 </RelativeLayout>

@@ -70,4 +70,24 @@
     <string name="mayi">무엇이 궁금하세요?\n편하게 질문해주세요.</string>
     <string name="ask">문의하기</string>
     <string name="reviewview">Review</string>
+    <string name="lowbar_home">home</string>
+    <string name="lowbar_build">build</string>
+    <string name="lowbar_setting">setting</string>
+    <string name="img_start_image">start_image</string>
+    <string name="setting">Setting</string>
+    <string name="darkmode">다크모드</string>
+    <string name="toggle_button">toggle_button</string>
+    <string name="old_mode">고령자 모드 (글씨체가 확장)</string>
+    <string name="account_setting">계정 설정</string>
+    <string name="developer">제작자</string>
+    <string name="img_thumbsup">thumbsup</string>
+    <string name="img_comment">comment</string>
+    <string name="img_user">user</string>
+    <string name="input_total_budget">총 예산 입력</string>
+    <string name="img_email">email</string>
+    <string name="img_shield">shield</string>
+    <string name="img_face_id">faceID</string>
+    <string name="img_build">build</string>
+    <string name="img_review">review</string>
+    <string name="end">완료</string>
 </resources>
