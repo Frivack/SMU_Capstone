@@ -45,18 +45,36 @@
             android:text="@string/budget"
             android:textAppearance="@style/char18black" />
 
-        <EditText
-            android:id="@+id/budget_input"
+        <TextView
+            android:id="@+id/total_budget"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="18dp"
             android:layout_marginBottom="-4dp"
             android:layout_marginStart="57dp"
             android:layout_marginEnd="30dp"
-            android:hint="24132"
-            android:inputType="number"
-            android:textColor="#C99DF3"
-            android:textSize="16sp" />
+            android:textAppearance="@style/char16black" />
+
+        <TextView
+            android:id="@+id/bd_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="56dp"
+            android:gravity="top"
+            android:text="@string/leftudget"
+            android:textAppearance="@style/char18black" />
+
+        <TextView
+            android:id="@+id/left_budget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="59dp"
+            android:layout_marginBottom="-4dp"
+            android:layout_marginStart="94dp"
+            android:layout_marginEnd="30dp"
+            android:textAppearance="@style/char16black" />
     </RelativeLayout>
 
     <ScrollView
@@ -87,6 +105,27 @@
                     android:background="@drawable/ic_launcher_foreground"
                     android:elevation="4dp"
                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/compnent31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/component"
+                        android:textAppearance="@style/char16black"/>
+                    <TextView
+                        android:id="@+id/price31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@null"
+                        android:textAppearance="@style/char16black"/>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/frame_32"
@@ -103,6 +142,27 @@
                     android:background="@drawable/ic_launcher_foreground"
                     android:elevation="4dp"
                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/compnent32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/component"
+                        android:textAppearance="@style/char16black"/>
+                    <TextView
+                        android:id="@+id/price32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@null"
+                        android:textAppearance="@style/char16black"/>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/frame_33"
@@ -119,6 +179,27 @@
                     android:background="@drawable/ic_launcher_foreground"
                     android:elevation="4dp"
                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/compnent33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/component"
+                        android:textAppearance="@style/char16black"/>
+                    <TextView
+                        android:id="@+id/price33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@null"
+                        android:textAppearance="@style/char16black"/>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/frame_34"
@@ -135,6 +216,27 @@
                     android:background="@drawable/ic_launcher_foreground"
                     android:elevation="4dp"
                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/compnent34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/component"
+                        android:textAppearance="@style/char16black"/>
+                    <TextView
+                        android:id="@+id/price34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@null"
+                        android:textAppearance="@style/char16black"/>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/frame_35"
@@ -151,6 +253,27 @@
                     android:background="@drawable/ic_launcher_foreground"
                     android:elevation="4dp"
                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/compnent35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/component"
+                        android:textAppearance="@style/char16black"/>
+                    <TextView
+                        android:id="@+id/price35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@null"
+                        android:textAppearance="@style/char16black"/>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/frame_36"
@@ -167,6 +290,27 @@
                     android:background="@drawable/ic_launcher_foreground"
                     android:elevation="4dp"
                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/compnent36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/component"
+                        android:textAppearance="@style/char16black"/>
+                    <TextView
+                        android:id="@+id/price36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@null"
+                        android:textAppearance="@style/char16black"/>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/frame_37"
@@ -183,6 +327,27 @@
                     android:background="@drawable/ic_launcher_foreground"
                     android:elevation="4dp"
                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/compnent37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/component"
+                        android:textAppearance="@style/char16black"/>
+                    <TextView
+                        android:id="@+id/price37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@null"
+                        android:textAppearance="@style/char16black"/>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/frame_38"
@@ -199,6 +364,27 @@
                     android:background="@drawable/ic_launcher_foreground"
                     android:elevation="4dp"
                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/compnent38"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/component"
+                        android:textAppearance="@style/char16black"/>
+                    <TextView
+                        android:id="@+id/price38"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@null"
+                        android:textAppearance="@style/char16black"/>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/frame_39"
@@ -215,6 +401,27 @@
                     android:background="@drawable/ic_launcher_foreground"
                     android:elevation="4dp"
                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/compnent39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/component"
+                        android:textAppearance="@style/char16black"/>
+                    <TextView
+                        android:id="@+id/price39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@null"
+                        android:textAppearance="@style/char16black"/>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/frame_310"
@@ -231,6 +438,27 @@
                     android:background="@drawable/ic_launcher_foreground"
                     android:elevation="4dp"
                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/compnent310"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/component"
+                        android:textAppearance="@style/char16black"/>
+                    <TextView
+                        android:id="@+id/price310"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@null"
+                        android:textAppearance="@style/char16black"/>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/frame_311"
@@ -263,6 +491,27 @@
                     android:background="@drawable/ic_launcher_foreground"
                     android:elevation="4dp"
                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/compnent312"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/component"
+                        android:textAppearance="@style/char16black"/>
+                    <TextView
+                        android:id="@+id/price312"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@null"
+                        android:textAppearance="@style/char16black"/>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/frame_313"
@@ -279,6 +528,27 @@
                     android:background="@drawable/ic_launcher_foreground"
                     android:elevation="4dp"
                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/compnent313"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/component"
+                        android:textAppearance="@style/char16black"/>
+                    <TextView
+                        android:id="@+id/price313"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@null"
+                        android:textAppearance="@style/char16black"/>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/frame_314"
@@ -295,6 +565,27 @@
                     android:background="@drawable/ic_launcher_foreground"
                     android:elevation="4dp"
                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/compnent314"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/component"
+                        android:textAppearance="@style/char16black"/>
+                    <TextView
+                        android:id="@+id/price314"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@null"
+                        android:textAppearance="@style/char16black"/>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/frame_315"
@@ -311,6 +602,27 @@
                     android:background="@drawable/ic_launcher_foreground"
                     android:elevation="4dp"
                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/compnent315"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/component"
+                        android:textAppearance="@style/char16black"/>
+                    <TextView
+                        android:id="@+id/price315"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@null"
+                        android:textAppearance="@style/char16black"/>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/frame_316"
@@ -327,6 +639,27 @@
                     android:background="@drawable/ic_launcher_foreground"
                     android:elevation="4dp"
                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/compnent316"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/component"
+                        android:textAppearance="@style/char16black"/>
+                    <TextView
+                        android:id="@+id/price316"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@null"
+                        android:textAppearance="@style/char16black"/>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/frame_317"
@@ -343,6 +676,27 @@
                     android:background="@drawable/ic_launcher_foreground"
                     android:elevation="4dp"
                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/compnent317"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/component"
+                        android:textAppearance="@style/char16black"/>
+                    <TextView
+                        android:id="@+id/price317"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@null"
+                        android:textAppearance="@style/char16black"/>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/frame_318"
@@ -359,6 +713,27 @@
                     android:background="@drawable/ic_launcher_foreground"
                     android:elevation="4dp"
                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:id="@+id/compnent318"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/component"
+                        android:textAppearance="@style/char16black"/>
+                    <TextView
+                        android:id="@+id/price318"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@null"
+                        android:textAppearance="@style/char16black"/>
+                </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

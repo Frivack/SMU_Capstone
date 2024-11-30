@@ -5,7 +5,7 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="summit">Summit</string>
-    <string name="forgot_id">계정을 잊으셨나요?</string>
+    <string name="new_id">신규 계정 생성</string>
     <string name="estimate">견적</string>
     <string name="budget">예산: </string>
     <string name="id">ID</string>
@@ -90,4 +90,6 @@
     <string name="img_build">build</string>
     <string name="img_review">review</string>
     <string name="end">완료</string>
+    <string name="leftudget">남은 예산:</string>
+    <string name="component">선택된 부품 없음</string>
 </resources>

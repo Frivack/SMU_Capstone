@@ -49,6 +49,7 @@
         <activity android:name="com.capstone.myapplication.SettingPage" />
         <activity android:name="com.capstone.myapplication.SupportPage" />
         <activity android:name="com.capstone.myapplication.WritePage" />
+        <activity android:name="com.capstone.myapplication.SignInPage" />
         <activity
             android:name="androidx.compose.ui.tooling.PreviewActivity"
             android:exported="true" />

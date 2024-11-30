@@ -1,9 +1,11 @@
 package com.capstone.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
+import android.widget.RelativeLayout
 import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
@@ -14,7 +16,7 @@ class BudgetPage : AppCompatActivity() {
     // 변수 초기화
     private lateinit var totalBudgetEdit: EditText // 총 예산 입력을 위한 EditText
     private lateinit var remainingBudgetText: TextView // 남은 예산을 표시할 TextView
-    private var totalBudget: Int = 10000 // 초기 총 예산
+    private var totalBudget: Int = 0 // 초기 총 예산
     private var remainingBudget: Int = totalBudget
 
     // SeekBar와 TextView를 저장할 리스트
@@ -99,6 +101,23 @@ class BudgetPage : AppCompatActivity() {
             }
         })
 
+        val currentBudget = intent.getStringExtra("CURRENT_BUDGET")
+        val totalBudgetEdit = findViewById<EditText>(R.id.total_budget_edit)
+        totalBudgetEdit.setText(currentBudget)
+
+        // 완료 버튼 클릭 시 데이터 반환
+        val finishButton = findViewById<RelativeLayout>(R.id.finish_button)
+        finishButton.setOnClickListener {
+            val totalBudget = totalBudgetEdit.text.toString()
+            val remainingBudgetString = remainingBudgetText.text.toString()
+            val extractedBudget = remainingBudgetString.replace("[^\\d]".toRegex(), "").toIntOrNull()
+
+            val resultIntent = Intent()
+            resultIntent.putExtra("TOTAL_BUDGET", totalBudget)
+            resultIntent.putExtra("REMAINING_BUDGET", extractedBudget.toString())
+            setResult(RESULT_OK, resultIntent)
+            finish() // 현재 액티비티 종료
+        }
     }
 
     private fun setupSeekBar(seekBar: SeekBar, valueText: TextView) {

@@ -25,19 +25,4 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
-
-    private fun setupSwichButtons() {
-        val build = findViewById<LinearLayout>(R.id.layout_build)
-        val account = findViewById<LinearLayout>(R.id.layout_account)
-        val review = findViewById<LinearLayout>(R.id.layout_review)
-        val setting = findViewById<LinearLayout>(R.id.layout_setting)
-        val support = findViewById<LinearLayout>(R.id.layout_support)
-        val notice = findViewById<LinearLayout>(R.id.layout_notice)
-
-        val build_button = findViewById<LinearLayout>(R.id.layout_build_button)
-
-        val lowbarHome = findViewById<ImageView>(R.id.imageHomeOne)
-        val lowbarBuild = findViewById<ImageView>(R.id.imageWhatidoOne)
-    }
 }

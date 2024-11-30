@@ -1,20 +1,24 @@
 package com.capstone.myapplication
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.capstone.DatabaseHelper
 import com.example.capstone.Optimizer
-import com.mysql.jdbc.log.Log
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.w3c.dom.Text
 
 class BuildPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buildpage)
+
+        setupSwichButtons()
     }
 
     fun msql(view: View) {
@@ -49,6 +53,36 @@ class BuildPage : AppCompatActivity() {
                     //resultTextView.text = resultText.toString()
                 }
             }
+        }
+    }
+
+    companion object {
+        const val REQUEST_CODE_BUDGET = 1 // 고유한 요청 코드
+    }
+
+    private fun setupSwichButtons()
+    {
+        val budget_layout = findViewById<RelativeLayout>(R.id.frame_2)
+
+        // 클릭 이벤트
+        budget_layout.setOnClickListener {
+            val intent = Intent(this, BudgetPage::class.java)
+            startActivityForResult(intent, REQUEST_CODE_BUDGET)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            // BudgetPage에서 반환된 데이터 처리
+            val totalBudget = data?.getStringExtra("TOTAL_BUDGET")
+            val remainingBudget = data?.getStringExtra("REMAINING_BUDGET")
+            // 반환된 데이터를 화면에 표시
+            val budgetInput = findViewById<TextView>(R.id.total_budget)
+            budgetInput.setText(totalBudget)
+            // 추가적으로 남은 예산을 표시하려면 적절한 View에 설정
+            val budgetLeft = findViewById<TextView>(R.id.left_budget)
+            budgetLeft.setText(remainingBudget)
         }
     }
 }

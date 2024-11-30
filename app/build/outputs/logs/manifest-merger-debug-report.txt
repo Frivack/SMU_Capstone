@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml:2:1-39:12
+ADDED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml:2:1-40:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\lmj\.gradle\caches\transforms-4\eecdc3896305a0070070500e62751ea5\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\lmj\.gradle\caches\transforms-4\0abb123e184858e6bfd111aea074367b\transformed\appcompat-1.7.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.material3:material3-android:1.2.1] C:\Users\lmj\.gradle\caches\transforms-4\c0c2659d5868f1a6ec538857ab139905\transformed\material3-release\AndroidManifest.xml:17:1-22:12
@@ -77,8 +77,8 @@ ADDED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidM
 	android:name
 		ADDED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml:7:5-37:19
-INJECTED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml:7:5-37:19
+ADDED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml:7:5-38:19
+INJECTED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml:7:5-38:19
 MERGED from [androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\lmj\.gradle\caches\transforms-4\5d09f84b4d9da196ea5d8315dabfdb7b\transformed\ui-tooling-release\AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\lmj\.gradle\caches\transforms-4\5d09f84b4d9da196ea5d8315dabfdb7b\transformed\ui-tooling-release\AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\lmj\.gradle\caches\transforms-4\eb54f968651d8a0882bd0365818996fa\transformed\ui-test-manifest-1.6.6\AndroidManifest.xml:22:5-26:19
@@ -175,6 +175,10 @@ activity#com.capstone.myapplication.WritePage
 ADDED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml:36:9-46
 	android:name
 		ADDED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml:36:19-44
+activity#com.capstone.myapplication.SignInPage
+ADDED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml:37:9-47
+	android:name
+		ADDED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml:37:19-45
 uses-sdk
 INJECTED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\lmj\AndroidStudioProjects\SMU_Capstone\app\src\main\AndroidManifest.xml

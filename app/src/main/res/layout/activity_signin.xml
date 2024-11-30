@@ -45,6 +45,7 @@
             android:layout_centerVertical="true"
             android:src="@drawable/img_mail"/>
         <EditText
+            android:id="@+id/text_email"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="60dp"
@@ -67,6 +68,7 @@
             android:layout_centerVertical="true"
             android:src="@drawable/img_shield"/>
         <EditText
+            android:id="@+id/text_password"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="60dp"
@@ -89,6 +91,7 @@
             android:layout_centerVertical="true"
             android:src="@drawable/img_secure"/>
         <EditText
+            android:id="@+id/text_password_check"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="60dp"
@@ -111,6 +114,7 @@
             android:layout_centerVertical="true"
             android:src="@drawable/img_face_id"/>
         <EditText
+            android:id="@+id/text_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="60dp"
@@ -133,6 +137,7 @@
             android:layout_centerVertical="true"
             android:src="@drawable/img_face_id"/>
         <EditText
+            android:id="@+id/text_phone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="60dp"
@@ -141,6 +146,7 @@
             android:background="@null"
             style="@style/char15edit"/>
     </RelativeLayout>
+    <!--
     <RelativeLayout
         android:id="@+id/frame_phone_check"
         android:layout_width="match_parent"
@@ -149,6 +155,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/layout_input">
         <EditText
+            android:id="@+id/text_check"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
@@ -165,6 +172,7 @@
             android:gravity="center"
             />
     </RelativeLayout>
+    !-->
     <RelativeLayout
         android:id="@+id/sign_in_button"
         android:layout_width="match_parent"

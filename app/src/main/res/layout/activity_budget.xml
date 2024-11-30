@@ -1,107 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/buget_bg"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:fillViewport="true">
+    android:background="@drawable/layout_background"
+    android:elevation="4dp">
     <RelativeLayout
-        android:id="@+id/buget_bg"
+        android:id="@+id/setting"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="1dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/layout_title_background">
+        <TextView
+            android:id="@+id/budget_sett"
+            android:layout_width="133dp"
+            android:layout_height="27dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:text="@string/budget_sett"
+            android:textAppearance="@style/char20"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frame_20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/layout_background"
-        android:elevation="4dp">
-        <RelativeLayout
-            android:id="@+id/setting"
-            android:layout_width="match_parent"
-            android:layout_height="59dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="1dp"
-            android:gravity="center_horizontal"
-            android:background="@drawable/layout_title_background">
-            <TextView
-                android:id="@+id/budget_sett"
-                android:layout_width="133dp"
-                android:layout_height="27dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="16dp"
-                android:text="@string/budget_sett"
-                android:textAppearance="@style/char20"/>
-        </RelativeLayout>
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/layout_bigbg">
 
         <RelativeLayout
-            android:id="@+id/frame_20"
+            android:id="@+id/frame_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="76dp"
-            android:background="@drawable/layout_bigbg">
-
-            <RelativeLayout
-                android:id="@+id/frame_2"
-                android:layout_width="match_parent"
+            android:layout_alignParentTop="true">
+            <TextView
+                android:id="@+id/total_budget"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true">
-                <TextView
-                    android:id="@+id/total_budget"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="13dp"
-                    android:text="@string/total_budget"
-                    android:textAppearance="@style/char20purple"
-                    android:gravity="top"
-                    />
-                <EditText
-                    android:id="@+id/total_budget_edit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/total_budget"
-                    android:layout_marginStart="8dp"
-                    android:layout_alignBaseline="@id/total_budget"
-                    android:hint="@string/input_total_budget"
-                    android:textSize="18sp"
-                    android:inputType="number"
-                    android:gravity="center_vertical" />
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="13dp"
+                android:text="@string/total_budget"
+                android:textAppearance="@style/char20purple"
+                android:gravity="top"
+                />
+            <EditText
+                android:id="@+id/total_budget_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/total_budget"
+                android:layout_marginStart="8dp"
+                android:layout_alignBaseline="@id/total_budget"
+                android:hint="@string/input_total_budget"
+                android:textSize="18sp"
+                android:inputType="number"
+                android:gravity="center_vertical" />
 
-                <ImageView
-                    android:id="@+id/edit_img"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:contentDescription="@string/edit"
-                    android:scaleType="fitXY"
-                    android:layout_marginStart="368dp"
-                    android:layout_marginTop="16dp"
-                    android:src="@drawable/img_edit"/>
-                <TextView
-                    android:id="@+id/left_budget"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="11dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="50dp"
-                    android:text="@string/left_budget"
-                    android:textAppearance="@style/char15purple"
-                    android:gravity="top"
-                    />
-            </RelativeLayout>
+            <ImageView
+                android:id="@+id/edit_img"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@string/edit"
+                android:scaleType="fitXY"
+                android:layout_marginStart="368dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/img_edit"/>
+            <TextView
+                android:id="@+id/left_budget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="50dp"
+                android:text="@string/left_budget"
+                android:textAppearance="@style/char15purple"
+                android:gravity="top"
+                />
+            <TextView
+                android:id="@+id/some_id"
+                android:layout_width="122dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="80dp"
+                android:text="@string/assign_by_comp"
+                android:textAppearance="@style/char13purple"
+                android:gravity="top"
+                />
+        </RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:layout_below="@id/frame_2">
             <LinearLayout
                 android:id="@+id/bottom_bg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="71dp"
                 android:orientation="vertical">
-                <TextView
-                    android:id="@+id/some_id"
-                    android:layout_width="122dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/assign_by_comp"
-                    android:textAppearance="@style/char13purple"
-                    android:gravity="top"
-                    />
                 <RelativeLayout
                     android:id="@+id/layout_1"
                     android:layout_width="match_parent"
@@ -868,6 +867,26 @@
                         />
                 </RelativeLayout>
             </LinearLayout>
+        </ScrollView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <RelativeLayout
+                android:id="@+id/finish_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/layout_pink"
+                android:onClick="msql">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/end"
+                    android:layout_centerInParent="true"
+                    android:textAppearance="@style/char20brown"/>
+            </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>
-</ScrollView>
+</RelativeLayout>

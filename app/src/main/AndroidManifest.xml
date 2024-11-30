@@ -34,6 +34,7 @@
         <activity android:name=".SettingPage"/>
         <activity android:name=".SupportPage"/>
         <activity android:name=".WritePage"/>
+        <activity android:name=".SignInPage"/>
     </application>
 
 </manifest>

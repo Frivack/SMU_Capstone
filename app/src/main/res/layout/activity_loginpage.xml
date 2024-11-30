@@ -139,12 +139,12 @@
             android:layout_centerInParent="true"
             />
         <TextView
-            android:id="@+id/forgot_id"
+            android:id="@+id/new_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginTop="326.5dp"
-            android:text="@string/forgot_id"
+            android:text="@string/new_id"
             android:textAppearance="@style/char20"
             android:layout_centerInParent="true"
             />
