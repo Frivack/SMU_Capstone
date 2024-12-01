@@ -4,6 +4,7 @@ import android.database.DataSetObserver
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.ListAdapter
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -29,6 +30,8 @@ class ReviewAdapter(
         val date: TextView = itemView.findViewById(R.id.review_date)
         val thumbsUp: TextView = itemView.findViewById(R.id.review_thumbs_up_text)
         val comments: TextView = itemView.findViewById(R.id.review_chat_text)
+        val reviewImage: ImageView = itemView.findViewById(R.id.review_img) // 리뷰 이미지 추가
+
 
         init {
             // 아이템 클릭 시 onReviewClick 람다 함수 호출
@@ -51,8 +54,15 @@ class ReviewAdapter(
         holder.date.text = review.date
         holder.thumbsUp.text = review.thumbsUp.toString()
         holder.comments.text = review.comments.toString()
+
+        if (review.reviewId == 2) {
+            holder.reviewImage.setImageResource(R.drawable.img_i9) // 원하는 이미지 리소스
+        } else {
+            holder.reviewImage.setImageResource(R.drawable.ic_launcher_foreground) // 기본 이미지 리소스
+        }
     }
 
     override fun getItemCount(): Int = reviews.size
+
 }
 

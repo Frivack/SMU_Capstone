@@ -16,7 +16,7 @@
         android:background="@drawable/layout_title_background">
         <TextView
             android:id="@+id/budget_sett"
-            android:layout_width="133dp"
+            android:layout_width="wrap_content"
             android:layout_height="27dp"
             android:layout_alignParentTop="true"
             android:layout_marginTop="16dp"

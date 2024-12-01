@@ -142,6 +142,13 @@ class BuildPage : AppCompatActivity() {
             selectedParts.add("placeholder" to mapOf("image" to "", "name" to "선택된 부품 없음", "price" to "0"))
         }
 
+        // 선택된 부품들의 가격 합산
+        val totalSelectedPrice = selectedParts.sumOf { (_, part) ->
+            part["price"]?.replace(",", "")?.replace(".00", "")?.toIntOrNull() ?: 0
+        }
+        remainingBudget = totalBudget - totalSelectedPrice // 남은 예산 계산
+        updateRemainingBudget(remainingBudget) // UI 업데이트
+
         Log.d("BuildPage", "최종 선택된 부품 리스트: ${selectedParts.map { it.second["name"] }}")
         return selectedParts
     }
@@ -154,6 +161,7 @@ class BuildPage : AppCompatActivity() {
             budgetLeftTextView.text = "₩${String.format("%,d", remainingBudget)}"
         }
     }
+
 
     private fun updateUI(selectedParts: List<Pair<String, Map<String, String>>>) {
         selectedParts.forEachIndexed { index, (_, part) ->
@@ -240,7 +248,8 @@ class BuildPage : AppCompatActivity() {
             // PERCENTAGE_VALUES 수신 및 처리
             val percentageValues = data?.getStringArrayListExtra("PERCENTAGE_VALUES") ?: arrayListOf()
             // UI에 예산 데이터 반영
-            findViewById<TextView>(R.id.total_budget).text = "₩$totalBudget"
+            // UI에 예산 데이터 반영
+            findViewById<TextView>(R.id.total_budget).text = "₩${String.format("%,d", totalBudget)}"
             findViewById<TextView>(R.id.left_budget).text = "₩${remainingBudgetString.toIntOrNull() ?: 0}"
             // PERCENTAGE_VALUES 로그 출력 (확인용)
             Log.d("BuildPage", "BudgetPage에서 받은 예산: $totalBudget")

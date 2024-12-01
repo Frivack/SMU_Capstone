@@ -2,6 +2,7 @@ package com.capstone.myapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
