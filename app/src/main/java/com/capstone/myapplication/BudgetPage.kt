@@ -4,9 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.RelativeLayout
 import android.widget.SeekBar
+import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -120,6 +124,33 @@ class BudgetPage : AppCompatActivity() {
 
             setResult(RESULT_OK, resultIntent)
             finish() // 현재 액티비티 종료
+        }
+
+        // 드롭다운 메뉴 생성
+        val spinner = findViewById<Spinner>(R.id.spinner_budget_options)
+
+        // 드롭다운 메뉴 데이터 정의
+        val options = listOf("Option 1", "Option 2", "Option 3", "Option 4")
+
+
+        val adapter = ArrayAdapter(
+            this,
+            R.layout.custom_spinner_item, // 커스텀 레이아웃
+            options
+        )
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner.adapter = adapter
+
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
+                // 선택된 아이템
+                val selectedItem = options[position]
+                Toast.makeText(this@BudgetPage, "Selected: $selectedItem", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {
+                // 아무것도 선택되지 않은 경우 처리
+            }
         }
     }
 

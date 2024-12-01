@@ -1139,6 +1139,7 @@ id speaker
 id speaker_percentage
 id speaker_seekBar
 id special_effects_controller_view_tag
+id spinner_budget_options
 id split_action_bar
 id src_atop
 id src_in
@@ -1254,6 +1255,7 @@ layout activity_start
 layout activity_support
 layout activity_writepage
 layout custom_dialog
+layout custom_spinner_item
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_comment

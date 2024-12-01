@@ -1138,6 +1138,7 @@ int id speaker 0x7f08019d
 int id speaker_percentage 0x7f08019e
 int id speaker_seekBar 0x7f08019f
 int id special_effects_controller_view_tag 0x7f0801a0
+int id spinner_budget_options 0x7f0801dd
 int id split_action_bar 0x7f0801a1
 int id src_atop 0x7f0801a2
 int id src_in 0x7f0801a3
@@ -1253,6 +1254,7 @@ int layout activity_start 0x7f0b0028
 int layout activity_support 0x7f0b0029
 int layout activity_writepage 0x7f0b002a
 int layout custom_dialog 0x7f0b002b
+int layout custom_spinner_item 0x7f0b003a
 int layout ime_base_split_test_activity 0x7f0b002c
 int layout ime_secondary_split_test_activity 0x7f0b002d
 int layout item_comment 0x7f0b002e

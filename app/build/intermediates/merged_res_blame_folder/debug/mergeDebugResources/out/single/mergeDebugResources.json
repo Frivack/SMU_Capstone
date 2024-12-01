@@ -176,10 +176,6 @@
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-54:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.capstone.myapplication.app-debug-52:/layout_activity_review_view.xml.flat",
-        "source": "com.capstone.myapplication.app-main-54:/layout/activity_review_view.xml"
-    },
-    {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-52:\\drawable_layout_purple.xml.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-54:\\drawable\\layout_purple.xml"
     },
@@ -250,6 +246,10 @@
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-52:\\drawable_layout_light_purple.xml.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-54:\\drawable\\layout_light_purple.xml"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-52:/layout_activity_budget.xml.flat",
+        "source": "com.capstone.myapplication.app-main-54:/layout/activity_budget.xml"
     },
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-52:\\layout_activity_buildpage.xml.flat",
@@ -342,5 +342,9 @@
     {
         "merged": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-52:\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\lmj\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-54:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.capstone.myapplication.app-debug-52:/layout_custom_spinner_item.xml.flat",
+        "source": "com.capstone.myapplication.app-main-54:/layout/custom_spinner_item.xml"
     }
 ]

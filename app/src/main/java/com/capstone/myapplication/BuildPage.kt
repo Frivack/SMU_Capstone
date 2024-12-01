@@ -41,7 +41,17 @@ class BuildPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buildpage)
 
-        //전원 버튼 설정 클릭
+        // 예산 텍스트뷰 기본 메시지 설정
+        val budgetTextView = findViewById<TextView>(R.id.total_budget)
+        budgetTextView.text = "클릭하여 예산을 설정하세요" // 기본 메시지 설정
+
+        // 예산 텍스트뷰 클릭 시 BudgetPage로 이동
+        budgetTextView.setOnClickListener {
+            val intent = Intent(this, BudgetPage::class.java)
+            startActivityForResult(intent, REQUEST_CODE_BUDGET)
+        }
+
+        // 전원 버튼 설정 클릭
         setupSwichButtons()
 
         // Intent로 전달된 예산 데이터 수신
@@ -59,8 +69,6 @@ class BuildPage : AppCompatActivity() {
                 //val selectedParts = selectOptimalParts(allParts) // 최적의 부품 선택
                 val selectedParts = selectOptimalParts(allParts, percentageValues)
                 // 예산 내에서 최적의 부품 선택
-
-
 
                 // UI 업데이트는 Main 스레드에서 처리
                 withContext(Dispatchers.Main) {

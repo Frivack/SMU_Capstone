@@ -335,6 +335,7 @@ id soundcard_seekBar
 id speaker
 id speaker_percentage
 id speaker_seekBar
+id spinner_budget_options
 id start_main_page
 id summit
 id text
@@ -369,6 +370,7 @@ layout activity_signin
 layout activity_start
 layout activity_support
 layout activity_writepage
+layout custom_spinner_item
 layout item_comment
 layout item_review
 mipmap ic_launcher
