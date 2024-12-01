@@ -1,6 +1,6 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/lg_bg"
+    android:id="@+id/exit_bg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
@@ -72,11 +72,11 @@
         android:id="@+id/linearRowhomeOne"
         android:layout_width="320dp"
         android:layout_height="59dp"
-        android:layout_marginTop="573dp"
+        android:layout_marginBottom="20dp"
         android:orientation="horizontal"
-        android:gravity="center"
         android:paddingVertical="8dp"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
         android:background="@drawable/layout_title_background">
 
         <!-- 첫 번째 이미지 뷰 -->

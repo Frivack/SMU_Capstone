@@ -158,6 +158,11 @@ attr editTextStyle
 attr elevation
 attr emojiCompatEnabled
 attr expandActivityOverflowButtonDrawable
+attr fastScrollEnabled
+attr fastScrollHorizontalThumbDrawable
+attr fastScrollHorizontalTrackDrawable
+attr fastScrollVerticalThumbDrawable
+attr fastScrollVerticalTrackDrawable
 attr firstBaselineToTopHeight
 attr font
 attr fontFamily
@@ -189,6 +194,7 @@ attr itemPadding
 attr lStar
 attr lastBaselineToBottomHeight
 attr layout
+attr layoutManager
 attr lineHeight
 attr listChoiceBackgroundIndicator
 attr listChoiceIndicatorMultipleAnimated
@@ -237,6 +243,8 @@ attr radioButtonStyle
 attr ratingBarStyle
 attr ratingBarStyleIndicator
 attr ratingBarStyleSmall
+attr recyclerViewStyle
+attr reverseLayout
 attr searchHintIcon
 attr searchIcon
 attr searchViewStyle
@@ -249,11 +257,13 @@ attr showDividers
 attr showText
 attr showTitle
 attr singleChoiceItemLayout
+attr spanCount
 attr spinBars
 attr spinnerDropDownItemStyle
 attr spinnerStyle
 attr splitTrack
 attr srcCompat
+attr stackFromEnd
 attr state_above_anchor
 attr subMenuArrow
 attr submitBackground
@@ -512,6 +522,9 @@ dimen compat_notification_large_icon_max_height
 dimen compat_notification_large_icon_max_width
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fastscroll_default_thickness
+dimen fastscroll_margin
+dimen fastscroll_minimum_range
 dimen highlight_alpha_material_colored
 dimen highlight_alpha_material_dark
 dimen highlight_alpha_material_light
@@ -519,6 +532,9 @@ dimen hint_alpha_material_dark
 dimen hint_alpha_material_light
 dimen hint_pressed_alpha_material_dark
 dimen hint_pressed_alpha_material_light
+dimen item_touch_helper_max_drag_scroll_per_frame
+dimen item_touch_helper_swipe_escape_max_velocity
+dimen item_touch_helper_swipe_escape_velocity
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -637,6 +653,7 @@ drawable ic_call_decline
 drawable ic_call_decline_low
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable img_4080
 drawable img_account
 drawable img_automatic
 drawable img_automatic85
@@ -647,10 +664,12 @@ drawable img_event85
 drawable img_face_id
 drawable img_font
 drawable img_home
+drawable img_i9
 drawable img_id_green
 drawable img_id_verified
 drawable img_logo
 drawable img_mail
+drawable img_notebook
 drawable img_password
 drawable img_picture
 drawable img_play
@@ -679,6 +698,7 @@ drawable layout_rectangle
 drawable layout_rectangle_button
 drawable layout_rectangle_pressed
 drawable layout_red
+drawable layout_round_rectangle
 drawable layout_title_background
 drawable layout_whiteshadow
 drawable line
@@ -699,6 +719,8 @@ drawable seekbar_thumb
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+font maplestory_bold
+font maplestory_light
 id ALT
 id CTRL
 id Edit
@@ -782,10 +804,15 @@ id camera
 id center_vertical
 id checkbox
 id checked
+id choocheon
 id chronometer
 id collapseActionView
+id comment_content
+id comment_thumbs_up_button
+id comment_thumbs_up_text
 id compnent31
 id compnent310
+id compnent311
 id compnent312
 id compnent313
 id compnent314
@@ -835,6 +862,7 @@ id edit_text_id
 id email
 id email_layout
 id end
+id exit_bg
 id expand_activities_button
 id expanded_menu
 id fan
@@ -875,6 +903,7 @@ id frame_name
 id frame_phone_number
 id frame_pw
 id frame_pw_check
+id glide_custom_view_target_tag
 id gpu
 id gpu_percentage
 id gpu_seekBar
@@ -927,6 +956,7 @@ id info_edit
 id inspection_slot_table_set
 id is_pooling_container_tag
 id italic
+id item_touch_helper_previous_elevation
 id join
 id keyboard
 id keyboard_percentage
@@ -1015,6 +1045,7 @@ id power_percentage
 id power_seekBar
 id price31
 id price310
+id price311
 id price312
 id price313
 id price314
@@ -1048,22 +1079,15 @@ id really
 id registeration
 id report_drawn
 id review
-id review_chat_bubble1
-id review_chat_bubble2
-id review_chat_text1
-id review_chat_text2
-id review_content1
-id review_content2
-id review_date1
-id review_date2
-id review_img1
-id review_img2
-id review_thumbs_up1
-id review_thumbs_up2
-id review_thumbs_up_text1
-id review_thumbs_up_text2
-id review_title1
-id review_title2
+id review_chat_bubble
+id review_chat_text
+id review_content
+id review_date
+id review_img
+id review_list
+id review_thumbs_up
+id review_thumbs_up_text
+id review_title
 id reviewview
 id rfh0v5aa39v9
 id right_icon
@@ -1084,6 +1108,7 @@ id ryfm82ge0nhd
 id rykyxl401xz
 id ryyrxnk48qf
 id screen
+id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
@@ -1145,10 +1170,13 @@ id text_name
 id text_password
 id text_password_check
 id text_phone
+id thumbs_up
+id thumbs_up_layout
 id time
 id title
 id titleDividerNoCustom
 id title_template
+id to_write
 id tocomputer
 id top
 id topPanel
@@ -1228,6 +1256,8 @@ layout activity_writepage
 layout custom_dialog
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_comment
+layout item_review
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -1284,6 +1314,7 @@ string call_notification_ongoing_text
 string call_notification_screening_text
 string close_drawer
 string close_sheet
+string commend
 string component
 string cooler
 string cpu
@@ -1396,6 +1427,7 @@ string monitor
 string mouse
 string navigation_menu
 string new_id
+string new_review
 string not_selected
 string notice
 string notice_text
@@ -1800,15 +1832,18 @@ style Widget_AppCompat_Toolbar_Button_Navigation
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 style char10purple
+style char11pink
 style char12black
 style char12lightpurple
 style char12pink
 style char12purple
 style char13purple
+style char14purple
 style char15edit
 style char15purple
 style char15white
 style char16black
+style char16lightpurple
 style char16purple
 style char18black
 style char20
@@ -1859,6 +1894,7 @@ styleable MenuView android_windowAnimationStyle android_itemTextAppearance andro
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
+styleable RecyclerView android_orientation android_clipToPadding android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration

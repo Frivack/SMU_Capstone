@@ -46,6 +46,7 @@
         <activity android:name="com.capstone.myapplication.MainPage" />
         <activity android:name="com.capstone.myapplication.NoticePage" />
         <activity android:name="com.capstone.myapplication.ReviewPage" />
+        <activity android:name="com.capstone.myapplication.ReviewViewPage" />
         <activity android:name="com.capstone.myapplication.SettingPage" />
         <activity android:name="com.capstone.myapplication.SupportPage" />
         <activity android:name="com.capstone.myapplication.WritePage" />

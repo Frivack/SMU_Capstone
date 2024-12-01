@@ -111,10 +111,13 @@ class BudgetPage : AppCompatActivity() {
             val totalBudget = totalBudgetEdit.text.toString()
             val remainingBudgetString = remainingBudgetText.text.toString()
             val extractedBudget = remainingBudgetString.replace("[^\\d]".toRegex(), "").toIntOrNull()
+            val percentageValues = percentageTexts.map { it.text.toString() }
 
             val resultIntent = Intent()
             resultIntent.putExtra("TOTAL_BUDGET", totalBudget)
             resultIntent.putExtra("REMAINING_BUDGET", extractedBudget.toString())
+            resultIntent.putStringArrayListExtra("PERCENTAGE_VALUES", ArrayList(percentageValues))
+
             setResult(RESULT_OK, resultIntent)
             finish() // 현재 액티비티 종료
         }

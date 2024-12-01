@@ -98,7 +98,7 @@
             android:background="@drawable/line" />
 
         <EditText
-            android:id="@+id/some_id"
+            android:id="@+id/content"
             style="@style/char20lightpurple"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -130,39 +130,58 @@
 
     <LinearLayout
         android:id="@+id/linearRowhomeOne"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center_horizontal|bottom"
-        android:background="@drawable/layout_background"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="5dp"
-        android:orientation="horizontal">
-        <ImageView android:id="@+id/imageHomeOne"
-            android:layout_gravity="center"
-            android:layout_height="40dp"
+        android:layout_width="320dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingVertical="8dp"
+        android:layout_gravity="center"
+        android:background="@drawable/layout_title_background">
+
+        <!-- 첫 번째 이미지 뷰 -->
+        <ImageView
+            android:id="@+id/imageHomeOne"
+            android:layout_height="50dp"
             android:layout_width="0dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:contentDescription="@string/lowbar_home"
-            android:src="@drawable/img_home"/>
-        <View android:background="#30000000"
+            android:src="@drawable/img_home" />
+
+        <!-- 첫 번째 선 -->
+        <View
             android:id="@+id/lineLineoneOne"
-            android:layout_height="59dp" android:layout_width="1dp"/>
-        <ImageView android:id="@+id/imageWhatidoOne"
-            android:layout_gravity="center"
-            android:layout_height="40dp"
+            android:layout_height="match_parent"
+            android:layout_width="1dp"
+            android:background="#1A000000" />
+
+        <!-- 두 번째 이미지 뷰 -->
+
+        <ImageView
+            android:id="@+id/imageWhatidoOne"
             android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:contentDescription="@string/lowbar_build"
-            android:src="@drawable/img_what_i_do"/>
-        <View android:background="#30000000"
+            android:src="@drawable/img_what_i_do" />
+
+        <!-- 두 번째 선 -->
+        <View
             android:id="@+id/lineLineoneThree"
-            android:layout_height="59dp" android:layout_width="1dp"/>
-        <ImageView android:id="@+id/imageAutomaticOne"
-            android:layout_gravity="center"
-            android:layout_height="40dp"
+            android:layout_height="match_parent"
+            android:layout_width="1dp"
+            android:background="#1A000000" />
+
+        <!-- 세 번째 이미지 뷰 -->
+        <ImageView
+            android:id="@+id/imageAutomaticOne"
+            android:layout_height="50dp"
             android:layout_width="0dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:contentDescription="@string/lowbar_setting"
-            android:src="@drawable/img_automatic"/>
+            android:src="@drawable/img_automatic" />
     </LinearLayout>
 </LinearLayout>

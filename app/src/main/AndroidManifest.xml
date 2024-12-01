@@ -31,6 +31,7 @@
         <activity android:name=".MainPage"/>
         <activity android:name=".NoticePage"/>
         <activity android:name=".ReviewPage"/>
+        <activity android:name=".ReviewViewPage"/>
         <activity android:name=".SettingPage"/>
         <activity android:name=".SupportPage"/>
         <activity android:name=".WritePage"/>

@@ -47,13 +47,14 @@ class LoginPage : AppCompatActivity() {
             val connection = dbHelper.connect()
 
             if (connection != null) {
-                val query = "SELECT password_hash FROM user_info.users WHERE email = ?"
+                val query = "SELECT user_id, password_hash FROM user_info.users WHERE email = ?"
                 try {
                     val statement = connection.prepareStatement(query)
                     statement.setString(1, email)
                     val resultSet = statement.executeQuery()
 
                     if (resultSet.next()) {
+                        val userId = resultSet.getInt("user_id") // user_id 조회
                         val storedHash = resultSet.getString("password_hash")
                         val inputHash = hashPassword(password)
 
@@ -61,8 +62,9 @@ class LoginPage : AppCompatActivity() {
                             // 로그인 성공
                             withContext(Dispatchers.Main) {
                                 Toast.makeText(this@LoginPage, "Login successful!", Toast.LENGTH_SHORT).show()
-                                val intent = Intent(this@LoginPage, MainPage::class.java) // 다음 액티비티
-                                intent.putExtra("USER_EMAIL", email) // 로그인 시 입력된 이메일
+                                val intent = Intent(this@LoginPage, MainPage::class.java)
+                                intent.putExtra("USER_ID", userId) // 사용자 ID 추가
+                                intent.putExtra("USER_EMAIL", email) // 이메일도 추가
                                 startActivity(intent)
                                 finish()
                             }

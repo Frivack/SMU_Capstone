@@ -15,6 +15,9 @@ class MainPage : AppCompatActivity() {
 
         // Intent에서 이메일 가져오기
         val email = intent.getStringExtra("USER_EMAIL")
+        val userId = intent.getIntExtra("USER_ID", 0)
+        //val email = "lmj@email.com"
+        //val userId = 2
 
         // 이메일이 null이 아닌 경우 TextView에 설정
         email?.let {
@@ -22,7 +25,7 @@ class MainPage : AppCompatActivity() {
             mainPageIdTextView.text = extractEmailPrefix(it)
         }
 
-        setupSwichButtons(email)
+        setupSwichButtons(email, userId)
     }
 
     // 이메일 앞부분 추출 함수
@@ -30,7 +33,7 @@ class MainPage : AppCompatActivity() {
         return email.substringBefore("@") // '@' 이전 문자열 반환
     }
 
-    private fun setupSwichButtons(email: String?)
+    private fun setupSwichButtons(email: String?, userId: Int)
     {
         val build = findViewById<LinearLayout>(R.id.layout_build)
         val account = findViewById<LinearLayout>(R.id.layout_account)
@@ -45,7 +48,6 @@ class MainPage : AppCompatActivity() {
         val lowbarBuild = findViewById<ImageView>(R.id.imageWhatidoOne)
         val lowbarSetting = findViewById<ImageView>(R.id.imageAutomaticOne)
 
-
         build.setOnClickListener {
             val intent = Intent(this, BuildPage::class.java)
             startActivity(intent)
@@ -59,6 +61,9 @@ class MainPage : AppCompatActivity() {
 
         review.setOnClickListener {
             val intent = Intent(this, ReviewPage::class.java)
+            intent.putExtra("USER_ID", userId)
+            val name = email?.let { it1 -> extractEmailPrefix(it1) }
+            intent.putExtra("USER_NAME", name)
             startActivity(intent)
         }
 
@@ -97,5 +102,4 @@ class MainPage : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
 }

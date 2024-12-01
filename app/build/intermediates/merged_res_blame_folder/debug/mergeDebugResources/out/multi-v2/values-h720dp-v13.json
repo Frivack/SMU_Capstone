@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.capstone.myapplication.app-mergeDebugResources-48:/values-h720dp-v13/values-h720dp-v13.xml",
+            "outputFile": "com.capstone.myapplication.app-mergeDebugResources-50:/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\lmj\\.gradle\\caches\\transforms-4\\0abb123e184858e6bfd111aea074367b\\transformed\\appcompat-1.7.0\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "source": "C:\\Users\\lmj\\.gradle\\caches\\transforms-4\\2259e491d3b36ef0cec0db5d28ca09a7\\transformed\\appcompat-1.7.0\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

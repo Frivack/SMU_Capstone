@@ -92,4 +92,6 @@
     <string name="end">완료</string>
     <string name="leftudget">남은 예산:</string>
     <string name="component">선택된 부품 없음</string>
+    <string name="new_review">글쓰기</string>
+    <string name="commend">추천</string>
 </resources>

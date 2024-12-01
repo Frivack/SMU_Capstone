@@ -3,10 +3,7 @@ package com.capstone.myapplication
 import android.content.Intent
 import android.os.Bundle
 import android.os.StrictMode
-import android.view.View
 import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         val start = findViewById<ImageView>(R.id.start_main_page)
 
         start.setOnClickListener {
-            val intent = Intent(this, MainPage::class.java)
+            val intent = Intent(this, LoginPage::class.java)
             startActivity(intent)
         }
     }

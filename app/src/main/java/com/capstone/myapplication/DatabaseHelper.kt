@@ -42,7 +42,7 @@ class DatabaseHelper {
     // 모든 부품 가져오기
     fun fetchAllParts(connection: Connection): Map<String, List<Map<String, String>>> {
         val tables = listOf(
-            "cooler", "cpu", "earphone", "fan", "gpu", "headset", "keyboard",
+            "cooler", "cpu", "earphone", "fan", "gpu", "hard_drive", "headset", "keyboard",
             "monitor", "motherboard", "mouse", "pc_case", "pcparts",
             "power_supply", "ram", "sound_card", "speaker", "storage"
         )
@@ -53,5 +53,23 @@ class DatabaseHelper {
             allParts[table] = fetchData(connection, query)
         }
         return allParts
+    }
+
+    fun insertReview(userId: Int, title: String, content: String): Boolean {
+        val query = "INSERT INTO user_info.reviews (user_id, title, content, created_at) VALUES (?, ?, ?, NOW())"
+        return try {
+            val connection = connect() // 기존의 연결 함수 사용
+            connection?.use {
+                val preparedStatement = it.prepareStatement(query)
+                preparedStatement.setInt(1, userId)
+                preparedStatement.setString(2, title)
+                preparedStatement.setString(3, content)
+                preparedStatement.executeUpdate()
+            }
+            true
+        } catch (e: Exception) {
+            e.printStackTrace()
+            false
+        }
     }
 }

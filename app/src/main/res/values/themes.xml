@@ -4,5 +4,6 @@
         <item name="colorPrimary">@color/primary_color</item>
         <item name="colorPrimaryDark">@color/primary_dark_color</item>
         <item name="colorAccent">@color/accent_color</item>
+        <item name="android:fontFamily">@font/maplestory_light</item>
     </style>
 </resources>
