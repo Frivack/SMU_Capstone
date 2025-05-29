@@ -45,7 +45,7 @@ class ReviewViewPage : AppCompatActivity() {
     }
 
     private fun fetchReviewDetailsFromDatabase(reviewId: Int): Review {
-        val databaseHelper = DatabaseHelper()
+        val databaseHelper = DatabaseHelper(this)
         val query = "SELECT title, content, created_at, user_id, thumbs_up, comments_count FROM user_info.reviews WHERE review_id = ?"
         val emailQuery = "SELECT email FROM user_info.users WHERE user_id = ?"
         var review = Review(reviewId, "", "", "", 0, 0, 0)
@@ -91,7 +91,7 @@ class ReviewViewPage : AppCompatActivity() {
     }
 
     private fun incrementThumbsUp(reviewId: Int) {
-        val databaseHelper = DatabaseHelper()
+        val databaseHelper = DatabaseHelper(this)
         val query = "UPDATE user_info.reviews SET thumbs_up = thumbs_up + 1 WHERE review_id = ?"
 
         val connection = databaseHelper.connect()

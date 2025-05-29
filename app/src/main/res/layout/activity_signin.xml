@@ -3,25 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/bg"
     android:layout_width="match_parent"
-    android:layout_height="640dp"
-    android:background="@drawable/layout_background"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
     android:orientation="vertical">
-    <RelativeLayout
-        android:id="@+id/frame"
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:background="@drawable/layout_light_purple">
-        <TextView
-            android:id="@+id/registeration"
-            android:layout_width="127dp"
-            android:layout_height="27dp"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:text="@string/registeration"
-            android:textAppearance="@style/char20"
-            android:gravity="center"
-            />
-    </RelativeLayout>
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
@@ -179,11 +163,13 @@
         android:layout_height="44dp"
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="32dp"
-        android:background="@drawable/layout_dark_purple">
+        android:background="@drawable/layout_graient1">
         <TextView
             android:id="@+id/join"
-            android:layout_width="57dp"
-            android:layout_height="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="24sp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:text="@string/sign_in"
@@ -191,4 +177,6 @@
             android:gravity="top"
             />
     </RelativeLayout>
+
+
 </LinearLayout>

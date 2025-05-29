@@ -637,6 +637,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable background_gradient
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -669,6 +670,7 @@ drawable img_id_green
 drawable img_id_verified
 drawable img_logo
 drawable img_mail
+drawable img_make
 drawable img_notebook
 drawable img_password
 drawable img_picture
@@ -685,13 +687,17 @@ drawable img_whatido85
 drawable layout_background
 drawable layout_bigbg
 drawable layout_blue
+drawable layout_color1
+drawable layout_color2
 drawable layout_dark_purple
+drawable layout_graient1
 drawable layout_input
 drawable layout_light_bg
 drawable layout_light_purple
 drawable layout_light_purple_grad
 drawable layout_light_purple_shaodw
 drawable layout_line
+drawable layout_outline
 drawable layout_pink
 drawable layout_purple
 drawable layout_rectangle
@@ -716,6 +722,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable seekbar_thumb
+drawable solid
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -845,7 +852,6 @@ id darkmode_toggle
 id date
 id decor_content_parent
 id default_activity_button
-id delete
 id delete_frame
 id deving2
 id deving3
@@ -856,10 +862,13 @@ id donot
 id earphone
 id earphone_percentage
 id earphone_seekBar
+id edit_email
 id edit_img
+id edit_name
+id edit_phone
+id edit_pw
 id edit_query
 id edit_text_id
-id email
 id email_layout
 id end
 id exit_bg
@@ -919,7 +928,10 @@ id hide_in_inspector_tag
 id home
 id homeAsUp
 id icon
+id icon_email
 id icon_group
+id icon_name
+id icon_pw
 id id_login_img
 id id_password_img
 id ifRoom
@@ -986,8 +998,6 @@ id layout_setting
 id layout_support
 id leave_user
 id left_budget
-id lg_bg
-id lg_login_panel
 id lg_welcome
 id line1
 id line3
@@ -998,7 +1008,6 @@ id line_2
 id linearRowhomeOne
 id listMode
 id list_item
-id login
 id login_email_text
 id login_password_text
 id logo
@@ -1030,7 +1039,6 @@ id oldmode_toggle
 id on
 id out
 id parentPanel
-id password
 id password_layout
 id pccase
 id pccase_percentage
@@ -1076,7 +1084,6 @@ id rcb8vdq69j48
 id rctytmjkhvq8
 id rea8v3wm5z8e
 id really
-id registeration
 id report_drawn
 id review
 id review_chat_bubble
@@ -1095,6 +1102,7 @@ id right_side
 id rj3n2jhecxuq
 id rkrybo4jfbcd
 id rlihl80sai8d
+id rlirspyhlh9
 id rnwd0rymnwfd
 id rp4jzsdf7i8m
 id rq38jh479imh
@@ -1103,6 +1111,7 @@ id rtofe1f71bhj
 id rvuqc4pxed8
 id rw2dwjbete5n
 id rx1zz8d7691c
+id rx2swut2n9o8
 id rx5ekyvmao7e
 id ryfm82ge0nhd
 id rykyxl401xz
@@ -1171,6 +1180,7 @@ id text_name
 id text_password
 id text_password_check
 id text_phone
+id text_verify
 id thumbs_up
 id thumbs_up_layout
 id time

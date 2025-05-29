@@ -4,13 +4,13 @@
     android:id="@+id/bg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/layout_background"
+    android:background="@drawable/layout_title_background"
     android:orientation="vertical">
     <RelativeLayout
         android:id="@+id/frame"
         android:layout_width="match_parent"
         android:layout_height="59dp"
-        android:background="@drawable/layout_light_purple">
+        android:background="@drawable/background_gradient">
         <TextView
             android:id="@+id/Edit"
             android:layout_width="127dp"
@@ -20,124 +20,167 @@
             android:text="@string/edit"
             android:textAppearance="@style/char20"
             android:gravity="center"
+            android:textColor="#5A5ABB"
             />
     </RelativeLayout>
     <TextView
         android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
-        android:text="@string/edit_exp"
-        android:textAppearance="@style/char25purple"
-        android:gravity="center"
-        android:layout_gravity="center"
+        android:textColor="#5A5ABB"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_height="wrap_content"
+        android:layout_width="237dp"
+        android:text="수정할 정보를 선택하여\n수정해주세요."
         />
     <RelativeLayout
-        android:id="@+id/frame_email"
         android:layout_width="match_parent"
         android:layout_height="44dp"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/layout_input">
-        <ImageView
-            android:layout_width="64dp"
-            android:layout_height="32dp"
-            android:layout_centerVertical="true"
-            android:contentDescription="@string/img_email"
-            android:src="@drawable/img_mail"/>
+        android:background="@drawable/layout_input"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="12dp">
+
+        <!-- 입력란 -->
         <EditText
+            android:id="@+id/edit_email"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="10dp"
-            android:hint="@string/email_example"
-            android:inputType="textWebEmailAddress"
+            android:layout_toStartOf="@id/icon_email"
+            android:layout_marginEnd="48dp"
+            android:hint="아이디에 저장된 이메일 출력"
             android:background="@null"
-            style="@style/char15edit"/>
+            android:textColor="#585869"
+            android:textSize="15sp"
+            android:paddingStart="12dp"
+            android:gravity="center_vertical"/>
+
+        <!-- 오른쪽 아이콘 -->
+        <ImageView
+            android:id="@+id/icon_email"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/img_mail"
+            android:contentDescription="이메일 아이콘"/>
+
     </RelativeLayout>
+
+    <!-- 비밀번호 -->
     <RelativeLayout
-        android:id="@+id/frame_pw"
         android:layout_width="match_parent"
         android:layout_height="44dp"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/layout_input">
-        <ImageView
-            android:layout_width="64dp"
-            android:layout_height="32dp"
-            android:layout_centerVertical="true"
-            android:contentDescription="@string/img_shield"
-            android:src="@drawable/img_shield"/>
+        android:background="@drawable/layout_input"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="10dp">
+
         <EditText
+            android:id="@+id/edit_pw"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="10dp"
-            android:hint="@string/password_edit"
-            android:inputType="textPassword"
+            android:layout_toStartOf="@id/icon_pw"
+            android:layout_marginEnd="48dp"
+            android:hint="비밀번호 수정"
             android:background="@null"
-            style="@style/char15edit"/>
+            android:textColor="#585869"
+            android:textSize="15sp"
+            android:paddingStart="12dp"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/icon_pw"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/img_shield"
+            android:contentDescription="비밀번호 아이콘"/>
     </RelativeLayout>
+
+    <!-- 이름 -->
     <RelativeLayout
-        android:id="@+id/frame_name"
         android:layout_width="match_parent"
         android:layout_height="44dp"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/layout_input">
-        <ImageView
-            android:layout_width="64dp"
-            android:layout_height="32dp"
-            android:layout_centerVertical="true"
-            android:contentDescription="@string/img_face_id"
-            android:src="@drawable/img_face_id"/>
+        android:background="@drawable/layout_input"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="10dp">
+
         <EditText
+            android:id="@+id/edit_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="10dp"
-            android:hint="@string/edit_name"
-            android:inputType="text"
+            android:layout_toStartOf="@id/icon_name"
+            android:layout_marginEnd="48dp"
+            android:hint="이름 수정"
             android:background="@null"
-            style="@style/char15edit"/>
+            android:textColor="#585869"
+            android:textSize="15sp"
+            android:paddingStart="12dp"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/icon_name"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/img_face_id"
+            android:contentDescription="이름 아이콘"/>
     </RelativeLayout>
+
+    <!-- 휴대폰번호 + 인증 -->
     <RelativeLayout
-        android:id="@+id/frame_phone_number"
         android:layout_width="match_parent"
         android:layout_height="44dp"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/layout_input">
-        <ImageView
-            android:layout_width="64dp"
-            android:layout_height="32dp"
-            android:layout_centerVertical="true"
-            android:contentDescription="@string/img_face_id"
-            android:src="@drawable/img_face_id"/>
+        android:background="@drawable/layout_input"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="10dp">
+
         <EditText
+            android:id="@+id/edit_phone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="10dp"
-            android:hint="@string/input_phone"
-            android:inputType="phone"
+            android:layout_toStartOf="@id/text_verify"
+            android:layout_marginEnd="48dp"
+            android:hint="아이디에 저장된 번호 출력"
             android:background="@null"
-            style="@style/char15edit"/>
+            android:textColor="#585869"
+            android:textSize="15sp"
+            android:paddingStart="12dp"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/text_verify"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="인증"
+            android:textColor="#585869"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:background="@null"/>
     </RelativeLayout>
+
     <RelativeLayout
         android:id="@+id/sign_in_button"
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="32dp"
-        android:background="@drawable/layout_dark_purple">
+        android:background="@drawable/layout_color2">
         <TextView
             android:id="@+id/done_button"
-            android:layout_width="57dp"
-            android:layout_height="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
             android:text="@string/done"
             android:textAppearance="@style/char15white"
             />
     </RelativeLayout>
+
 </LinearLayout>

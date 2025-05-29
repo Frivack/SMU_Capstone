@@ -4,7 +4,7 @@
     android:id="@+id/buget_bg"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/layout_background"
+    android:background="@drawable/background_gradient"
     android:elevation="4dp">
     <RelativeLayout
         android:id="@+id/setting"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="76dp"
-        android:background="@drawable/layout_bigbg">
+        android:background="@drawable/background_gradient">
 
         <RelativeLayout
             android:id="@+id/frame_2"
@@ -208,23 +208,24 @@
                         android:gravity="top"
                         />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:id="@+id/layout_3"
                     android:layout_width="match_parent"
                     android:layout_height="51dp"
                     android:layout_marginTop="9dp">
+
                     <TextView
                         android:id="@+id/mainboard"
                         android:layout_width="51dp"
                         android:layout_height="24dp"
-                        android:layout_marginStart="13dp"
                         android:layout_alignParentTop="true"
+                        android:layout_marginStart="13dp"
                         android:layout_marginTop="17dp"
+                        android:gravity="top"
                         android:text="@string/mainboard"
                         android:textAppearance="@style/char12purple"
-                        android:thumb="@drawable/seekbar_thumb"
-                        android:gravity="top"
-                        />
+                        android:thumb="@drawable/seekbar_thumb" />
 
                     <SeekBar
                         android:id="@+id/mainboard_seekBar"
@@ -249,11 +250,10 @@
                         android:layout_height="34dp"
                         android:layout_alignParentEnd="true"
                         android:layout_marginTop="7dp"
+                        android:gravity="top"
                         android:text="@string/percentage"
                         android:textAppearance="@style/char12purple"
-                        android:thumb="@drawable/seekbar_thumb"
-                        android:gravity="top"
-                        />
+                        android:thumb="@drawable/seekbar_thumb" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -882,7 +882,7 @@
                 </RelativeLayout>
             </LinearLayout>
         </ScrollView>
-        <RelativeLayout
+        <!--<RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true">
@@ -901,6 +901,69 @@
                     android:layout_centerInParent="true"
                     android:textAppearance="@style/char20brown"/>
             </RelativeLayout>
-        </RelativeLayout>
+        </RelativeLayout>-->
     </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/rlirspyhlh9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+    android:orientation="vertical">>
+        <LinearLayout
+            android:id="@+id/linearRowhomeOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="6dp"
+            android:paddingHorizontal="37dp"
+            android:orientation="horizontal"
+            android:background="@drawable/layout_title_background">
+
+            <!-- 첫 번째 이미지 뷰 -->
+            <ImageView
+                android:id="@+id/imageHomeOne"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:contentDescription="@string/lowbar_home"
+                android:src="@drawable/img_home"
+                />
+
+            <!-- 첫 번째 선 -->
+            <View
+                android:id="@+id/lineLineoneOne"
+                android:layout_height="match_parent"
+                android:layout_width="1dp"
+                android:background="#1A000000" />
+
+            <!-- 두 번째 이미지 뷰 -->
+
+            <ImageView
+                android:id="@+id/imageWhatidoOne"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:contentDescription="@string/lowbar_build"
+                android:src="@drawable/img_what_i_do" />
+
+            <!-- 두 번째 선 -->
+            <View
+                android:id="@+id/lineLineoneThree"
+                android:layout_height="match_parent"
+                android:layout_width="1dp"
+                android:background="#1A000000" />
+
+            <!-- 세 번째 이미지 뷰 -->
+            <ImageView
+                android:id="@+id/imageAutomaticOne"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:contentDescription="@string/lowbar_setting"
+                android:src="@drawable/img_automatic" />
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>

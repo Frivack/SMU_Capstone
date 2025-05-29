@@ -10,6 +10,7 @@ color purple_700
 color teal_200
 color teal_700
 color white
+drawable background_gradient
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable img_4080
@@ -28,6 +29,7 @@ drawable img_id_green
 drawable img_id_verified
 drawable img_logo
 drawable img_mail
+drawable img_make
 drawable img_notebook
 drawable img_password
 drawable img_picture
@@ -44,13 +46,17 @@ drawable img_whatido85
 drawable layout_background
 drawable layout_bigbg
 drawable layout_blue
+drawable layout_color1
+drawable layout_color2
 drawable layout_dark_purple
+drawable layout_graient1
 drawable layout_input
 drawable layout_light_bg
 drawable layout_light_purple
 drawable layout_light_purple_grad
 drawable layout_light_purple_shaodw
 drawable layout_line
+drawable layout_outline
 drawable layout_pink
 drawable layout_purple
 drawable layout_rectangle
@@ -62,6 +68,7 @@ drawable layout_title_background
 drawable layout_whiteshadow
 drawable line
 drawable seekbar_thumb
+drawable solid
 font maplestory_bold
 font maplestory_light
 id Edit
@@ -109,7 +116,6 @@ id cpu_seekBar
 id current_id
 id darkmode_toggle
 id date
-id delete
 id delete_frame
 id deving2
 id deving3
@@ -118,8 +124,11 @@ id donot
 id earphone
 id earphone_percentage
 id earphone_seekBar
+id edit_email
 id edit_img
-id email
+id edit_name
+id edit_phone
+id edit_pw
 id email_layout
 id exit_bg
 id fan
@@ -167,6 +176,9 @@ id hard_seekBar
 id headset
 id headset_percentage
 id headset_seekBar
+id icon_email
+id icon_name
+id icon_pw
 id id_login_img
 id id_password_img
 id imageAutomaticOne
@@ -226,15 +238,12 @@ id layout_setting
 id layout_support
 id leave_user
 id left_budget
-id lg_bg
-id lg_login_panel
 id lg_welcome
 id lineLineoneOne
 id lineLineoneThree
 id line_1
 id line_2
 id linearRowhomeOne
-id login
 id login_email_text
 id login_password_text
 id logo
@@ -254,7 +263,6 @@ id mouse_seekBar
 id new_id
 id oldmode_toggle
 id out
-id password
 id password_layout
 id pccase
 id pccase_percentage
@@ -296,7 +304,6 @@ id rcb8vdq69j48
 id rctytmjkhvq8
 id rea8v3wm5z8e
 id really
-id registeration
 id review
 id review_chat_bubble
 id review_chat_text
@@ -312,6 +319,7 @@ id rfh0v5aa39v9
 id rj3n2jhecxuq
 id rkrybo4jfbcd
 id rlihl80sai8d
+id rlirspyhlh9
 id rnwd0rymnwfd
 id rp4jzsdf7i8m
 id rq38jh479imh
@@ -320,6 +328,7 @@ id rtofe1f71bhj
 id rvuqc4pxed8
 id rw2dwjbete5n
 id rx1zz8d7691c
+id rx2swut2n9o8
 id rx5ekyvmao7e
 id ryfm82ge0nhd
 id rykyxl401xz
@@ -344,6 +353,7 @@ id text_name
 id text_password
 id text_password_check
 id text_phone
+id text_verify
 id thumbs_up
 id thumbs_up_layout
 id title

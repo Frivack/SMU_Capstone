@@ -38,7 +38,8 @@ class WritePage : AppCompatActivity() {
     }
 
     private fun saveReviewToDatabase(title: String, content: String, userId: Int) {
-        val databaseHelper = DatabaseHelper()
+        val databaseHelper = DatabaseHelper(applicationContext)
+
 
         val isInserted = databaseHelper.insertReview(userId, title, content)
 

@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="59dp"
         android:layout_alignParentTop="true"
-        android:background="@drawable/layout_title_background">
+        android:background="@drawable/layout_line">
         <TextView
             android:id="@+id/bd_estimate"
             android:layout_width="wrap_content"
@@ -22,20 +22,20 @@
             android:layout_centerInParent="true"
             android:gravity="top"
             />
+
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/frame_5"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/frame_1"
-        android:background="@color/white">
+        android:background="@drawable/layout_line">
         <TextView
             android:id="@+id/some_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/notice_text"
             android:textAppearance="@style/char12lightpurple"
             android:gravity="top"
             />
@@ -46,6 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
+        android:background="@drawable/layout_line"
         android:elevation="4dp">
 
         <LinearLayout
@@ -60,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img31"
@@ -77,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img32"
@@ -94,7 +95,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img33"
@@ -111,7 +112,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img34"
@@ -128,7 +129,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img35"
@@ -145,7 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img36"
@@ -162,7 +163,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img37"
@@ -179,7 +180,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img38"
@@ -196,7 +197,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img39"
@@ -213,7 +214,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img310"
@@ -230,7 +231,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img311"
@@ -247,7 +248,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img312"
@@ -264,7 +265,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img313"
@@ -281,7 +282,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img314"
@@ -298,7 +299,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img315"
@@ -315,7 +316,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img316"
@@ -332,7 +333,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img317"
@@ -349,7 +350,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginVertical="8dp"
-                android:background="@drawable/layout_line">
+                android:background="@color/white">
 
                 <View
                     android:id="@+id/img318"
@@ -362,30 +363,32 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/rlirspyhlh9"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
         <LinearLayout
             android:id="@+id/linearRowhomeOne"
-            android:layout_width="320dp"
-            android:layout_height="59dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="6dp"
+            android:paddingHorizontal="37dp"
             android:orientation="horizontal"
-            android:gravity="center"
-            android:paddingVertical="8dp"
-            android:layout_centerHorizontal="true"
             android:background="@drawable/layout_title_background">
 
             <!-- 첫 번째 이미지 뷰 -->
             <ImageView
                 android:id="@+id/imageHomeOne"
-                android:layout_height="50dp"
-                android:layout_width="0dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:contentDescription="@string/lowbar_home"
-                android:src="@drawable/img_home" />
+                android:src="@drawable/img_home"
+                />
 
             <!-- 첫 번째 선 -->
             <View
@@ -395,11 +398,10 @@
                 android:background="#1A000000" />
 
             <!-- 두 번째 이미지 뷰 -->
-
             <ImageView
                 android:id="@+id/imageWhatidoOne"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:contentDescription="@string/lowbar_build"
@@ -415,12 +417,12 @@
             <!-- 세 번째 이미지 뷰 -->
             <ImageView
                 android:id="@+id/imageAutomaticOne"
-                android:layout_height="50dp"
-                android:layout_width="0dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:contentDescription="@string/lowbar_setting"
                 android:src="@drawable/img_automatic" />
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 </RelativeLayout>

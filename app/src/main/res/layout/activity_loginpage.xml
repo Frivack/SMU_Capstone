@@ -1,32 +1,9 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/lg_bg"
+    android:background="@drawable/background_gradient"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:background="@drawable/layout_background"
-    android:elevation="4dp"
-    >
-    <RelativeLayout
-        android:id="@+id/lg_login_panel"
-        android:layout_width="320dp"
-        android:layout_height="59dp"
-        android:layout_alignParentTop="true"
-        android:gravity="center"
-        android:layout_marginTop="25dp"
-        android:layout_centerInParent="true"
-        android:background="@drawable/layout_title_background">
-        <TextView
-            android:id="@+id/login"
-            android:layout_width="wrap_content"
-            android:layout_height="27dp"
-            android:layout_alignParentTop="true"
-
-            android:text="@string/login"
-            android:textAppearance="@style/char20"
-            android:gravity="top"
-            />
-    </RelativeLayout>
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/some_id"
@@ -36,98 +13,87 @@
         android:gravity="center_horizontal"
         android:layout_centerInParent="true"
         android:layout_marginTop="99dp"
-        android:background="@drawable/layout_title_background">
+        android:background="@drawable/background_gradient">
         <TextView
             android:id="@+id/lg_welcome"
-            android:layout_width="128dp"
-            android:layout_height="36dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:gravity="center"
+            android:textColor="#5639A4"
+            android:textStyle="bold"
             android:layout_centerInParent="true"
             android:text="@string/welcome"
             android:textAppearance="@style/welcome"
             />
-        <RelativeLayout
-            android:id="@+id/email_layout"
-            android:layout_width="260dp"
-            android:layout_height="29dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="67.5dp"
-            android:layout_centerInParent="true"
-            >
-            <TextView
-                android:id="@+id/email"
-                android:layout_width="60dp"
-                android:layout_height="15dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="7dp"
-                android:text="@string/email"
-                android:textAppearance="@style/email"
-                android:gravity="top"
-            />
-            <EditText
-                android:id="@+id/login_email_text"
+            <RelativeLayout
+                android:id="@+id/email_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-4dp"
-                android:layout_marginBottom="-4dp"
-                android:layout_marginStart="65dp"
-                android:layout_marginEnd="30dp"
-                android:hint="Email"
-                android:inputType="textEmailAddress"
-                android:textColor="#C99DF3"
-                android:textSize="12sp" />
-            <View
-                android:id="@+id/id_login_img"
-                android:layout_width="39dp"
-                android:layout_height="21dp"
-                android:layout_alignParentRight="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_marginHorizontal="24dp"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/img_id_verified"
-                />
-        </RelativeLayout>
+                android:layout_marginTop="67.5dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_centerInParent="true"
+                >
+                <EditText
+                    android:id="@+id/login_email_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-4dp"
+                    android:layout_marginBottom="-4dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginEnd="30dp"
+                    android:textStyle="bold"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#C99DF3"
+                    android:textSize="12sp" />
+                <View
+                    android:id="@+id/id_login_img"
+                    android:layout_width="27dp"
+                    android:layout_height="21dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/img_id_verified"
+                    />
+            </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/password_layout"
-            android:layout_width="260dp"
-            android:layout_height="29dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="112.5dp"
-            android:layout_centerInParent="true"
-            >
-            <TextView
-                android:id="@+id/password"
-                android:layout_width="60dp"
-                android:layout_height="15dp"
+            <RelativeLayout
+                android:id="@+id/password_layout"
+                android:layout_width="260dp"
+                android:layout_height="29dp"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="7dp"
-                android:text="@string/password"
-                android:textAppearance="@style/email"
-                android:gravity="top"
-                />
-            <EditText
-                android:id="@+id/login_password_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="-3dp"
-                android:layout_marginBottom="-4dp"
-                android:layout_marginStart="65dp"
-                android:layout_marginEnd="30dp"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:textColor="#C99DF3"
-                android:textSize="12sp" />
-            <View
-                android:id="@+id/id_password_img"
-                android:layout_width="39dp"
-                android:layout_height="21dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/img_password"
-                />
-        </RelativeLayout>
+                android:layout_marginTop="112.5dp"
+                android:layout_centerInParent="true"
+                >
+                <EditText
+                    android:id="@+id/login_password_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-3dp"
+                    android:layout_marginBottom="-4dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginEnd="30dp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="#C99DF3"
+                    android:textSize="12sp" />
+                <View
+                    android:id="@+id/id_password_img"
+                    android:layout_width="30dp"
+                    android:layout_height="21dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/img_password"
+                    />
+            </RelativeLayout>
         <TextView
             android:id="@+id/summit"
             android:layout_width="wrap_content"

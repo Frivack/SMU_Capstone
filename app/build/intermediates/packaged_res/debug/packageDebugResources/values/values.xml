@@ -10,13 +10,13 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
-    <string name="account">Account</string>
+    <string name="account">계정</string>
     <string name="account_setting">계정 설정</string>
     <string name="app_name">EngUniFriend</string>
     <string name="ask">문의하기</string>
     <string name="assign_by_comp">부품 별 예산 할당하기</string>
     <string name="budget">예산: </string>
-    <string name="budget_sett">Budget Setting</string>
+    <string name="budget_sett">예산 설정</string>
     <string name="commend">추천</string>
     <string name="component">선택된 부품 없음</string>
     <string name="cooler">쿨러</string>
@@ -28,18 +28,18 @@
     <string name="done">수정완료</string>
     <string name="donot">\n탈퇴 후에는 해당 계정과 관련된 \n모든 데이터가 삭제됩니다.\n신중하게 결정해주세요.\n\n\n아래 버튼을 누르면 회원 탈퇴가 진행되며, \n탈퇴 즉시 서비스를 이용할 수 없게 됩니다.</string>
     <string name="earphone">이어폰</string>
-    <string name="edit">Edit</string>
+    <string name="edit">정보 수정</string>
     <string name="edit_exp">수정할 정보를 선택하여\n수정해주세요.</string>
     <string name="edit_name">이름 수정</string>
     <string name="email">Email</string>
     <string name="email_example">hello@example.com</string>
     <string name="end">완료</string>
-    <string name="estimate">견적</string>
+    <string name="estimate">리스트</string>
     <string name="fan">팬</string>
     <string name="gpu">GPU</string>
     <string name="hard">저장장치</string>
     <string name="headset">헤드셋</string>
-    <string name="id">ID</string>
+    <string name="id">rockhat</string>
     <string name="img_build">build</string>
     <string name="img_comment">comment</string>
     <string name="img_email">email</string>
@@ -69,7 +69,7 @@
     <string name="mouse">마우스</string>
     <string name="new_id">신규 계정 생성</string>
     <string name="new_review">글쓰기</string>
-    <string name="notice">Notice</string>
+    <string name="notice">리뷰</string>
     <string name="notice_text">공지사항</string>
     <string name="old_mode">고령자 모드 (글씨체가 확장)</string>
     <string name="password">Password</string>
@@ -77,23 +77,23 @@
     <string name="password_edit">비밀번호 수정</string>
     <string name="password_example">비밀번호를 입력하세요</string>
     <string name="pccase">케이스</string>
-    <string name="percentage">0%\n(₩0)</string>
+    <string name="percentage">0%</string>
     <string name="phone_check">확인 번호를 입력해주세요.</string>
     <string name="post">포스트</string>
     <string name="power">파워</string>
     <string name="ram">메모리</string>
     <string name="really">정말로 탈퇴하시겠습니까?</string>
     <string name="registeration">Registeration</string>
-    <string name="review">ReView</string>
+    <string name="review">리뷰</string>
     <string name="review_empty_comment_num"/>
     <string name="review_empty_content"/>
     <string name="review_empty_date"/>
     <string name="review_empty_thumbsup_num"/>
     <string name="review_empty_title"/>
-    <string name="reviewview">Review</string>
+    <string name="reviewview">리뷰</string>
     <string name="servicecenter">Service Center</string>
     <string name="setting">Setting</string>
-    <string name="sign_in">가입하기</string>
+    <string name="sign_in">회원가입</string>
     <string name="soundcard">사운드카드</string>
     <string name="speaker">스피커</string>
     <string name="summit">Summit</string>
@@ -101,7 +101,7 @@
     <string name="total_budget">총 예산:</string>
     <string name="user_id">user_id</string>
     <string name="userout">회원 탈퇴</string>
-    <string name="welcome">Welcome!</string>
+    <string name="welcome">Welcome!\n오신걸 환영해요!</string>
     <string name="write_date">00.00 00:00</string>
     <string name="writer_ID">ID</string>
     <string name="writing">Writing</string>
@@ -170,11 +170,11 @@
     </style>
     <style name="char18black">
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">#000000</item>
+        <item name="android:textColor">#FFFFFF</item>
     </style>
     <style name="char20">
         <item name="android:textSize">20sp</item>
-        <item name="android:textColor">#CA9EF4</item>
+        <item name="android:textColor">#5A5ABB</item>
     </style>
     <style name="char20brown">
         <item name="android:textSize">20sp</item>
@@ -215,6 +215,6 @@
     </style>
     <style name="welcome">
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">#D76D69</item>
+        <item name="android:textColor">#5A5ABB</item>
     </style>
 </resources>

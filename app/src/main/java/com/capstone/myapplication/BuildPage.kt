@@ -61,7 +61,7 @@ class BuildPage : AppCompatActivity() {
 
     fun msql(view: View) {
         CoroutineScope(Dispatchers.IO).launch {
-            val dbHelper = DatabaseHelper() // 기존 DatabaseHelper 사용
+            val dbHelper = DatabaseHelper(applicationContext) // 기존 DatabaseHelper 사용
             val connection = dbHelper.connect() // 데이터베이스 연결
 
             connection?.use {
@@ -264,7 +264,7 @@ class BuildPage : AppCompatActivity() {
             // 예산을 기반으로 부품 선택 및 UI 업데이트
             // 부품 선택 및 UI 업데이트
             CoroutineScope(Dispatchers.IO).launch {
-                val dbHelper = DatabaseHelper()
+                val dbHelper = DatabaseHelper(applicationContext)
                 val connection = dbHelper.connect()
 
                 connection?.use {

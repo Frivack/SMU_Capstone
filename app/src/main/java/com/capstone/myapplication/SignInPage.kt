@@ -48,7 +48,7 @@ class SignInPage : AppCompatActivity() {
 
     private fun registerUser(username: String, email: String, password: String, phone: String) {
         CoroutineScope(Dispatchers.IO).launch {
-            val dbHelper = DatabaseHelper()
+            val dbHelper = DatabaseHelper(applicationContext)
             val connection = dbHelper.connect()
 
             if (connection != null) {

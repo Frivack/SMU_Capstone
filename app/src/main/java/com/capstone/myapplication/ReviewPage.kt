@@ -54,7 +54,7 @@ class ReviewPage : AppCompatActivity() {
     }
 
     private fun fetchReviewsFromDatabase(): List<Review> {
-        val databaseHelper = DatabaseHelper()
+        val databaseHelper = DatabaseHelper(applicationContext)
         val reviews = mutableListOf<Review>()
 
         val query = "SELECT review_id, user_id, title, content, thumbs_up, comments_count FROM user_info.reviews"
@@ -70,7 +70,7 @@ class ReviewPage : AppCompatActivity() {
                         reviewId = resultSet.getInt("review_id"),
                         title = resultSet.getString("title"),
                         content = resultSet.getString("content"),
-                        date = "", // 데이터베이스에서 날짜 추가 가능
+                        date = "", // 필요하면 created_at 컬럼도 추가 가능
                         thumbsUp = resultSet.getInt("thumbs_up"),
                         comments = resultSet.getInt("comments_count"),
                         userId = resultSet.getInt("user_id")
@@ -79,11 +79,12 @@ class ReviewPage : AppCompatActivity() {
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
-                Toast.makeText(this, "리뷰 데이터를 불러오는 중 오류가 발생했습니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "리뷰 데이터를 불러오는 중 오류가 발생했습니다.", Toast.LENGTH_SHORT).show()
             }
         }
         return reviews
     }
+
 
     private fun setupSwichButtons(userId: Int)
     {
