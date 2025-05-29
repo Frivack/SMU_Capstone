@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_background"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/frame_account"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:background="@drawable/layout_light_purple">
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#411A66"
+            android:text="@string/account"
+            android:textAppearance="@style/char20purple"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/frame_1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <TextView
+            android:id="@+id/current_id"
+            android:layout_width="wrap_content"
+            android:textColor="#411A66"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:text="@string/current_id_text"
+            android:textAppearance="@style/char20purple"
+            />
+        <TextView
+            android:id="@+id/user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/current_id"
+            android:layout_alignBottom="@id/current_id"
+            android:layout_centerVertical="true"
+            android:layout_alignEnd="@id/user_id"
+            android:layout_marginStart="10dp"
+            android:text="@string/id"
+            android:textAppearance="@style/char20green"
+            android:gravity="bottom"
+            />
+        <ImageView
+            android:id="@+id/user_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/img_user"
+            android:src="@drawable/img_id_green"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/frame_3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <TextView
+            android:id="@+id/info_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="#411A66"
+            android:layout_centerVertical="true"
+            android:text="@string/info_edit"
+            android:textAppearance="@style/char20purple"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/frame_4"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="#411A66"
+            android:layout_centerVertical="true"
+            android:text="@string/logout"
+            android:textAppearance="@style/char20purple"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/frame_5"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <TextView
+            android:id="@+id/leave_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:text="@string/leave"
+            android:textAppearance="@style/char20red"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/rlirspyhlh9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/linearRowhomeOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="6dp"
+            android:paddingHorizontal="37dp"
+            android:orientation="horizontal"
+            android:background="@drawable/layout_title_background">
+
+            <!-- 첫 번째 이미지 뷰 -->
+            <ImageView
+                android:id="@+id/imageHomeOne"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:contentDescription="@string/lowbar_home"
+                android:src="@drawable/img_home"
+                />
+
+            <!-- 첫 번째 선 -->
+            <View
+                android:id="@+id/lineLineoneOne"
+                android:layout_height="match_parent"
+                android:layout_width="1dp"
+                android:background="#1A000000" />
+
+            <!-- 두 번째 이미지 뷰 -->
+
+            <ImageView
+                android:id="@+id/imageWhatidoOne"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:contentDescription="@string/lowbar_build"
+                android:src="@drawable/img_what_i_do" />
+
+            <!-- 두 번째 선 -->
+            <View
+                android:id="@+id/lineLineoneThree"
+                android:layout_height="match_parent"
+                android:layout_width="1dp"
+                android:background="#1A000000" />
+
+            <!-- 세 번째 이미지 뷰 -->
+            <ImageView
+                android:id="@+id/imageAutomaticOne"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:contentDescription="@string/lowbar_setting"
+                android:src="@drawable/img_automatic" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

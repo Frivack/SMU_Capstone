@@ -1,0 +1,84 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_light_purple"
+    android:padding="10dp"
+    android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:id="@+id/review_img"
+        android:layout_width="87dp"
+        android:layout_height="77dp"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/review_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="5dp"
+        android:text="리뷰 제목"
+        android:textAppearance="@style/char12black" />
+
+    <TextView
+        android:id="@+id/review_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="25dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:lineSpacingExtra="4dp"
+        android:text="리뷰 내용"
+        android:textAppearance="@style/char12black" />
+
+    <TextView
+        android:id="@+id/review_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:text="날짜"
+        android:textAppearance="@style/char12lightpurple" />
+
+    <ImageView
+        android:id="@+id/review_thumbs_up"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="50dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/img_thumbs_up" />
+
+    <TextView
+        android:id="@+id/review_thumbs_up_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="30dp"
+        android:text="0"
+        android:textAppearance="@style/char12pink" />
+
+    <ImageView
+        android:id="@+id/review_chat_bubble"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/img_chat_bubble" />
+
+    <TextView
+        android:id="@+id/review_chat_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="0"
+        android:textAppearance="@style/char12pink" />
+</RelativeLayout>
