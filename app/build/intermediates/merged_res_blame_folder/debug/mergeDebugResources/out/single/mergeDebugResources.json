@@ -20,6 +20,10 @@
         "source": "C:\\Users\\gamin\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-54:\\drawable\\img_font.png"
     },
     {
+        "merged": "com.capstone.myapplication.app-debug-52:/xml_network_security_config.xml.flat",
+        "source": "com.capstone.myapplication.app-main-54:/xml/network_security_config.xml"
+    },
+    {
         "merged": "C:\\Users\\gamin\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-52:\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\gamin\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-54:\\mipmap-hdpi\\ic_launcher.webp"
     },
@@ -202,10 +206,6 @@
     {
         "merged": "C:\\Users\\gamin\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-52:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\gamin\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-main-54:\\mipmap-xhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.capstone.myapplication.app-debug-52:/layout_activity_signin.xml.flat",
-        "source": "com.capstone.myapplication.app-main-54:/layout/activity_signin.xml"
     },
     {
         "merged": "C:\\Users\\gamin\\.gradle\\daemon\\8.7\\com.capstone.myapplication.app-debug-52:\\drawable_img_i9.png.flat",

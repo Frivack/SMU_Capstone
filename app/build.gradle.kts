@@ -50,6 +50,9 @@ android {
 }
 
 dependencies {
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.12.0")
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation ("mysql:mysql-connector-java:8.0.33")
     implementation(libs.recyclerview)     // 수정된 부분
     implementation(libs.androidx.core.ktx)

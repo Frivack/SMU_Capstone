@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
-import com.example.capstone.DatabaseHelper
+import com.example.capstone.ApiHelper
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -36,6 +36,7 @@ class BuildPage : AppCompatActivity() {
         R.id.price313, R.id.price314, R.id.price315, R.id.price316
     )
     private var totalBudget: Int = 0 // 예산 데이터
+    private val apiHelper = ApiHelper()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,6 +52,7 @@ class BuildPage : AppCompatActivity() {
             startActivityForResult(intent, REQUEST_CODE_BUDGET)
         }
 
+
         // 전원 버튼 설정 클릭
         setupSwichButtons()
 
@@ -61,21 +63,29 @@ class BuildPage : AppCompatActivity() {
 
     fun msql(view: View) {
         CoroutineScope(Dispatchers.IO).launch {
-            val dbHelper = DatabaseHelper(applicationContext) // 기존 DatabaseHelper 사용
-            val connection = dbHelper.connect() // 데이터베이스 연결
-
-            connection?.use {
-                val allParts = dbHelper.fetchAllParts(it) // 모든 부품 데이터 가져오기
+            val allParts = apiHelper.fetchAllParts() // Map<String, List<Map<String, Any>>>
+            // 변환
+            val convertedAllParts = allParts.mapValues { (_, partsList) ->
+                partsList.map { partMap ->
+                    partMap.mapValues { (_, value) -> value?.toString() ?: "" }
+                }
+            }
+            val selectedParts = selectOptimalParts(convertedAllParts, percentageValues)
+            withContext(Dispatchers.Main) {
+                updateUI(selectedParts)
+            }
+            //connection?.use {
+                //val allParts = dbHelper.fetchAllParts(it) // 모든 부품 데이터 가져오기
                 //val selectedParts = selectOptimalParts(allParts) // 최적의 부품 선택
-                val selectedParts = selectOptimalParts(allParts, percentageValues)
+                //val selectedParts = selectOptimalParts(allParts, percentageValues)
                 // 예산 내에서 최적의 부품 선택
 
                 // UI 업데이트는 Main 스레드에서 처리
-                withContext(Dispatchers.Main) {
+                //withContext(Dispatchers.Main) {
                     //loadImages(selectedParts)
-                    updateUI(selectedParts)
-                }
-            }
+                    //updateUI(selectedParts)
+                //}
+            //}
         }
     }
 
@@ -264,21 +274,34 @@ class BuildPage : AppCompatActivity() {
             // 예산을 기반으로 부품 선택 및 UI 업데이트
             // 부품 선택 및 UI 업데이트
             CoroutineScope(Dispatchers.IO).launch {
-                val dbHelper = DatabaseHelper(applicationContext)
-                val connection = dbHelper.connect()
-
-                connection?.use {
-                    val allParts = dbHelper.fetchAllParts(it)
-
-                    // percentageValues를 전달하여 selectOptimalParts 호출
-                    val selectedParts = selectOptimalParts(allParts, percentageValues)
-
-                    // UI 업데이트는 Main 스레드에서 처리
-                    withContext(Dispatchers.Main) {
-                        updateUI(selectedParts)
+                val allParts = apiHelper.fetchAllParts() // Map<String, List<Map<String, Any>>>
+                // 변환
+                val convertedAllParts = allParts.mapValues { (_, partsList) ->
+                    partsList.map { partMap ->
+                        partMap.mapValues { (_, value) -> value?.toString() ?: "" }
                     }
                 }
+                val selectedParts = selectOptimalParts(convertedAllParts, percentageValues)
+                withContext(Dispatchers.Main) {
+                    updateUI(selectedParts)
+                }
             }
+            //CoroutineScope(Dispatchers.IO).launch {
+                //val dbHelper = DatabaseHelper(applicationContext)
+                //val connection = dbHelper.connect()
+
+                //connection?.use {
+                    //val allParts = dbHelper.fetchAllParts(it)
+
+                    // percentageValues를 전달하여 selectOptimalParts 호출
+                    //val selectedParts = selectOptimalParts(allParts, percentageValues)
+
+                    // UI 업데이트는 Main 스레드에서 처리
+                    //withContext(Dispatchers.Main) {
+                        //updateUI(selectedParts)
+                    //}
+                //}
+            //}
         }
     }
 }
