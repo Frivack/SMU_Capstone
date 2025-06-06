@@ -109,7 +109,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent31"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -146,7 +146,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent32"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -183,7 +183,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent33"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -220,7 +220,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent34"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -257,7 +257,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent35"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -294,7 +294,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent36"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -331,7 +331,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent37"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -368,7 +368,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent38"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -405,7 +405,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent39"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -442,7 +442,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent310"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -479,7 +479,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent311"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -516,7 +516,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent312"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -553,7 +553,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent313"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -590,7 +590,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent314"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -627,7 +627,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent315"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -664,7 +664,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent316"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -701,7 +701,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent317"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -738,7 +738,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
-                    <TextView
+                    <Spinner
                         android:id="@+id/compnent318"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
