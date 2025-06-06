@@ -895,7 +895,7 @@
                 android:layout_marginHorizontal="60dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/layout_graient1"
-                android:onClick="msql">
+                >
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
