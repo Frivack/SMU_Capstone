@@ -52,7 +52,6 @@ class BuildPage : AppCompatActivity() {
     // 현재 선택된 부품 리스트
     private var selectedParts: MutableList<Pair<String, Map<String, String>>> = mutableListOf()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buildpage)
@@ -87,28 +86,6 @@ class BuildPage : AppCompatActivity() {
         // Intent로 전달된 예산 데이터 수신
         totalBudget = intent.getIntExtra("TOTAL_BUDGET", 0)
         Log.d("BuildPage", "받은 예산: $totalBudget")
-    }
-
-    fun msql(view: View) {
-        Log.e("MSQLTESTING", "msql start")
-        CoroutineScope(Dispatchers.IO).launch {
-            Log.e("MSQLTESTING", "connect start")
-            val allPartsFetched = apiHelper.fetchAllParts()
-            // 변환
-            val convertedAllParts = allPartsFetched.mapValues { (_, partsList) ->
-                partsList.map { partMap -> partMap.mapValues { (_, value) -> value?.toString() ?: "" } }
-            }
-            // 여기서 멤버변수에 저장!
-            allParts = convertedAllParts
-
-            val optimalParts = selectOptimalParts(convertedAllParts, percentageValues)
-            // 이것도 멤버변수로 저장!
-            selectedParts = optimalParts.toMutableList()
-            withContext(Dispatchers.Main) {
-                updateUI(selectedParts)
-            }
-            Log.e("MSQLTESTING", "msql finish ")
-        }
     }
 
     private fun selectOptimalParts(
@@ -193,15 +170,12 @@ class BuildPage : AppCompatActivity() {
         return selectedParts
     }
 
-
-
     private fun updateRemainingBudget(remainingBudget: Int) {
         runOnUiThread {
             val budgetLeftTextView = findViewById<TextView>(R.id.left_budget)
             budgetLeftTextView.text = "₩${String.format("%,d", remainingBudget)}"
         }
     }
-
 
     private fun updateUI(selectedParts: List<Pair<String, Map<String, String>>>) {
         selectedParts.forEachIndexed { index, (_, part) ->
@@ -229,7 +203,6 @@ class BuildPage : AppCompatActivity() {
             priceView?.text = price
 
             // 이미지 URL 가져오기
-            //val imageUrl = part["image"]
             if (!imageUrl.isNullOrEmpty()) {
                 // Glide로 이미지 로드
                 Glide.with(this)
@@ -279,8 +252,6 @@ class BuildPage : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        Log.e("Start Building Page", "RESULT CODE$resultCode")
-        Log.e("Start Building Page", "REQUEST CODE$requestCode")
         // 1. 예산 관련
         if (requestCode == REQUEST_CODE_BUDGET && resultCode == RESULT_OK) {// BudgetPage에서 반환된 예산 데이터를 수신
             if (requestCode == REQUEST_CODE_BUDGET && resultCode == RESULT_OK) {
@@ -292,7 +263,6 @@ class BuildPage : AppCompatActivity() {
                 val remainingBudgetString = data?.getStringExtra("REMAINING_BUDGET") ?: "0"
                 // PERCENTAGE_VALUES 수신 및 처리
                 val percentageValues = data?.getStringArrayListExtra("PERCENTAGE_VALUES") ?: arrayListOf()
-                // UI에 예산 데이터 반영
                 // UI에 예산 데이터 반영
                 findViewById<TextView>(R.id.total_budget).text = "₩${String.format("%,d", totalBudget)}"
                 findViewById<TextView>(R.id.left_budget).text = "₩${remainingBudgetString.toIntOrNull() ?: 0}"
@@ -316,14 +286,11 @@ class BuildPage : AppCompatActivity() {
             }
         }
 
-        Log.e("Start Building Page", "RESULT CODE$resultCode")
-
         // 2. 부품 교체 관련 (추가되는 부분)
         // 부품 선택 요청코드의 범위 체크
         if (resultCode == RESULT_OK &&
             requestCode in REQUEST_CODE_PART_SELECT until (REQUEST_CODE_PART_SELECT + orderedPartsKeys.size)
         ) {
-            Log.e("Start Building Page", "2")
             val partIndex = requestCode - REQUEST_CODE_PART_SELECT
             val selectedPartId = data?.getStringExtra("SELECTED_PART_ID") ?: return
 
@@ -333,7 +300,6 @@ class BuildPage : AppCompatActivity() {
             val newPart = allCategoryParts?.find { it["id"] == selectedPartId }
 
             if (newPart != null) {
-                Log.e("Start Building Page", "3")
                 // selectedParts를 mutableList로 만들었다고 가정 (selectedParts[partIndex] 교체)
                 selectedParts[partIndex] = categoryKey to newPart
                 updateUI(selectedParts)
@@ -345,6 +311,5 @@ class BuildPage : AppCompatActivity() {
                 updateRemainingBudget(remainingBudget)
             }
         }
-        Log.e("Start Building Page", "end")
     }
 }
