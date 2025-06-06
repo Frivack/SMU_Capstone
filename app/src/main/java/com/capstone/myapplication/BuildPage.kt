@@ -8,6 +8,8 @@ import android.view.View
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
@@ -18,23 +20,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class BuildPage : AppCompatActivity() {
-
-    // XML에서 각 View의 ID를 배열로 정의
-    private val viewIds = listOf(
-        R.id.img31, R.id.img32, R.id.img33, R.id.img34, R.id.img35, R.id.img36,
-        R.id.img37, R.id.img38, R.id.img39, R.id.img310, R.id.img311, R.id.img312,
-        R.id.img313, R.id.img314, R.id.img315, R.id.img316
-    )
-    private val textComponentIds = listOf(
-        R.id.compnent31, R.id.compnent32, R.id.compnent33, R.id.compnent34, R.id.compnent35, R.id.compnent36,
-        R.id.compnent37, R.id.compnent38, R.id.compnent39, R.id.compnent310, R.id.compnent311, R.id.compnent312,
-        R.id.compnent313, R.id.compnent314, R.id.compnent315, R.id.compnent316
-    )
-    private val textPriceIds = listOf(
-        R.id.price31, R.id.price32, R.id.price33, R.id.price34, R.id.price35, R.id.price36,
-        R.id.price37, R.id.price38, R.id.price39, R.id.price310, R.id.price311, R.id.price312,
-        R.id.price313, R.id.price314, R.id.price315, R.id.price316
-    )
     private var totalBudget: Int = 0 // 예산 데이터
     private val apiHelper = ApiHelper()
     private val orderedPartsKeys = listOf(
@@ -43,33 +28,19 @@ class BuildPage : AppCompatActivity() {
         "earphone", "speaker"
     )
     private val REQUEST_CODE_PART_SELECT = 1000
+    private val REQUEST_CODE_BUDGET = 1
     class PartSelectDialog : AppCompatActivity() {
         // 아직 비워놔도 되고, 추후 부품 리스트 띄우는 코드 작성
     }
-    // 모든 부품 데이터 (카테고리별 부품리스트)
-    private var allParts: Map<String, List<Map<String, String>>> = emptyMap()
 
-    // 현재 선택된 부품 리스트
+    private lateinit var partsAdapter: PartsAdapter
+    private var allParts: Map<String, List<Map<String, String>>> = mapOf() // 모든 부품 정보 저장
     private var selectedParts: MutableList<Pair<String, Map<String, String>>> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buildpage)
 
-        viewIds.forEachIndexed { index, viewId ->
-            val imageView = findViewById<View>(viewId)
-            imageView.setOnClickListener {
-                // 1. 어떤 부품(카테고리)인지 인덱스, 키, id 등을 넘김
-                val categoryKey = orderedPartsKeys[index]
-
-                // 2. 다이얼로그 or 액티비티를 띄움 (여기서는 예시로 PartSelectDialog 액티비티)
-                val intent = Intent(this, PartSelectDialog::class.java)
-                intent.putExtra("CATEGORY_KEY", categoryKey)
-                // 현재 선택된 부품 id 등도 넘길 수 있음
-                // intent.putExtra("CURRENT_PART_ID", 현재부품id)
-                startActivityForResult(intent, REQUEST_CODE_PART_SELECT + index)
-            }
-        }
         // 예산 텍스트뷰 기본 메시지 설정
         val budgetTextView = findViewById<TextView>(R.id.total_budget)
         budgetTextView.text = "클릭하여 예산을 설정하세요" // 기본 메시지 설정
@@ -80,7 +51,9 @@ class BuildPage : AppCompatActivity() {
             startActivityForResult(intent, REQUEST_CODE_BUDGET)
         }
 
-        // 전원 버튼 설정 클릭
+        setupRecyclerView()
+
+        // 이동 버튼 설정 클릭
         setupSwichButtons()
 
         // Intent로 전달된 예산 데이터 수신
@@ -115,21 +88,13 @@ class BuildPage : AppCompatActivity() {
                 0
             }
 
-            Log.e("EEEEEEEEEEEEEE", "$allocatedBudget")
-
             // 예산이 0원인 경우 "선택된 부품 없음"으로 처리
             if (allocatedBudget == 0) {
                 selectedParts.add(key to mapOf("image" to "", "name" to "선택된 부품 없음", "price" to "0"))
                 return@forEachIndexed
             }
-            Log.e("XXXXXXXXXXXXXXXXXXXXX", percentageValues[index])
-
-            // 사용 가능한 예산 (남은 예산 고려)
-            //val effectiveBudget = minOf(remainingBudget, allocatedBudget)
-
             Log.d("BuildPage", "$key 카테고리: 할당된 예산 ₩$allocatedBudget, 남은 예산 ₩$remainingBudget")
 
-            //val performanceKey = performanceCriteria[key]
             // 예산이 0원이거나 부품이 없을 경우 기본값 추가
             if (allocatedBudget == 0 || parts == null || parts.isEmpty()) {
                 selectedParts.add(key to mapOf("image" to "", "name" to "선택된 부품 없음", "price" to "0"))
@@ -177,65 +142,6 @@ class BuildPage : AppCompatActivity() {
         }
     }
 
-    private fun updateUI(selectedParts: List<Pair<String, Map<String, String>>>) {
-        selectedParts.forEachIndexed { index, (_, part) ->
-            if (index >= viewIds.size) return@forEachIndexed // 뷰 ID를 초과하지 않도록 제한
-
-            val viewId = viewIds[index]
-            val view = findViewById<View>(viewId) // 이미지 뷰를 가져옴
-
-            // 텍스트 뷰 ID 가져오기
-            val imageViewId = viewIds[index]
-            val nameViewId = resources.getIdentifier("compnent3${index + 1}", "id", packageName)
-            val priceViewId = resources.getIdentifier("price3${index + 1}", "id", packageName)
-
-            val imageView = findViewById<View>(imageViewId)
-            val nameView = findViewById<TextView>(nameViewId)
-            val priceView = findViewById<TextView>(priceViewId)
-
-            // 부품 정보 가져오기
-            val imageUrl = part["image"]
-            val name = part["name"] ?: "선택된 부품 없음"
-            val price = part["price"]?.replace(",", "")?.replace(".00", "")?.toIntOrNull()
-                ?.let { String.format("₩%,d", it) } ?: "가격 없음"
-            // TextView에 부품 이름과 가격 설정
-            nameView?.text = name
-            priceView?.text = price
-
-            // 이미지 URL 가져오기
-            if (!imageUrl.isNullOrEmpty()) {
-                // Glide로 이미지 로드
-                Glide.with(this)
-                    .load(imageUrl)
-                    .into(object : CustomTarget<Drawable>() {
-                        override fun onResourceReady(
-                            resource: Drawable,
-                            transition: Transition<in Drawable>?
-                        ) {
-                            imageView.background = resource
-                        }
-
-                        override fun onLoadCleared(placeholder: Drawable?) {
-                            // 필요 시 자리 표시자 처리
-                        }
-                    })
-                Log.d("BuildPage", "부품 ${part["name"]}의 이미지를 로드했습니다.")
-            } else {
-                Log.d("BuildPage", "부품 ${part["name"]}에 이미지 URL이 없습니다.")
-            }
-
-            // 로그 출력 (디버깅용)
-            Log.d("BuildPage", "텍스트 뷰: ${nameView?.id}, 이름: $name, 가격: $price")
-            // 텍스트 설정
-            nameView.text = name
-            priceView.text = price
-        }
-    }
-
-    companion object {
-        const val REQUEST_CODE_BUDGET = 1 // 고유한 요청 코드
-    }
-
     private fun setupSwichButtons()
     {
         val budgetLayout = findViewById<RelativeLayout>(R.id.frame_2)
@@ -247,41 +153,92 @@ class BuildPage : AppCompatActivity() {
         }
     }
 
+    private fun setupRecyclerView() {
+        val recyclerView = findViewById<RecyclerView>(R.id.parts_recycler_view)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
+        // 어댑터 초기화. 콜백 함수로 handlePartSelection을 넘겨줌
+        //partsAdapter = PartsAdapter(this, selectedParts, allParts) { index, newPart ->
+        //    handlePartSelection(index, newPart)
+        //}
+        //recyclerView.adapter = partsAdapter
+    }
+
+    // 부품이 변경되었을 때 호출되는 함수
+    private fun handlePartSelection(index: Int, newPart: Map<String, String>) {
+        val (categoryKey, _) = selectedParts[index]
+
+        // 1. selectedParts 리스트 업데이트
+        selectedParts[index] = categoryKey to newPart
+
+        // 2. 어댑터에 변경 사항 알림 (★중요★: 전체 데이터를 다시 전달)
+        //    단일 아이템만 바꾸면 스피너 상태가 꼬일 수 있으므로 전체를 갱신
+        partsAdapter.updateData(selectedParts)
+
+        // 3. 남은 예산 등 다른 UI 업데이트
+        updateRemainingBudget()
+
+        // 4. (선택) 변경된 부품의 이미지 업데이트
+        val newImageUrl = newPart["image"]
+        // Glide.with(this).load(newImageUrl).into(...)
+
+        Log.d("BuildPage", "부품 변경: ${categoryKey} -> ${newPart["name"]}")
+    }
+
+    // 남은 예산 계산 및 UI 업데이트 함수
+    private fun updateRemainingBudget() {
+        val totalSelectedPrice = selectedParts.sumOf { (_, part) ->
+            part["price"]?.replace(",", "")?.replace(".00", "")?.toIntOrNull() ?: 0
+        }
+        val remaining = totalBudget - totalSelectedPrice
+
+        val leftBudgetTextView = findViewById<TextView>(R.id.left_budget)
+        leftBudgetTextView.text = "₩${String.format("%,d", remaining)}"
+    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        // 1. 예산 관련
         if (requestCode == REQUEST_CODE_BUDGET && resultCode == RESULT_OK) {// BudgetPage에서 반환된 예산 데이터를 수신
-            if (requestCode == REQUEST_CODE_BUDGET && resultCode == RESULT_OK) {
-                // BudgetPage에서 반환된 예산 데이터를 수신
-                // TOTAL_BUDGET 수신 및 처리
-                val totalBudgetString = data?.getStringExtra("TOTAL_BUDGET") ?: "0"
-                totalBudget = totalBudgetString.toIntOrNull() ?: 0
-                // REMAINING_BUDGET 수신 및 처리
-                val remainingBudgetString = data?.getStringExtra("REMAINING_BUDGET") ?: "0"
-                // PERCENTAGE_VALUES 수신 및 처리
-                val percentageValues = data?.getStringArrayListExtra("PERCENTAGE_VALUES") ?: arrayListOf()
-                // UI에 예산 데이터 반영
-                findViewById<TextView>(R.id.total_budget).text = "₩${String.format("%,d", totalBudget)}"
-                findViewById<TextView>(R.id.left_budget).text = "₩${remainingBudgetString.toIntOrNull() ?: 0}"
-                // PERCENTAGE_VALUES 로그 출력 (확인용)
-                Log.d("BuildPage", "BudgetPage에서 받은 예산: $totalBudget")
-                // 예산을 기반으로 부품 선택 및 UI 업데이트
-                // 부품 선택 및 UI 업데이트
-                CoroutineScope(Dispatchers.IO).launch {
-                    val allParts = apiHelper.fetchAllParts() // Map<String, List<Map<String, Any>>>
-                    // 변환
-                    val convertedAllParts = allParts.mapValues { (_, partsList) ->
-                        partsList.map { partMap ->
-                            partMap.mapValues { (_, value) -> value?.toString() ?: "" }
-                        }
+            // BudgetPage에서 반환된 예산 데이터를 수신
+            val totalBudgetString = data?.getStringExtra("TOTAL_BUDGET") ?: "0"
+            totalBudget = totalBudgetString.toIntOrNull() ?: 0
+            val remainingBudgetString = data?.getStringExtra("REMAINING_BUDGET") ?: "0"
+            val percentageValues = data?.getStringArrayListExtra("PERCENTAGE_VALUES") ?: arrayListOf()
+            // UI에 예산 데이터 반영
+            findViewById<TextView>(R.id.total_budget).text = "₩${String.format("%,d", totalBudget)}"
+            findViewById<TextView>(R.id.left_budget).text = "₩${remainingBudgetString.toIntOrNull() ?: 0}"
+            // PERCENTAGE_VALUES 로그 출력 (확인용)
+            Log.d("BuildPage", "BudgetPage에서 받은 예산: $totalBudget")
+            // 예산을 기반으로 부품 선택 및 UI 업데이트
+            CoroutineScope(Dispatchers.IO).launch {
+                val allParts = apiHelper.fetchAllParts()
+                val convertedAllParts = allParts.mapValues { (_, partsList) ->
+                    partsList.map { partMap ->
+                        partMap.mapValues { (_, value) -> value?.toString() ?: "" }
                     }
-                    val selectedParts = selectOptimalParts(convertedAllParts, percentageValues)
-                    withContext(Dispatchers.Main) {
-                        updateUI(selectedParts)
+                }
+
+                this@BuildPage.allParts = convertedAllParts
+
+                val initialSelectedParts = selectOptimalParts(convertedAllParts, percentageValues)
+
+                this@BuildPage.selectedParts = initialSelectedParts.toMutableList()
+
+                withContext(Dispatchers.Main) {
+                    val partSelectionCallback = { index: Int, newPart: Map<String, String> ->
+                        handlePartSelection(index, newPart)
                     }
+                    partsAdapter = PartsAdapter(
+                        this@BuildPage,
+                        this@BuildPage.selectedParts,
+                        this@BuildPage.allParts,
+                        partSelectionCallback
+                    )
+
+                    findViewById<RecyclerView>(R.id.parts_recycler_view).adapter = partsAdapter
+
+                    updateRemainingBudget() // 최초 남은 예산 업데이트
                 }
             }
         }
