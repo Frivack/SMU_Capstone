@@ -108,18 +108,6 @@ class BuildPage : AppCompatActivity() {
                 updateUI(selectedParts)
             }
             Log.e("MSQLTESTING", "msql finish ")
-        //connection?.use {
-                //val allParts = dbHelper.fetchAllParts(it) // 모든 부품 데이터 가져오기
-                //val selectedParts = selectOptimalParts(allParts) // 최적의 부품 선택
-                //val selectedParts = selectOptimalParts(allParts, percentageValues)
-                // 예산 내에서 최적의 부품 선택
-
-                // UI 업데이트는 Main 스레드에서 처리
-                //withContext(Dispatchers.Main) {
-                    //loadImages(selectedParts)
-                    //updateUI(selectedParts)
-                //}
-            //}
         }
     }
 
@@ -293,9 +281,39 @@ class BuildPage : AppCompatActivity() {
 
         Log.e("Start Building Page", "RESULT CODE$resultCode")
         Log.e("Start Building Page", "REQUEST CODE$requestCode")
-        // 1. 예산 관련 (이미 있던 코드)
-        if (requestCode == REQUEST_CODE_BUDGET && resultCode == RESULT_OK) {
-            // ... (생략: 네가 이미 쓰는 예산 관련 코드)
+        // 1. 예산 관련
+        if (requestCode == REQUEST_CODE_BUDGET && resultCode == RESULT_OK) {// BudgetPage에서 반환된 예산 데이터를 수신
+            if (requestCode == REQUEST_CODE_BUDGET && resultCode == RESULT_OK) {
+                // BudgetPage에서 반환된 예산 데이터를 수신
+                // TOTAL_BUDGET 수신 및 처리
+                val totalBudgetString = data?.getStringExtra("TOTAL_BUDGET") ?: "0"
+                totalBudget = totalBudgetString.toIntOrNull() ?: 0
+                // REMAINING_BUDGET 수신 및 처리
+                val remainingBudgetString = data?.getStringExtra("REMAINING_BUDGET") ?: "0"
+                // PERCENTAGE_VALUES 수신 및 처리
+                val percentageValues = data?.getStringArrayListExtra("PERCENTAGE_VALUES") ?: arrayListOf()
+                // UI에 예산 데이터 반영
+                // UI에 예산 데이터 반영
+                findViewById<TextView>(R.id.total_budget).text = "₩${String.format("%,d", totalBudget)}"
+                findViewById<TextView>(R.id.left_budget).text = "₩${remainingBudgetString.toIntOrNull() ?: 0}"
+                // PERCENTAGE_VALUES 로그 출력 (확인용)
+                Log.d("BuildPage", "BudgetPage에서 받은 예산: $totalBudget")
+                // 예산을 기반으로 부품 선택 및 UI 업데이트
+                // 부품 선택 및 UI 업데이트
+                CoroutineScope(Dispatchers.IO).launch {
+                    val allParts = apiHelper.fetchAllParts() // Map<String, List<Map<String, Any>>>
+                    // 변환
+                    val convertedAllParts = allParts.mapValues { (_, partsList) ->
+                        partsList.map { partMap ->
+                            partMap.mapValues { (_, value) -> value?.toString() ?: "" }
+                        }
+                    }
+                    val selectedParts = selectOptimalParts(convertedAllParts, percentageValues)
+                    withContext(Dispatchers.Main) {
+                        updateUI(selectedParts)
+                    }
+                }
+            }
         }
 
         Log.e("Start Building Page", "RESULT CODE$resultCode")
