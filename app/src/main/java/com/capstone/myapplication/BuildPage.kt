@@ -247,7 +247,7 @@ class BuildPage : AppCompatActivity() {
         }
     }
 
-    private var percentageValues: List<String> = emptyList() // 전역 변수로 선언
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -283,32 +283,6 @@ class BuildPage : AppCompatActivity() {
                         updateUI(selectedParts)
                     }
                 }
-            }
-        }
-
-        // 2. 부품 교체 관련 (추가되는 부분)
-        // 부품 선택 요청코드의 범위 체크
-        if (resultCode == RESULT_OK &&
-            requestCode in REQUEST_CODE_PART_SELECT until (REQUEST_CODE_PART_SELECT + orderedPartsKeys.size)
-        ) {
-            val partIndex = requestCode - REQUEST_CODE_PART_SELECT
-            val selectedPartId = data?.getStringExtra("SELECTED_PART_ID") ?: return
-
-            // allParts와 selectedParts는 멤버변수화 해두는 게 좋음!
-            val categoryKey = orderedPartsKeys[partIndex]
-            val allCategoryParts = allParts[categoryKey] // 이제 멤버변수니까 접근 OK!
-            val newPart = allCategoryParts?.find { it["id"] == selectedPartId }
-
-            if (newPart != null) {
-                // selectedParts를 mutableList로 만들었다고 가정 (selectedParts[partIndex] 교체)
-                selectedParts[partIndex] = categoryKey to newPart
-                updateUI(selectedParts)
-                // 남은 예산 등 갱신
-                val totalSelectedPrice = selectedParts.sumOf { (_, part) ->
-                    part["price"]?.replace(",", "")?.replace(".00", "")?.toIntOrNull() ?: 0
-                }
-                val remainingBudget = totalBudget - totalSelectedPrice
-                updateRemainingBudget(remainingBudget)
             }
         }
     }
