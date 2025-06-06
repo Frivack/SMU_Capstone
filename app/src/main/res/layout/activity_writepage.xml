@@ -131,55 +131,51 @@
 
     <!-- 하단바 -->
     <LinearLayout
-        android:id="@+id/rlirspyhlh9"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:elevation="8dp">
 
         <LinearLayout
-            android:id="@+id/linearRowhomeOne"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="6dp"
-            android:paddingHorizontal="37dp"
-            android:orientation="horizontal"
-            android:background="@drawable/layout_title_background">
-
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
             <ImageView
                 android:id="@+id/imageHomeOne"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:contentDescription="@string/lowbar_home"
-                android:src="@drawable/img_home" />
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/img_home"
+                android:contentDescription="@string/lowbar_home"/>
+        </LinearLayout>
 
-            <View
-                android:id="@+id/lineLineoneOne"
-                android:layout_height="match_parent"
-                android:layout_width="1dp"
-                android:background="#1A000000" />
-
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
             <ImageView
                 android:id="@+id/imageWhatidoOne"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:contentDescription="@string/lowbar_build"
-                android:src="@drawable/img_what_i_do" />
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/img_what_i_do"
+                android:contentDescription="@string/lowbar_build"/>
+        </LinearLayout>
 
-            <View
-                android:id="@+id/lineLineoneThree"
-                android:layout_height="match_parent"
-                android:layout_width="1dp"
-                android:background="#1A000000" />
-
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
             <ImageView
                 android:id="@+id/imageAutomaticOne"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:contentDescription="@string/lowbar_setting"
-                android:src="@drawable/img_automatic" />
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/img_automatic"
+                android:contentDescription="@string/lowbar_setting"/>
         </LinearLayout>
     </LinearLayout>
+
 </LinearLayout>
