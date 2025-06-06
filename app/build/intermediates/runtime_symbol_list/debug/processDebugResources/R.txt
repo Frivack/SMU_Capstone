@@ -637,6 +637,7 @@ int drawable abc_textfield_search_default_mtrl_alpha 0x7f07004f
 int drawable abc_textfield_search_material 0x7f070050
 int drawable abc_vector_test 0x7f070051
 int drawable background_gradient 0x7f070052
+int drawable box_white_rounded 0x7f0700ab
 int drawable btn_checkbox_checked_mtrl 0x7f070053
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f070054
 int drawable btn_checkbox_unchecked_mtrl 0x7f070055
@@ -683,6 +684,7 @@ int drawable img_thumbs_up 0x7f07007d
 int drawable img_toggle_button 0x7f07007e
 int drawable img_what_i_do 0x7f07007f
 int drawable img_whatido85 0x7f070080
+int drawable input_field_bg 0x7f0700ac
 int drawable layout_background 0x7f070081
 int drawable layout_bigbg 0x7f070082
 int drawable layout_blue 0x7f070083
@@ -807,6 +809,7 @@ int id budget_sett 0x7f09004c
 int id buget_bg 0x7f09004d
 int id buttonPanel 0x7f09004e
 int id camera 0x7f09004f
+int id center_container 0x7f0901e2
 int id center_vertical 0x7f090050
 int id checkbox 0x7f090051
 int id checked 0x7f090052
@@ -1008,6 +1011,7 @@ int id linearRowhomeOne 0x7f090115
 int id listMode 0x7f090116
 int id list_item 0x7f090117
 int id login_email_text 0x7f090118
+int id login_logo 0x7f0901e3
 int id login_password_text 0x7f090119
 int id logo 0x7f09011a
 int id logout 0x7f09011b

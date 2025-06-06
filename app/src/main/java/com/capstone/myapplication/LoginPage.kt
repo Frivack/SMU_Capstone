@@ -47,7 +47,7 @@ class LoginPage : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 // username을 email로 임시 세팅
-                val loginResponse = apiHelper.login(email, password, email)
+                val loginResponse = apiHelper.login(email, password)
                 withContext(Dispatchers.Main) {
                     android.util.Log.e("LoginResponse", loginResponse?.toString() ?: "null")
                     if (loginResponse == null) {

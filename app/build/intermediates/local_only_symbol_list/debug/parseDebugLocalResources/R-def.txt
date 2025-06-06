@@ -11,6 +11,7 @@ color teal_200
 color teal_700
 color white
 drawable background_gradient
+drawable box_white_rounded
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable img_4080
@@ -43,6 +44,7 @@ drawable img_thumbs_up
 drawable img_toggle_button
 drawable img_what_i_do
 drawable img_whatido85
+drawable input_field_bg
 drawable layout_background
 drawable layout_bigbg
 drawable layout_blue
@@ -84,6 +86,7 @@ id bottom_bg
 id budget_sett
 id buget_bg
 id camera
+id center_container
 id choocheon
 id comment_content
 id comment_thumbs_up_button
@@ -245,6 +248,7 @@ id line_1
 id line_2
 id linearRowhomeOne
 id login_email_text
+id login_logo
 id login_password_text
 id logo
 id logout

@@ -880,9 +880,11 @@
                         android:gravity="top"
                         />
                 </RelativeLayout>
+                <!-- ScrollView의 LinearLayout 마지막 부분에 아래 코드 추가 -->
             </LinearLayout>
+
         </ScrollView>
-        <!--<RelativeLayout
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true">
@@ -892,7 +894,7 @@
                 android:layout_height="60dp"
                 android:layout_marginHorizontal="60dp"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/layout_pink"
+                android:background="@drawable/layout_graient1"
                 android:onClick="msql">
                 <TextView
                     android:layout_width="wrap_content"
@@ -901,7 +903,7 @@
                     android:layout_centerInParent="true"
                     android:textAppearance="@style/char20brown"/>
             </RelativeLayout>
-        </RelativeLayout>-->
+        </RelativeLayout>
     </RelativeLayout>
     <LinearLayout
         android:id="@+id/rlirspyhlh9"

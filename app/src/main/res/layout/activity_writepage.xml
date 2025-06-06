@@ -6,116 +6,118 @@
     android:layout_height="match_parent"
     android:background="@drawable/layout_title_background"
     android:orientation="vertical">
-    <RelativeLayout
-        android:id="@+id/writeing"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@drawable/layout_title_background"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/writing"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/writing"
-            android:textAppearance="@style/char20purple"
-            android:layout_centerInParent="true"
-            />
-    </RelativeLayout>
 
+    <!-- 제목 및 입력라인 -->
+    <TextView
+        android:id="@+id/title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="제목"
+        android:textColor="#5A5ABB"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="21dp"/>
+
+    <!-- 제목 입력 -->
+    <EditText
+        android:id="@+id/title"
+        style="@style/char20lightpurple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="21dp"
+        android:background="@null"
+        android:hint="제목"
+        android:inputType="text" />
+
+    <!-- 선 -->
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="21dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/line" />
+
+    <!-- 아이콘 5개 가로배치 -->
     <LinearLayout
-        android:id="@+id/frame"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginStart="21dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/camera"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/img_camera" />
+
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/img_picture" />
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/img_play" />
+
+        <ImageView
+            android:id="@+id/font"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/img_font" />
+
+        <ImageView
+            android:id="@+id/font2"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:src="@drawable/img_font2" />
+    </LinearLayout>
+
+    <!-- 선 -->
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="21dp"
+        android:background="@drawable/line" />
+
+    <!-- 내용 입력창 -->
+    <EditText
+        android:id="@+id/content"
+        style="@style/char20lightpurple"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginHorizontal="21dp"
+        android:layout_marginTop="18dp"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="내용을 입력하세요." />
+
+    <!-- 여백 및 버튼 하단배치 -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="1dp"
-        android:layout_weight="1"
-        android:background="@drawable/layout_title_background"
-        android:orientation="vertical">
-
-        <EditText
-            android:id="@+id/title"
-            style="@style/char20lightpurple"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="21dp"
-            android:layout_marginTop="19dp"
-            android:background="@null"
-            android:gravity="top"
-            android:inputType="text"
-            android:hint="제목" />
-
-        <View
-            android:id="@+id/line_1"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="3dp"
-            android:background="@drawable/line" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <ImageView
-                android:id="@+id/camera"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginEnd="15dp"
-                android:src="@drawable/img_camera" />
-
-            <ImageView
-                android:id="@+id/picture"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginHorizontal="15dp"
-                android:contentDescription="picture"
-                android:src="@drawable/img_picture" />
-
-            <ImageView
-                android:id="@+id/play"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginHorizontal="15dp"
-                android:contentDescription="play"
-                android:src="@drawable/img_play" />
-
-            <ImageView
-                android:id="@+id/font"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginHorizontal="15dp"
-                android:contentDescription="font"
-                android:src="@drawable/img_font" />
-        </LinearLayout>
-
-        <View
-            android:id="@+id/line_2"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="4dp"
-            android:background="@drawable/line" />
-
-        <EditText
-            android:id="@+id/content"
-            style="@style/char20lightpurple"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="30dp"
-            android:background="@null"
-            android:gravity="top"
-            android:hint="내용을 입력하세요." />
-    </LinearLayout>
+        android:layout_weight="1"/>
 
     <RelativeLayout
         android:id="@+id/post_frame"
         android:layout_width="140dp"
         android:layout_height="45dp"
-        android:layout_marginTop="-80dp"
-        android:layout_marginBottom="50dp"
-        android:layout_gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="38dp"
         android:background="@drawable/layout_blue">
         <TextView
             android:id="@+id/post"
@@ -124,64 +126,60 @@
             android:text="@string/post"
             android:textAppearance="@style/char20lightpink"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            />
+            android:layout_centerVertical="true"/>
     </RelativeLayout>
 
+    <!-- 하단바 -->
     <LinearLayout
-        android:id="@+id/linearRowhomeOne"
-        android:layout_width="320dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="20dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:paddingVertical="8dp"
-        android:layout_gravity="center"
-        android:background="@drawable/layout_title_background">
+        android:id="@+id/rlirspyhlh9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <!-- 첫 번째 이미지 뷰 -->
-        <ImageView
-            android:id="@+id/imageHomeOne"
-            android:layout_height="50dp"
-            android:layout_width="0dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:contentDescription="@string/lowbar_home"
-            android:src="@drawable/img_home" />
+        <LinearLayout
+            android:id="@+id/linearRowhomeOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="6dp"
+            android:paddingHorizontal="37dp"
+            android:orientation="horizontal"
+            android:background="@drawable/layout_title_background">
 
-        <!-- 첫 번째 선 -->
-        <View
-            android:id="@+id/lineLineoneOne"
-            android:layout_height="match_parent"
-            android:layout_width="1dp"
-            android:background="#1A000000" />
+            <ImageView
+                android:id="@+id/imageHomeOne"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/lowbar_home"
+                android:src="@drawable/img_home" />
 
-        <!-- 두 번째 이미지 뷰 -->
+            <View
+                android:id="@+id/lineLineoneOne"
+                android:layout_height="match_parent"
+                android:layout_width="1dp"
+                android:background="#1A000000" />
 
-        <ImageView
-            android:id="@+id/imageWhatidoOne"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:contentDescription="@string/lowbar_build"
-            android:src="@drawable/img_what_i_do" />
+            <ImageView
+                android:id="@+id/imageWhatidoOne"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/lowbar_build"
+                android:src="@drawable/img_what_i_do" />
 
-        <!-- 두 번째 선 -->
-        <View
-            android:id="@+id/lineLineoneThree"
-            android:layout_height="match_parent"
-            android:layout_width="1dp"
-            android:background="#1A000000" />
+            <View
+                android:id="@+id/lineLineoneThree"
+                android:layout_height="match_parent"
+                android:layout_width="1dp"
+                android:background="#1A000000" />
 
-        <!-- 세 번째 이미지 뷰 -->
-        <ImageView
-            android:id="@+id/imageAutomaticOne"
-            android:layout_height="50dp"
-            android:layout_width="0dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:contentDescription="@string/lowbar_setting"
-            android:src="@drawable/img_automatic" />
+            <ImageView
+                android:id="@+id/imageAutomaticOne"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/lowbar_setting"
+                android:src="@drawable/img_automatic" />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

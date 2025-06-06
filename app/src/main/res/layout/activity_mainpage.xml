@@ -88,9 +88,8 @@
                     <TextView
                         android:id="@+id/rea8v3wm5z8e"
                         android:textColor="#5A5ABB"
-
-                        android:textSize="16px"
-                        android:textStyle="normal"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:text="신규/수정 견적"
@@ -121,8 +120,8 @@
                     <TextView
                         android:id="@+id/r8t7zo8z5auc"
                         android:textColor="#5A5ABB"
-                        android:textSize="16px"
-                        android:textStyle="normal"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:text="계정"
@@ -157,8 +156,8 @@
                     <TextView
                         android:id="@+id/deving2"
                         android:textColor="#5A5ABB"
-                        android:textSize="16px"
-                        android:textStyle="normal"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:text="리뷰 보기"
@@ -188,7 +187,7 @@
                     <TextView
                         android:id="@+id/rs6556pyx5tq"
                         android:textColor="#5A5ABB"
-                        android:textSize="16px"
+                        android:textSize="16sp"
                         android:textStyle="bold"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
@@ -223,8 +222,8 @@
                     <TextView
                         android:id="@+id/deving3"
                         android:textColor="#5A5ABB"
-                        android:textSize="16px"
-                        android:textStyle="normal"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:text="고객센터"
@@ -260,8 +259,8 @@
                     <TextView
                         android:id="@+id/rnwd0rymnwfd"
                         android:textColor="#5A5ABB"
-                        android:textSize="16px"
-                        android:textStyle="normal"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:text="공지사항"

@@ -638,6 +638,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable background_gradient
+drawable box_white_rounded
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -684,6 +685,7 @@ drawable img_thumbs_up
 drawable img_toggle_button
 drawable img_what_i_do
 drawable img_whatido85
+drawable input_field_bg
 drawable layout_background
 drawable layout_bigbg
 drawable layout_blue
@@ -808,6 +810,7 @@ id budget_sett
 id buget_bg
 id buttonPanel
 id camera
+id center_container
 id center_vertical
 id checkbox
 id checked
@@ -1009,6 +1012,7 @@ id linearRowhomeOne
 id listMode
 id list_item
 id login_email_text
+id login_logo
 id login_password_text
 id logo
 id logout

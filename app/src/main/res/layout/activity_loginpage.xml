@@ -1,176 +1,192 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@drawable/background_gradient"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/some_id"
-        android:layout_width="321dp"
-        android:layout_height="443dp"
+    <!-- WelCome (왼쪽상단 고정) -->
+    <TextView
+        android:id="@+id/lg_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textColor="#5A5ABA"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="24dp"
+        android:gravity="start"
         android:layout_alignParentTop="true"
-        android:gravity="center_horizontal"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="99dp"
-        android:background="@drawable/background_gradient">
-        <TextView
-            android:id="@+id/lg_welcome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:gravity="center"
-            android:textColor="#5639A4"
-            android:textStyle="bold"
-            android:layout_centerInParent="true"
-            android:text="@string/welcome"
-            android:textAppearance="@style/welcome"
-            />
-            <RelativeLayout
-                android:id="@+id/email_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:orientation="vertical"
-                android:padding="10dp"
-                android:layout_marginHorizontal="24dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="67.5dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:layout_centerInParent="true"
-                >
-                <EditText
-                    android:id="@+id/login_email_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-4dp"
-                    android:layout_marginBottom="-4dp"
-                    android:layout_marginStart="65dp"
-                    android:layout_marginEnd="30dp"
-                    android:textStyle="bold"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress"
-                    android:textColor="#C99DF3"
-                    android:textSize="12sp" />
-                <View
-                    android:id="@+id/id_login_img"
-                    android:layout_width="27dp"
-                    android:layout_height="21dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="4dp"
-                    android:background="@drawable/img_id_verified"
-                    />
-            </RelativeLayout>
+        android:layout_alignParentStart="true" />
 
-            <RelativeLayout
-                android:id="@+id/password_layout"
-                android:layout_width="260dp"
-                android:layout_height="29dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="112.5dp"
-                android:layout_centerInParent="true"
-                >
-                <EditText
-                    android:id="@+id/login_password_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-3dp"
-                    android:layout_marginBottom="-4dp"
-                    android:layout_marginStart="65dp"
-                    android:layout_marginEnd="30dp"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:textColor="#C99DF3"
-                    android:textSize="12sp" />
-                <View
-                    android:id="@+id/id_password_img"
-                    android:layout_width="30dp"
-                    android:layout_height="21dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="4dp"
-                    android:background="@drawable/img_password"
-                    />
-            </RelativeLayout>
+    <!-- 중앙 정렬되는 모든 것 감싸는 "컨테이너" -->
+    <LinearLayout
+        android:id="@+id/center_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/lg_welcome"
+        android:layout_marginTop="32dp">
+
+        <!-- Email 입력란 -->
+        <RelativeLayout
+            android:id="@+id/email_layout"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:background="@drawable/input_field_bg"
+            android:layout_marginBottom="18dp">
+
+            <EditText
+                android:id="@+id/login_email_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="이메일"
+                android:textStyle="bold"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                android:inputType="textEmailAddress"
+                android:paddingStart="16dp"
+                android:paddingEnd="48dp"
+                android:gravity="center_vertical"/>
+
+            <View
+                android:id="@+id/id_login_img"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/img_id_verified"/>
+        </RelativeLayout>
+
+        <!-- Password 입력란 -->
+        <RelativeLayout
+            android:id="@+id/password_layout"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:background="@drawable/input_field_bg"
+            android:layout_marginBottom="32dp">
+
+            <EditText
+                android:id="@+id/login_password_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="비밀번호"
+                android:textStyle="bold"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                android:inputType="textPassword"
+                android:paddingStart="16dp"
+                android:paddingEnd="48dp"
+                android:gravity="center_vertical"/>
+
+            <View
+                android:id="@+id/id_password_img"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/img_password"/>
+        </RelativeLayout>
+
+        <!-- X 아이콘 (중앙) -->
+        <ImageView
+            android:id="@+id/login_logo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@null"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="28dp"
+            />
+
+        <!-- 로그인 버튼 (중앙) -->
         <TextView
             android:id="@+id/summit"
-            android:layout_width="wrap_content"
-            android:layout_height="27dp"
-            android:layout_marginTop="183.5dp"
-            android:layout_alignParentTop="true"
+            android:layout_width="232dp"
+            android:layout_height="48dp"
+            android:background="@drawable/layout_light_purple_grad"
+            android:gravity="center"
             android:text="@string/summit"
-            android:textAppearance="@style/char20"
-            android:layout_centerInParent="true"
-            />
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:elevation="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- 계정을 잊으셨나요? (중앙) -->
         <TextView
             android:id="@+id/new_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="326.5dp"
             android:text="@string/new_id"
-            android:textAppearance="@style/char20"
-            android:layout_centerInParent="true"
-            />
-    </RelativeLayout>
+            android:textColor="#6969D7"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="12dp"/>
+    </LinearLayout>
 
+    <!-- 하단 네비바 -->
     <LinearLayout
-        android:id="@+id/linearRowhomeOne"
-        android:layout_width="320dp"
-        android:layout_height="59dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:paddingVertical="8dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/layout_title_background">
+        android:id="@+id/rlirspyhlh9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
 
-        <!-- 첫 번째 이미지 뷰 -->
-        <ImageView
-            android:id="@+id/imageHomeOne"
-            android:layout_height="50dp"
-            android:layout_width="0dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:contentDescription="@string/lowbar_home"
-            android:src="@drawable/img_home" />
+        <LinearLayout
+            android:id="@+id/linearRowhomeOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="6dp"
+            android:paddingHorizontal="37dp"
+            android:orientation="horizontal"
+            android:background="@drawable/layout_title_background">
 
-        <!-- 첫 번째 선 -->
-        <View
-            android:id="@+id/lineLineoneOne"
-            android:layout_height="match_parent"
-            android:layout_width="1dp"
-            android:background="#1A000000" />
+            <ImageView
+                android:id="@+id/imageHomeOne"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:contentDescription="@string/lowbar_home"
+                android:src="@drawable/img_home" />
 
-        <!-- 두 번째 이미지 뷰 -->
+            <View
+                android:id="@+id/lineLineoneOne"
+                android:layout_height="match_parent"
+                android:layout_width="1dp"
+                android:background="#1A000000" />
 
-        <ImageView
-            android:id="@+id/imageWhatidoOne"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:contentDescription="@string/lowbar_build"
-            android:src="@drawable/img_what_i_do" />
+            <ImageView
+                android:id="@+id/imageWhatidoOne"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:contentDescription="@string/lowbar_build"
+                android:src="@drawable/img_what_i_do" />
 
-        <!-- 두 번째 선 -->
-        <View
-            android:id="@+id/lineLineoneThree"
-            android:layout_height="match_parent"
-            android:layout_width="1dp"
-            android:background="#1A000000" />
+            <View
+                android:id="@+id/lineLineoneThree"
+                android:layout_height="match_parent"
+                android:layout_width="1dp"
+                android:background="#1A000000" />
 
-        <!-- 세 번째 이미지 뷰 -->
-        <ImageView
-            android:id="@+id/imageAutomaticOne"
-            android:layout_height="50dp"
-            android:layout_width="0dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:contentDescription="@string/lowbar_setting"
-            android:src="@drawable/img_automatic" />
+            <ImageView
+                android:id="@+id/imageAutomaticOne"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:contentDescription="@string/lowbar_setting"
+                android:src="@drawable/img_automatic" />
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

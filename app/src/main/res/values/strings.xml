@@ -4,8 +4,8 @@
     <string name="welcome">Welcome!\n오신걸 환영해요!</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="summit">Summit</string>
-    <string name="new_id">신규 계정 생성</string>
+    <string name="summit">로그인</string>
+    <string name="new_id">회원가입</string>
     <string name="estimate">리스트</string>
     <string name="budget">예산: </string>
     <string name="id">rockhat</string>

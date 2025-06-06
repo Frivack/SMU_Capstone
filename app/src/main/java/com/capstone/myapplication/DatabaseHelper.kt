@@ -30,8 +30,7 @@ data class Review(
 )
 data class LoginRequest(
     val email: String,
-    val password: String,
-    val username: String    // 반드시 추가!
+    val password: String
 )
 data class LoginResponse(
     val message: String,
@@ -58,7 +57,6 @@ interface ApiService {
 
     @POST("login")
     suspend fun login(@Body request: LoginRequest): Response<LoginResponse>
-
 
 
     @GET("reviews")
@@ -102,13 +100,12 @@ class ApiHelper {
     }
 
 
-    suspend fun login(email: String, password: String, username: String): LoginResponse?
-    {
+    suspend fun login(email: String, password: String): LoginResponse? {
         val passwordHash = sha256(password) // 비밀번호 해시화
-        // email을 username에도 같이 넣어서 보냄 (요구사항에 맞게)
-        val response = RetrofitClient.apiService.login(LoginRequest(email, passwordHash, email))
+        val response = RetrofitClient.apiService.login(LoginRequest(email, passwordHash))
         return if (response.isSuccessful) response.body() else null
     }
+
 
 
     suspend fun fetchAllReviews(): List<Review> {

@@ -37,11 +37,40 @@ class BuildPage : AppCompatActivity() {
     )
     private var totalBudget: Int = 0 // 예산 데이터
     private val apiHelper = ApiHelper()
+    private val orderedPartsKeys = listOf(
+        "cpu", "gpu", "motherboard", "ram", "power_supply", "hard_drive", "cooler",
+        "fan", "sound_card",  "pc_case", "mouse", "monitor", "keyboard", "headset",
+        "earphone", "speaker"
+    )
+    private val REQUEST_CODE_PART_SELECT = 1000
+    class PartSelectDialog : AppCompatActivity() {
+        // 아직 비워놔도 되고, 추후 부품 리스트 띄우는 코드 작성
+    }
+    // 모든 부품 데이터 (카테고리별 부품리스트)
+    private var allParts: Map<String, List<Map<String, String>>> = emptyMap()
+
+    // 현재 선택된 부품 리스트
+    private var selectedParts: MutableList<Pair<String, Map<String, String>>> = mutableListOf()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buildpage)
 
+        viewIds.forEachIndexed { index, viewId ->
+            val imageView = findViewById<View>(viewId)
+            imageView.setOnClickListener {
+                // 1. 어떤 부품(카테고리)인지 인덱스, 키, id 등을 넘김
+                val categoryKey = orderedPartsKeys[index]
+
+                // 2. 다이얼로그 or 액티비티를 띄움 (여기서는 예시로 PartSelectDialog 액티비티)
+                val intent = Intent(this, PartSelectDialog::class.java)
+                intent.putExtra("CATEGORY_KEY", categoryKey)
+                // 현재 선택된 부품 id 등도 넘길 수 있음
+                // intent.putExtra("CURRENT_PART_ID", 현재부품id)
+                startActivityForResult(intent, REQUEST_CODE_PART_SELECT + index)
+            }
+        }
         // 예산 텍스트뷰 기본 메시지 설정
         val budgetTextView = findViewById<TextView>(R.id.total_budget)
         budgetTextView.text = "클릭하여 예산을 설정하세요" // 기본 메시지 설정
@@ -51,6 +80,7 @@ class BuildPage : AppCompatActivity() {
             val intent = Intent(this, BudgetPage::class.java)
             startActivityForResult(intent, REQUEST_CODE_BUDGET)
         }
+
 
 
         // 전원 버튼 설정 클릭
@@ -63,18 +93,21 @@ class BuildPage : AppCompatActivity() {
 
     fun msql(view: View) {
         CoroutineScope(Dispatchers.IO).launch {
-            val allParts = apiHelper.fetchAllParts() // Map<String, List<Map<String, Any>>>
+            val allPartsFetched = apiHelper.fetchAllParts()
             // 변환
-            val convertedAllParts = allParts.mapValues { (_, partsList) ->
-                partsList.map { partMap ->
-                    partMap.mapValues { (_, value) -> value?.toString() ?: "" }
-                }
+            val convertedAllParts = allPartsFetched.mapValues { (_, partsList) ->
+                partsList.map { partMap -> partMap.mapValues { (_, value) -> value?.toString() ?: "" } }
             }
-            val selectedParts = selectOptimalParts(convertedAllParts, percentageValues)
+            // 여기서 멤버변수에 저장!
+            allParts = convertedAllParts
+
+            val optimalParts = selectOptimalParts(convertedAllParts, percentageValues)
+            // 이것도 멤버변수로 저장!
+            selectedParts = optimalParts.toMutableList()
             withContext(Dispatchers.Main) {
                 updateUI(selectedParts)
             }
-            //connection?.use {
+        //connection?.use {
                 //val allParts = dbHelper.fetchAllParts(it) // 모든 부품 데이터 가져오기
                 //val selectedParts = selectOptimalParts(allParts) // 최적의 부품 선택
                 //val selectedParts = selectOptimalParts(allParts, percentageValues)
@@ -256,52 +289,37 @@ class BuildPage : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+
+        // 1. 예산 관련 (이미 있던 코드)
         if (requestCode == REQUEST_CODE_BUDGET && resultCode == RESULT_OK) {
-            // BudgetPage에서 반환된 예산 데이터를 수신
-            // TOTAL_BUDGET 수신 및 처리
-            val totalBudgetString = data?.getStringExtra("TOTAL_BUDGET") ?: "0"
-            totalBudget = totalBudgetString.toIntOrNull() ?: 0
-            // REMAINING_BUDGET 수신 및 처리
-            val remainingBudgetString = data?.getStringExtra("REMAINING_BUDGET") ?: "0"
-            // PERCENTAGE_VALUES 수신 및 처리
-            val percentageValues = data?.getStringArrayListExtra("PERCENTAGE_VALUES") ?: arrayListOf()
-            // UI에 예산 데이터 반영
-            // UI에 예산 데이터 반영
-            findViewById<TextView>(R.id.total_budget).text = "₩${String.format("%,d", totalBudget)}"
-            findViewById<TextView>(R.id.left_budget).text = "₩${remainingBudgetString.toIntOrNull() ?: 0}"
-            // PERCENTAGE_VALUES 로그 출력 (확인용)
-            Log.d("BuildPage", "BudgetPage에서 받은 예산: $totalBudget")
-            // 예산을 기반으로 부품 선택 및 UI 업데이트
-            // 부품 선택 및 UI 업데이트
-            CoroutineScope(Dispatchers.IO).launch {
-                val allParts = apiHelper.fetchAllParts() // Map<String, List<Map<String, Any>>>
-                // 변환
-                val convertedAllParts = allParts.mapValues { (_, partsList) ->
-                    partsList.map { partMap ->
-                        partMap.mapValues { (_, value) -> value?.toString() ?: "" }
-                    }
+            // ... (생략: 네가 이미 쓰는 예산 관련 코드)
+        }
+
+        // 2. 부품 교체 관련 (추가되는 부분)
+        // 부품 선택 요청코드의 범위 체크
+        if (resultCode == RESULT_OK &&
+            requestCode in REQUEST_CODE_PART_SELECT until (REQUEST_CODE_PART_SELECT + orderedPartsKeys.size)
+        ) {
+            val partIndex = requestCode - REQUEST_CODE_PART_SELECT
+            val selectedPartId = data?.getStringExtra("SELECTED_PART_ID") ?: return
+
+            // allParts와 selectedParts는 멤버변수화 해두는 게 좋음!
+            val categoryKey = orderedPartsKeys[partIndex]
+            val allCategoryParts = allParts[categoryKey] // 이제 멤버변수니까 접근 OK!
+            val newPart = allCategoryParts?.find { it["id"] == selectedPartId }
+
+            if (newPart != null) {
+                // selectedParts를 mutableList로 만들었다고 가정 (selectedParts[partIndex] 교체)
+                selectedParts[partIndex] = categoryKey to newPart
+                updateUI(selectedParts)
+                // 남은 예산 등 갱신
+                val totalSelectedPrice = selectedParts.sumOf { (_, part) ->
+                    part["price"]?.replace(",", "")?.replace(".00", "")?.toIntOrNull() ?: 0
                 }
-                val selectedParts = selectOptimalParts(convertedAllParts, percentageValues)
-                withContext(Dispatchers.Main) {
-                    updateUI(selectedParts)
-                }
+                val remainingBudget = totalBudget - totalSelectedPrice
+                updateRemainingBudget(remainingBudget)
             }
-            //CoroutineScope(Dispatchers.IO).launch {
-                //val dbHelper = DatabaseHelper(applicationContext)
-                //val connection = dbHelper.connect()
-
-                //connection?.use {
-                    //val allParts = dbHelper.fetchAllParts(it)
-
-                    // percentageValues를 전달하여 selectOptimalParts 호출
-                    //val selectedParts = selectOptimalParts(allParts, percentageValues)
-
-                    // UI 업데이트는 Main 스레드에서 처리
-                    //withContext(Dispatchers.Main) {
-                        //updateUI(selectedParts)
-                    //}
-                //}
-            //}
         }
     }
+
 }
