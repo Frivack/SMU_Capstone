@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -117,6 +118,7 @@ class BudgetPage : AppCompatActivity() {
             val extractedBudget = remainingBudgetString.replace("[^\\d]".toRegex(), "").toIntOrNull()
             val percentageValues = percentageTexts.map { it.text.toString() }
 
+            Log.e("FinishButton", "total: $totalBudget extracted: ${extractedBudget.toString()} Percentage: ${percentageValues.toString()}")
             val resultIntent = Intent()
             resultIntent.putExtra("TOTAL_BUDGET", totalBudget)
             resultIntent.putExtra("REMAINING_BUDGET", extractedBudget.toString())

@@ -81,8 +81,6 @@ class BuildPage : AppCompatActivity() {
             startActivityForResult(intent, REQUEST_CODE_BUDGET)
         }
 
-
-
         // 전원 버튼 설정 클릭
         setupSwichButtons()
 
@@ -92,7 +90,9 @@ class BuildPage : AppCompatActivity() {
     }
 
     fun msql(view: View) {
+        Log.e("MSQLTESTING", "msql start")
         CoroutineScope(Dispatchers.IO).launch {
+            Log.e("MSQLTESTING", "connect start")
             val allPartsFetched = apiHelper.fetchAllParts()
             // 변환
             val convertedAllParts = allPartsFetched.mapValues { (_, partsList) ->
@@ -107,6 +107,7 @@ class BuildPage : AppCompatActivity() {
             withContext(Dispatchers.Main) {
                 updateUI(selectedParts)
             }
+            Log.e("MSQLTESTING", "msql finish ")
         //connection?.use {
                 //val allParts = dbHelper.fetchAllParts(it) // 모든 부품 데이터 가져오기
                 //val selectedParts = selectOptimalParts(allParts) // 최적의 부품 선택
@@ -290,16 +291,21 @@ class BuildPage : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
+        Log.e("Start Building Page", "RESULT CODE$resultCode")
+        Log.e("Start Building Page", "REQUEST CODE$requestCode")
         // 1. 예산 관련 (이미 있던 코드)
         if (requestCode == REQUEST_CODE_BUDGET && resultCode == RESULT_OK) {
             // ... (생략: 네가 이미 쓰는 예산 관련 코드)
         }
+
+        Log.e("Start Building Page", "RESULT CODE$resultCode")
 
         // 2. 부품 교체 관련 (추가되는 부분)
         // 부품 선택 요청코드의 범위 체크
         if (resultCode == RESULT_OK &&
             requestCode in REQUEST_CODE_PART_SELECT until (REQUEST_CODE_PART_SELECT + orderedPartsKeys.size)
         ) {
+            Log.e("Start Building Page", "2")
             val partIndex = requestCode - REQUEST_CODE_PART_SELECT
             val selectedPartId = data?.getStringExtra("SELECTED_PART_ID") ?: return
 
@@ -309,6 +315,7 @@ class BuildPage : AppCompatActivity() {
             val newPart = allCategoryParts?.find { it["id"] == selectedPartId }
 
             if (newPart != null) {
+                Log.e("Start Building Page", "3")
                 // selectedParts를 mutableList로 만들었다고 가정 (selectedParts[partIndex] 교체)
                 selectedParts[partIndex] = categoryKey to newPart
                 updateUI(selectedParts)
@@ -320,6 +327,6 @@ class BuildPage : AppCompatActivity() {
                 updateRemainingBudget(remainingBudget)
             }
         }
+        Log.e("Start Building Page", "end")
     }
-
 }

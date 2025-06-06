@@ -16,8 +16,6 @@ class MainPage : AppCompatActivity() {
         // Intent에서 이메일 가져오기
         val email = intent.getStringExtra("USER_EMAIL")
         val userId = intent.getIntExtra("USER_ID", 0)
-        //val email = "lmj@email.com"
-        //val userId = 2
 
         // 이메일이 null이 아닌 경우 TextView에 설정
         email?.let {
