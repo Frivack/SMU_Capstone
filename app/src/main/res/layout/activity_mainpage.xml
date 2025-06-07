@@ -1,6 +1,11 @@
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -351,6 +356,28 @@
                 android:contentDescription="@string/lowbar_setting"/>
         </LinearLayout>
     </LinearLayout>
+    </LinearLayout>
 
+    <!-- ========== 챗봇 Fragment를 담을 컨테이너 (처음에는 숨겨져 있음) ========== -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/chatbot_fragment_container"
+        android:name="com.capstone.myapplication.ChatbotFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="80dp"
+        android:visibility="gone" />
 
-</LinearLayout>
+    <!-- ========== 챗봇 실행 버튼 (FAB) ========== -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_chatbot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_launcher_background"
+        android:contentDescription="챗봇 열기" />
+
+</FrameLayout>

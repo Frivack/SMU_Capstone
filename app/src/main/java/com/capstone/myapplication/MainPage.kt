@@ -2,10 +2,13 @@ package com.capstone.myapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentContainerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainPage : AppCompatActivity() {
 
@@ -21,6 +24,19 @@ class MainPage : AppCompatActivity() {
         email?.let {
             val mainPageIdTextView = findViewById<TextView>(R.id.mainpage_id)
             mainPageIdTextView.text = extractEmailPrefix(it)
+        }
+
+        // ========== 챗봇 버튼 및 컨테이너 설정 ==========
+        val fabChatbot: FloatingActionButton = findViewById(R.id.fab_chatbot)
+        val chatbotContainer: FragmentContainerView = findViewById(R.id.chatbot_fragment_container)
+
+        fabChatbot.setOnClickListener {
+            // 버튼 클릭 시 챗봇 프래그먼트 컨테이너를 보여주거나 숨김
+            if (chatbotContainer.visibility == View.VISIBLE) {
+                chatbotContainer.visibility = View.GONE
+            } else {
+                chatbotContainer.visibility = View.VISIBLE
+            }
         }
 
         setupSwichButtons(email, userId)
@@ -100,4 +116,5 @@ class MainPage : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- 봇 말풍선의 배경색 (회색 계열) -->
+    <solid android:color="#EAEAEA" />
+
+    <!-- 모서리를 둥글게 만듭니다. -->
+    <!-- 왼쪽 위 모서리만 뾰족하게 해서 사용자와 대칭되는 모양을 만듭니다. -->
+    <corners
+        android:radius="16dp"
+        android:topLeftRadius="0dp" />
+
+</shape>
