@@ -1,6 +1,7 @@
 package com.capstone.myapplication
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import android.widget.EditText
 import android.widget.TextView
@@ -15,7 +16,6 @@ import kotlinx.coroutines.withContext
 
 
 class LoginPage : AppCompatActivity() {
-    // ✅ 중복 선언하지 말 것! 아래 한 번만
     private val apiHelper = ApiHelper()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,6 +57,7 @@ class LoginPage : AppCompatActivity() {
                     if (loginResponse?.message == "Login successful" && loginResponse.user != null) {
                         Toast.makeText(this@LoginPage, "Login successful!", Toast.LENGTH_SHORT).show()
                         val intent = Intent(this@LoginPage, MainPage::class.java)
+                        val uid = loginResponse.user.user_id
                         intent.putExtra("USER_ID", loginResponse.user.user_id)
                         intent.putExtra("USER_EMAIL", loginResponse.user.email)
                         startActivity(intent)
@@ -73,8 +74,6 @@ class LoginPage : AppCompatActivity() {
             }
         }
     }
-
-
 
     private fun setupSwitchButtons() {
         val newId = findViewById<TextView>(R.id.new_id)

@@ -2,6 +2,7 @@ package com.capstone.myapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -75,6 +76,7 @@ class MainPage : AppCompatActivity() {
 
         review.setOnClickListener {
             val intent = Intent(this, ReviewPage::class.java)
+            Log.e("MainToReview", "UserID: $userId.toString()")
             intent.putExtra("USER_ID", userId)
             val name = email?.let { it1 -> extractEmailPrefix(it1) }
             intent.putExtra("USER_NAME", name)
