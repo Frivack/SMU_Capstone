@@ -1,0 +1,185 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background_gradient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- WelCome (왼쪽상단 고정) -->
+    <TextView
+        android:id="@+id/lg_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textColor="#5A5ABA"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="24dp"
+        android:gravity="start"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <!-- 중앙 정렬되는 모든 것 감싸는 "컨테이너" -->
+    <LinearLayout
+        android:id="@+id/center_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/lg_welcome"
+        android:layout_marginTop="32dp">
+
+        <!-- Email 입력란 -->
+        <RelativeLayout
+            android:id="@+id/email_layout"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:background="@drawable/input_field_bg"
+            android:layout_marginBottom="18dp">
+
+            <EditText
+                android:id="@+id/login_email_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="이메일"
+                android:textStyle="bold"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                android:inputType="textEmailAddress"
+                android:paddingStart="16dp"
+                android:paddingEnd="48dp"
+                android:gravity="center_vertical"/>
+
+            <View
+                android:id="@+id/id_login_img"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/img_id_verified"/>
+        </RelativeLayout>
+
+        <!-- Password 입력란 -->
+        <RelativeLayout
+            android:id="@+id/password_layout"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:background="@drawable/input_field_bg"
+            android:layout_marginBottom="32dp">
+
+            <EditText
+                android:id="@+id/login_password_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="비밀번호"
+                android:textStyle="bold"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                android:inputType="textPassword"
+                android:paddingStart="16dp"
+                android:paddingEnd="48dp"
+                android:gravity="center_vertical"/>
+
+            <View
+                android:id="@+id/id_password_img"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/img_password"/>
+        </RelativeLayout>
+
+        <!-- X 아이콘 (중앙) -->
+        <ImageView
+            android:id="@+id/login_logo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@null"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="28dp"
+            />
+
+        <!-- 로그인 버튼 (중앙) -->
+        <TextView
+            android:id="@+id/summit"
+            android:layout_width="232dp"
+            android:layout_height="48dp"
+            android:background="@drawable/layout_light_purple_grad"
+            android:gravity="center"
+            android:text="@string/summit"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:elevation="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- 계정을 잊으셨나요? (중앙) -->
+        <TextView
+            android:id="@+id/new_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_id"
+            android:textColor="#6969D7"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="12dp"/>
+    </LinearLayout>
+
+    <!-- 하단 네비바 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:elevation="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/imageHomeOne"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/img_home"
+                android:contentDescription="@string/lowbar_home"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/imageWhatidoOne"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/img_what_i_do"
+                android:contentDescription="@string/lowbar_build"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/imageAutomaticOne"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/img_automatic"
+                android:contentDescription="@string/lowbar_setting"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

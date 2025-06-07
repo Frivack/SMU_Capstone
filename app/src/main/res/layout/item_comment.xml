@@ -1,0 +1,35 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/comment_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="14sp"
+        android:text="댓글 내용" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/comment_thumbs_up_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="추천: 0" />
+
+        <ImageButton
+            android:id="@+id/comment_thumbs_up_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_thumbs_up"
+            android:contentDescription="추천 버튼" />
+    </LinearLayout>
+</LinearLayout>

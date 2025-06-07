@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_background"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/writeing"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/layout_title_background"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/servicecenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/servicecenter"
+            android:textAppearance="@style/char20purple"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/mayi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/mayi"
+        android:textAppearance="@style/char24purple"
+        android:gravity="center_horizontal|top"
+        />
+
+    <LinearLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:layout_weight="1"
+        android:background="@drawable/layout_background"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/line_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/camera"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/img_camera" />
+
+            <ImageView
+                android:id="@+id/picture"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="15dp"
+                android:src="@drawable/img_picture" />
+
+            <ImageView
+                android:id="@+id/play"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="15dp"
+                android:src="@drawable/img_play" />
+
+            <ImageView
+                android:id="@+id/font"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="15dp"
+                android:src="@drawable/img_font" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/line" />
+
+        <EditText
+            android:id="@+id/content"
+            style="@style/char20lightpurple"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="내용을 입력하세요." />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/post_frame"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="-80dp"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/layout_blue">
+        <TextView
+            android:id="@+id/ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ask"
+            android:textAppearance="@style/char20lightpink"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:elevation="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/imageHomeOne"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/img_home"
+                android:contentDescription="@string/lowbar_home"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/imageWhatidoOne"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/img_what_i_do"
+                android:contentDescription="@string/lowbar_build"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/imageAutomaticOne"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/img_automatic"
+                android:contentDescription="@string/lowbar_setting"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

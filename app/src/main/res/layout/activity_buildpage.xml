@@ -1,0 +1,111 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bd_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_title_background"
+    android:elevation="4dp">
+    <RelativeLayout
+        android:id="@+id/frame_1"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentTop="true"
+        android:elevation="5dp"
+        android:background="@drawable/layout_title_background">
+        <TextView
+            android:id="@+id/bd_estimate"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:text="@string/estimate"
+            android:textAppearance="@style/char20"
+            android:layout_centerInParent="true"
+            android:gravity="top"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frame_2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="75dp"
+        android:elevation="5dp"
+        android:background="@drawable/layout_title_background">
+
+        <TextView
+            android:id="@+id/bd_budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:gravity="top"
+            android:text="@string/budget"
+            android:textAppearance="@style/char18black" />
+
+        <TextView
+            android:id="@+id/total_budget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="-4dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginEnd="30dp"
+            android:textAppearance="@style/char16black" />
+
+        <TextView
+            android:id="@+id/bd_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="56dp"
+            android:gravity="top"
+            android:text="@string/leftudget"
+            android:textAppearance="@style/char18black" />
+
+        <TextView
+            android:id="@+id/left_budget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="57dp"
+            android:layout_marginBottom="-4dp"
+            android:layout_marginStart="94dp"
+            android:layout_marginEnd="30dp"
+            android:textAppearance="@style/char16black" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/parts_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/frame_2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <RelativeLayout
+            android:id="@+id/finish_button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/layout_color1"
+            android:onClick="msql">
+            <TextView
+                android:textColor="#FFFFFF"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/end"
+                android:layout_centerInParent="true"
+                android:textAppearance="@style/char20brown"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
