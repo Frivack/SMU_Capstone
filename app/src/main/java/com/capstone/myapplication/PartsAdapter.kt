@@ -16,7 +16,7 @@ class PartsAdapter(
     private val context: Context,
     private var selectedParts: MutableList<Pair<String, Map<String, String>>>,
     private val allParts: Map<String, List<Map<String, String>>>, // 모든 부품 목록
-    private val onPartSelected: (Int, Map<String, String>) -> Unit // (변경된 아이템 인덱스, 새로 선택된 부품) 콜백
+    private val onPartSelected: (Int, Map<String, String>, List<Pair<String, Map<String, String>>>) -> Unit
 ) : RecyclerView.Adapter<PartsAdapter.PartViewHolder>() {
 
     private var isInitialBinding = true // 초기 바인딩 시 스피너 이벤트 방지 플래그
@@ -82,7 +82,7 @@ class PartsAdapter(
 
                     // 선택된 부품이 현재 부품과 다를 경우에만 콜백 호출 (무한 루프 방지)
                     if (newSelectedPart["name"] != selectedParts[position].second["name"]) {
-                        onPartSelected(position, newSelectedPart)
+                        onPartSelected(position, newSelectedPart, selectedParts)
                     }
                 }
                 override fun onNothingSelected(parent: AdapterView<*>?) {}
