@@ -28,6 +28,9 @@ class BudgetPage : AppCompatActivity() {
     private val seekBars = mutableListOf<SeekBar>()
     private val percentageTexts = mutableListOf<TextView>()
 
+    private lateinit var themeSpinner: Spinner
+    private var selectedThemeId: Int? = null // 선택된 테마 ID를 저장할 변수 추가
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_budget)
@@ -107,22 +110,23 @@ class BudgetPage : AppCompatActivity() {
         })
 
         val currentBudget = intent.getStringExtra("CURRENT_BUDGET")
-        val totalBudgetEdit = findViewById<EditText>(R.id.total_budget_edit)
         totalBudgetEdit.setText(currentBudget)
 
         // 완료 버튼 클릭 시 데이터 반환
         val finishButton = findViewById<RelativeLayout>(R.id.finish_button)
         finishButton.setOnClickListener {
             val totalBudget = totalBudgetEdit.text.toString()
+            val totalBudgetValue = this.totalBudget.toString()
             val remainingBudgetString = remainingBudgetText.text.toString()
             val extractedBudget = remainingBudgetString.replace("[^\\d]".toRegex(), "").toIntOrNull()
             val percentageValues = percentageTexts.map { it.text.toString() }
 
             Log.e("FinishButton", "total: $totalBudget extracted: ${extractedBudget.toString()} Percentage: ${percentageValues.toString()}")
             val resultIntent = Intent()
-            resultIntent.putExtra("TOTAL_BUDGET", totalBudget)
+            resultIntent.putExtra("TOTAL_BUDGET", totalBudgetValue)
             resultIntent.putExtra("REMAINING_BUDGET", extractedBudget.toString())
             resultIntent.putStringArrayListExtra("PERCENTAGE_VALUES", ArrayList(percentageValues))
+            selectedThemeId?.let { resultIntent.putExtra("SELECTED_THEME_ID", it) }
 
             setResult(RESULT_OK, resultIntent)
             finish() // 현재 액티비티 종료
@@ -154,6 +158,12 @@ class BudgetPage : AppCompatActivity() {
                 // 아무것도 선택되지 않은 경우 처리
             }
         }
+
+        // 기존 예산 프리셋 Spinner 설정
+        setupPresetSpinner()
+
+        // 신규 테마 Spinner 설정
+        setupThemeSpinner()
     }
 
     private fun setupSeekBar(seekBar: SeekBar, valueText: TextView) {
@@ -212,5 +222,66 @@ class BudgetPage : AppCompatActivity() {
     private fun formatCurrency(amount: Int): String {
         // 숫자를 ₩ 단위로 포맷팅
         return "₩${String.format("%,d", amount)}"
+    }
+
+
+    // 예산 프리셋 적용 로직 (예시 구현)
+    private fun applyBudgetPreset(presetIndex: Int) {
+        val percentages = when (presetIndex) {
+            1 -> listOf(20, 25, 10, 15, 5, 10, 5, 5, 0, 5, 0, 0, 0, 0, 0, 0) // 사무용
+            2 -> listOf(20, 35, 10, 15, 5, 5, 5, 0, 0, 5, 0, 0, 0, 0, 0, 0) // 게이밍
+            3 -> listOf(25, 40, 10, 10, 5, 5, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0) // 최고 사양
+            else -> null // "직접 설정" 또는 기타
+        }
+
+        percentages?.let {
+            if (it.size == seekBars.size) {
+                var totalPercentage = 0
+                for (i in seekBars.indices) {
+                    seekBars[i].progress = it[i]
+                    totalPercentage += it[i]
+                }
+                if (totalPercentage > 100) {
+                    Toast.makeText(this, "프리셋의 총합이 100%를 넘습니다!", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
+    // 기존 드롭다운 메뉴 관련 코드를 함수로 분리 및 수정
+    private fun setupPresetSpinner() {
+        val spinner = findViewById<Spinner>(R.id.spinner_budget_options)
+        // 프리셋 옵션 정의 (예시)
+        val options = listOf("예산 설정", "사무용 표준", "게이밍 입문", "최고 사양")
+
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, options)
+        adapter.setDropDownViewResource(R.layout.item_custom_spinner_dropdown)
+        spinner.adapter = adapter
+
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
+                // 선택된 프리셋에 따라 SeekBar 값들을 자동으로 ㅅㄷ조절하는 로직
+                applyBudgetPreset(position)
+            }
+            override fun onNothingSelected(parent: AdapterView<*>) {}
+        }
+    }
+    // 테마 Spinner 설정 함수
+    private fun setupThemeSpinner() {
+        themeSpinner = findViewById(R.id.spinner_theme_options)
+        // 서버 API와 매칭되는 테마 목록 정의
+        val themes = listOf("모든 테마", "블랙 & 화이트", "RGB", "블랙", "화이트", "핑크 & 퍼플")
+
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, themes)
+        adapter.setDropDownViewResource(R.layout.item_custom_spinner_dropdown)
+        themeSpinner.adapter = adapter
+
+        themeSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                // "모든 테마"(position 0)는 null, 나머지는 서버 API에 맞는 ID(1부터 시작)
+                selectedThemeId = if (position == 0) null else position
+            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
+        }
     }
 }

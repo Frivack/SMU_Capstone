@@ -69,8 +69,25 @@
                     android:layout_height="77dp"
                     android:layout_marginStart="14dp"
                     android:layout_marginTop="12dp"
-                    android:background="@drawable/ic_launcher_foreground"
+                    android:background="@drawable/img_server_repair"
                     android:elevation="4dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="80dp"
+                    android:fontFamily="@font/maplestory_bold"
+                    android:text="2025월 04월 11일 오류 수정\n\n안녕하세요. 4월 정기 서버 점검이 완료되었습니다."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginStart="-80dp"
+                    android:fontFamily="@font/maplestory_bold"
+                    android:text="2025.04.11"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -86,8 +103,25 @@
                     android:layout_height="77dp"
                     android:layout_marginStart="14dp"
                     android:layout_marginTop="12dp"
-                    android:background="@drawable/ic_launcher_foreground"
+                    android:background="@drawable/img_rama"
                     android:elevation="4dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="80dp"
+                    android:fontFamily="@font/maplestory_bold"
+                    android:text="리뷰 게시판 악질 유저 차단 안내\n\n혐짤달리던애들 다 15일 차단임."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginStart="-80dp"
+                    android:fontFamily="@font/maplestory_bold"
+                    android:text="2025.04.11"/>
             </LinearLayout>
 
             <LinearLayout
@@ -97,14 +131,6 @@
                 android:layout_marginVertical="8dp"
                 android:background="@color/white">
 
-                <View
-                    android:id="@+id/img33"
-                    android:layout_width="77dp"
-                    android:layout_height="77dp"
-                    android:layout_marginStart="14dp"
-                    android:layout_marginTop="12dp"
-                    android:background="@drawable/ic_launcher_foreground"
-                    android:elevation="4dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -114,14 +140,6 @@
                 android:layout_marginVertical="8dp"
                 android:background="@color/white">
 
-                <View
-                    android:id="@+id/img34"
-                    android:layout_width="77dp"
-                    android:layout_height="77dp"
-                    android:layout_marginStart="14dp"
-                    android:layout_marginTop="12dp"
-                    android:background="@drawable/ic_launcher_foreground"
-                    android:elevation="4dp" />
             </LinearLayout>
 
             <LinearLayout

@@ -102,20 +102,26 @@ class BuildPage : AppCompatActivity() {
             }
 
             // 예산 내에서 가장 비싼 부품 선택
-            val bestPart = parts.filter { part ->
-                val price = part["price"]?.replace(",", "")?.replace(".00", "")?.toIntOrNull() ?: 0
-                price <= allocatedBudget // 예산 내 부품만 고려
-            }.maxByOrNull { part ->
-                part["price"]?.replace(",", "")?.replace(".00", "")?.toIntOrNull() ?: 0
+            if (parts.isNullOrEmpty()) {
+                selectedParts.add(key to mapOf("image" to "", "name" to "선택된 부품 없음", "price" to "0"))
+                Log.d("Selected Part", "Category: $key, No parts available in this category.")
+                return@forEachIndexed
             }
 
+            val bestPart = parts
+                .mapNotNull { part -> // price가 유효하지 않은 부품은 걸러냄
+                    val price = part["price"]?.replace(",", "")?.replace(".00", "")?.toIntOrNull()
+                    if (price != null) Pair(part, price) else null
+                }
+                .filter { (_, price) -> price <= allocatedBudget } // 예산 내의 부품만 필터링
+                .maxByOrNull { (_, price) -> price } // 그 중에서 가장 비싼 부품 선택
+
             if (bestPart != null) {
-                selectedParts.add(key to bestPart)
-                remainingBudget -= bestPart["price"]?.replace(",", "")?.replace(".00", "")?.toIntOrNull() ?: 0
-                Log.d("Selected Part", "Category: $key, Selected: ${bestPart["name"]}, Price: ${bestPart["price"]}")
+                selectedParts.add(key to bestPart.first) // Pair의 첫 번째 요소가 part 맵
+                Log.d("Selected Part", "Category: $key, Selected: ${bestPart.first["name"]}, Price: ${bestPart.second}")
             } else {
                 selectedParts.add(key to mapOf("image" to "", "name" to "선택된 부품 없음", "price" to "0"))
-                Log.d("Selected Part", "Category: $key, No suitable part found.")
+                Log.d("Selected Part", "Category: $key, No suitable part found within budget ₩$allocatedBudget.")
             }
         }
 
@@ -129,17 +135,10 @@ class BuildPage : AppCompatActivity() {
             part["price"]?.replace(",", "")?.replace(".00", "")?.toIntOrNull() ?: 0
         }
         remainingBudget = totalBudget - totalSelectedPrice // 남은 예산 계산
-        updateRemainingBudget(remainingBudget) // UI 업데이트
+        //updateRemainingBudget() // UI 업데이트
 
         Log.d("BuildPage", "최종 선택된 부품 리스트: ${selectedParts.map { it.second["name"] }}")
         return selectedParts
-    }
-
-    private fun updateRemainingBudget(remainingBudget: Int) {
-        runOnUiThread {
-            val budgetLeftTextView = findViewById<TextView>(R.id.left_budget)
-            budgetLeftTextView.text = "₩${String.format("%,d", remainingBudget)}"
-        }
     }
 
     private fun setupSwichButtons()
@@ -156,31 +155,32 @@ class BuildPage : AppCompatActivity() {
     private fun setupRecyclerView() {
         val recyclerView = findViewById<RecyclerView>(R.id.parts_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
-
-        // 어댑터 초기화. 콜백 함수로 handlePartSelection을 넘겨줌
-        //partsAdapter = PartsAdapter(this, selectedParts, allParts) { index, newPart ->
-        //    handlePartSelection(index, newPart)
-        //}
-        //recyclerView.adapter = partsAdapter
     }
 
     // 부품이 변경되었을 때 호출되는 함수
-    private fun handlePartSelection(index: Int, newPart: Map<String, String>) {
-        val (categoryKey, _) = selectedParts[index]
+    private fun handlePartSelection(
+        visibleIndex: Int,
+        newPart: Map<String, String>,
+        visibleParts: List<Pair<String, Map<String, String>>>
+    ) {
+        val (categoryKey, _) = visibleParts[visibleIndex]
 
         // 1. selectedParts 리스트 업데이트
-        selectedParts[index] = categoryKey to newPart
+        val originalIndex = this.selectedParts.indexOfFirst { it.first == categoryKey }
 
-        // 2. 어댑터에 변경 사항 알림 (★중요★: 전체 데이터를 다시 전달)
-        //    단일 아이템만 바꾸면 스피너 상태가 꼬일 수 있으므로 전체를 갱신
-        partsAdapter.updateData(selectedParts)
+        if (originalIndex != -1) {
+            // 3. 원본 'selectedParts' 리스트를 업데이트합니다.
+            this.selectedParts[originalIndex] = categoryKey to newPart
 
-        // 3. 남은 예산 등 다른 UI 업데이트
-        updateRemainingBudget()
+            // 4. 업데이트된 원본 리스트를 다시 필터링하여 어댑터에 전달합니다.
+            val newVisibleParts = this.selectedParts.filter { (_, part) ->
+                part["name"] != "선택된 부품 없음"
+            }
+            partsAdapter.updateData(newVisibleParts.toMutableList())
 
-        // 4. (선택) 변경된 부품의 이미지 업데이트
-        val newImageUrl = newPart["image"]
-        // Glide.with(this).load(newImageUrl).into(...)
+            // 5. 남은 예산을 업데이트합니다.
+            updateRemainingBudget()
+        }
 
         Log.d("BuildPage", "부품 변경: ${categoryKey} -> ${newPart["name"]}")
     }
@@ -194,6 +194,11 @@ class BuildPage : AppCompatActivity() {
 
         val leftBudgetTextView = findViewById<TextView>(R.id.left_budget)
         leftBudgetTextView.text = "₩${String.format("%,d", remaining)}"
+
+        runOnUiThread {
+            val leftBudgetTextView = findViewById<TextView>(R.id.left_budget)
+            leftBudgetTextView.text = "₩${String.format("%,d", remaining)}"
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -202,9 +207,17 @@ class BuildPage : AppCompatActivity() {
         if (requestCode == REQUEST_CODE_BUDGET && resultCode == RESULT_OK) {// BudgetPage에서 반환된 예산 데이터를 수신
             // BudgetPage에서 반환된 예산 데이터를 수신
             val totalBudgetString = data?.getStringExtra("TOTAL_BUDGET") ?: "0"
-            totalBudget = totalBudgetString.toIntOrNull() ?: 0
+            this.totalBudget = totalBudgetString.toIntOrNull() ?: 0
             val remainingBudgetString = data?.getStringExtra("REMAINING_BUDGET") ?: "0"
             val percentageValues = data?.getStringArrayListExtra("PERCENTAGE_VALUES") ?: arrayListOf()
+            val selectedThemeId = if (data?.hasExtra("SELECTED_THEME_ID") == true) {
+                data.getIntExtra("SELECTED_THEME_ID", 0)
+            } else {
+                null // "모든 테마" 선택 시
+            }
+            Log.d("BuildPage", "BudgetPage에서 받은 예산: ${this.totalBudget}")
+            Log.d("BuildPage", "받은 테마 ID: $selectedThemeId")
+
             // UI에 예산 데이터 반영
             findViewById<TextView>(R.id.total_budget).text = "₩${String.format("%,d", totalBudget)}"
             findViewById<TextView>(R.id.left_budget).text = "₩${remainingBudgetString.toIntOrNull() ?: 0}"
@@ -212,7 +225,7 @@ class BuildPage : AppCompatActivity() {
             Log.d("BuildPage", "BudgetPage에서 받은 예산: $totalBudget")
             // 예산을 기반으로 부품 선택 및 UI 업데이트
             CoroutineScope(Dispatchers.IO).launch {
-                val allParts = apiHelper.fetchAllParts()
+                val allParts = apiHelper.fetchAllParts(theme = selectedThemeId, limit = 10, offset = 0)
                 val convertedAllParts = allParts.mapValues { (_, partsList) ->
                     partsList.map { partMap ->
                         partMap.mapValues { (_, value) -> value?.toString() ?: "" }
@@ -220,24 +233,25 @@ class BuildPage : AppCompatActivity() {
                 }
 
                 this@BuildPage.allParts = convertedAllParts
-
                 val initialSelectedParts = selectOptimalParts(convertedAllParts, percentageValues)
-
                 this@BuildPage.selectedParts = initialSelectedParts.toMutableList()
 
                 withContext(Dispatchers.Main) {
-                    val partSelectionCallback = { index: Int, newPart: Map<String, String> ->
-                        handlePartSelection(index, newPart)
+                    val visibleParts = this@BuildPage.selectedParts.filter { (_, part) ->
+                        part["name"] != "선택된 부품 없음"
                     }
                     partsAdapter = PartsAdapter(
                         this@BuildPage,
-                        this@BuildPage.selectedParts,
+                        visibleParts.toMutableList(),
                         this@BuildPage.allParts,
-                        partSelectionCallback
+                        // 람다식의 파라미터 이름을 (visibleIndex, newPart, currentVisibleParts)로 명확히 합니다.
+                        { visibleIndex, newPart, currentVisibleParts ->
+                            // 어댑터로부터 받은 파라미터를 그대로 handlePartSelection에 전달합니다.
+                            handlePartSelection(visibleIndex, newPart, currentVisibleParts)
+                        }
                     )
 
                     findViewById<RecyclerView>(R.id.parts_recycler_view).adapter = partsAdapter
-
                     updateRemainingBudget() // 최초 남은 예산 업데이트
                 }
             }

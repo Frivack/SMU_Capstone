@@ -64,7 +64,7 @@
     <string name="really">정말로 탈퇴하시겠습니까?</string>
     <string name="donot">\n탈퇴 후에는 해당 계정과 관련된 \n모든 데이터가 삭제됩니다.\n신중하게 결정해주세요.\n\n\n아래 버튼을 누르면 회원 탈퇴가 진행되며, \n탈퇴 즉시 서비스를 이용할 수 없게 됩니다.</string>
     <string name="userout">회원 탈퇴</string>
-    <string name="notice">리뷰</string>
+    <string name="notice">공지사항</string>
     <string name="notice_text">공지사항</string>
     <string name="servicecenter">Service Center</string>
     <string name="mayi">무엇이 궁금하세요?\n편하게 질문해주세요.</string>

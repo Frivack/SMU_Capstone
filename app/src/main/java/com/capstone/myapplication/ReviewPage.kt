@@ -2,6 +2,7 @@ package com.capstone.myapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,7 @@ class ReviewPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_review)
+
 
         val userId = intent.getIntExtra("USER_ID", 0)
         val userName = intent.getStringExtra("USER_NAME")
