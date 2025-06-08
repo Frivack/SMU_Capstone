@@ -67,7 +67,7 @@
     <string name="mayi">무엇이 궁금하세요?\n편하게 질문해주세요.</string>
     <string name="monitor">모니터</string>
     <string name="mouse">마우스</string>
-    <string name="new_id">신규 계정 생성</string>
+    <string name="new_id">회원가입</string>
     <string name="new_review">글쓰기</string>
     <string name="notice">리뷰</string>
     <string name="notice_text">공지사항</string>
@@ -96,7 +96,7 @@
     <string name="sign_in">회원가입</string>
     <string name="soundcard">사운드카드</string>
     <string name="speaker">스피커</string>
-    <string name="summit">Summit</string>
+    <string name="summit">로그인</string>
     <string name="toggle_button">toggle_button</string>
     <string name="total_budget">총 예산:</string>
     <string name="user_id">user_id</string>

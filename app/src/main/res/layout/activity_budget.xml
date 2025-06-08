@@ -386,7 +386,6 @@
                         android:thumb="@drawable/seekbar_thumb"
                         android:thumbTint="#FFFFFF"
                         android:trackTint="#E8D7F3" />
-
                     <TextView
                         android:id="@+id/hard_percentage"
                         android:layout_width="80dp"
