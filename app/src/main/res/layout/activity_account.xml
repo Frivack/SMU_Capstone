@@ -162,5 +162,5 @@
                 android:contentDescription="@string/lowbar_setting"/>
         </LinearLayout>
     </LinearLayout>
-<!--푸쉬되라푸쉬되라푸쉬되라푸쉬되라푸쉬되라푸쉬되라푸쉬되라푸쉬되라-->
+
 </LinearLayout>
