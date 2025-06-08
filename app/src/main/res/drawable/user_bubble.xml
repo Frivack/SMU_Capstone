@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- 말풍선의 배경색 -->
+    <!-- 사용자님의 앱 테마 색상(#5A5ABB)과 맞췄습니다. -->
+    <solid android:color="#5A5ABB" />
+
+    <!-- 모서리를 둥글게 만듭니다. -->
+    <!-- 오른쪽 위 모서리만 뾰족하게 해서 말풍선 느낌을 줍니다. -->
+    <corners
+        android:radius="16dp"
+        android:topRightRadius="0dp" />
+
+</shape>
