@@ -6,7 +6,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.capstone.Review // 여기만 남겨!
+import com.example.capstone.Review
+import java.text.SimpleDateFormat
+import java.util.Locale
+import java.util.TimeZone
 
 class ReviewAdapter(
     private val reviews: List<Review>,
@@ -37,16 +40,27 @@ class ReviewAdapter(
         val review = reviews[position]
         holder.title.text = review.title
         holder.content.text = review.content
-        holder.date.text = review.created_at        // ← 여기!! created_at으로
+
+        // 날짜 포맷 변경
+        val inputFormat = SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss z", Locale.ENGLISH)
+        val outputFormat = SimpleDateFormat("yyyy/MM/dd", Locale.getDefault())
+
+        val formattedDate = try {
+            val date = inputFormat.parse(review.created_at)
+            outputFormat.format(date)
+        } catch (e: Exception) {
+            review.created_at // 포맷 실패 시 원래 값 표시
+        }
+        holder.date.text = formattedDate
+
         holder.thumbsUp.text = review.thumbs_up?.toString() ?: "0"
         holder.comments.text = review.comments_count?.toString() ?: "0"
 
-        if (review.review_id == 2) {                // ← 여기!! review_id로
+        if (review.review_id == 2) {
             holder.reviewImage.setImageResource(R.drawable.img_i9)
         } else {
             holder.reviewImage.setImageResource(R.drawable.ic_launcher_foreground)
         }
     }
-
     override fun getItemCount(): Int = reviews.size
 }
