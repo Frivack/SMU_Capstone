@@ -88,6 +88,8 @@
                         android:src="@drawable/img_whatido85"
                         android:scaleType="fitXY"
                         />
+
+
                     <TextView
                         android:id="@+id/rea8v3wm5z8e"
                         android:textColor="#5A5ABB"
