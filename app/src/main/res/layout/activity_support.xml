@@ -17,8 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/servicecenter"
+            android:text="서비스센터"
             android:textAppearance="@style/char20purple"
+            android:textColor="#222222"
             />
     </RelativeLayout>
 
@@ -27,6 +28,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textColor="#c9c8ee"
+
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
         android:text="@string/mayi"
@@ -98,8 +101,8 @@
 
         <EditText
             android:id="@+id/content"
-            style="@style/char20lightpurple"
             android:layout_width="match_parent"
+            android:textColor="#c9c8ee"
             android:layout_height="40dp"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="30dp"
@@ -119,6 +122,7 @@
         <TextView
             android:id="@+id/ask"
             android:layout_width="wrap_content"
+            android:textColor="#ffffff"
             android:layout_height="wrap_content"
             android:text="@string/ask"
             android:textAppearance="@style/char20lightpink"
